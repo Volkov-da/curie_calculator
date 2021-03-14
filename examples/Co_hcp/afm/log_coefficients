@@ -1,0 +1,29 @@
+en1/log_magnetic:Coefficients:
+en1/log_magnetic-[6, -6, 6, -2, 12, -6]
+--
+en10/log_magnetic:Coefficients:
+en10/log_magnetic-[0, -2, 2, 0, 8, 0, -4, -2]
+--
+en2/log_magnetic:Coefficients:
+en2/log_magnetic-[0, -6, 0, 2]
+--
+en3/log_magnetic:Coefficients:
+en3/log_magnetic-[0, 2, 0, 2]
+--
+en4/log_magnetic:Coefficients:
+en4/log_magnetic-[-2, 2, 6, -2]
+--
+en5/log_magnetic:Coefficients:
+en5/log_magnetic-[2, 2, -6, -2]
+--
+en6/log_magnetic:Coefficients:
+en6/log_magnetic-[0, -6, 0, 0, 0, -6, 0, -6]
+--
+en7/log_magnetic:Coefficients:
+en7/log_magnetic-[6, -6, 6, 0, 12, -6, 0, -6]
+--
+en8/log_magnetic:Coefficients:
+en8/log_magnetic-[2, -2, 4, 0, 0, 0, -4, -2]
+--
+en9/log_magnetic:Coefficients:
+en9/log_magnetic-[4, -2, 0, 0, 4, 0, -4, -2]

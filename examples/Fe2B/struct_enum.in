@@ -1,0 +1,20 @@
+Fe4 B2
+bulk
+4.1496         0.0000        0.0000
+-1.9996        3.6360         0.0000
+-1.0749       -1.8180         3.5718
+3 - nary case
+6 # Number of points in the multilattice
+-1.5373         0.9090         2.9796 0/1
+ 2.6122         0.9090         0.5922 0/1
+ 0.5652         2.1194         1.7859 0/1
+ 0.5097        -0.3014         1.7859 0/1
+ 1.6124         2.7270         0.0000 2
+ 0.5374         0.9090         0.0000 2
+1 2   # Starting and ending cell sizes for search
+0.10E-06 # Epsilon (finite precision parameter)
+full
+# Concentration restrictions
+2 2 6
+2 2 6
+2 2 6

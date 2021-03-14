@@ -1,0 +1,33 @@
+NiO GGA+U AFM
+  SYSTEM    = "NiO"
+
+Electronic minimization
+  ENCUT     = 450
+  EDIFF     = 1E-4
+  LORBIT    = 11
+  LREAL     = .False.
+  ISTART    = 0
+  ISYM      = 0
+  NELMIN    = 6
+
+DOS
+  ISMEAR    = -5
+
+Magnetism
+  ISPIN     = 2
+  MAGMOM    = 4*2.0 4*-2.0 8*0  # AFM conf.
+
+Mixer
+  AMIX      = 0.2
+  BMIX      = 0.00001
+  AMIX_MAG  = 0.8
+  BMIX_MAG  = 0.00001
+
+GGA+U
+  LDAU      = .TRUE.
+  LDAUTYPE  = 2
+  LDAUL     = 2 -1
+  LDAUU     = 5.00 0.00
+  LDAUJ     = 0.00 0.00
+  LDAUPRINT = 2
+  LMAXMIX   = 4 

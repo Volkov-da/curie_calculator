@@ -1,0 +1,26 @@
+ # <fortpy version="3" revision="247"></fortpy>
+Ni-Fcc    
+bulk
+  2.4767001       0.0000000       0.0000000        # a1 parent lattice vector
+  1.2383500       2.1448852       0.0000000        # a2 parent lattice vector
+  1.2383500      0.71496173       2.0222171        # a3 parent lattice vector
+    1 # Number of points in the multilattice
+  0.0000000       0.0000000       0.0000000        # d01 d-vector, labels: 0/1
+ 2-nary case
+   1   4 # Starting and ending cell sizes for search
+ 0.10000000E-06 # Epsilon (finite precision parameter)
+Concentration check:
+    T
+Including only structures of which the concentration   of each atom is in the range:
+Type 1:    1/   2 --    1/   2
+Type 2:    1/   2 --    1/   2
+full list of labelings (including incomplete labelings) is used
+(Non)Equivalency list: 1
+start   #tot      HNF     Hdegn   labdegn   Totdegn   #size idx    pg    SNF             HNF                 Left transform                          labeling
+          1         1       4        0        0           1   2    12   1  1  2    1  0  1  0  0  2      1    0    0    0    1    0    0    0    1   01
+          2         2       3        0        0           2   2    16   1  1  2    1  0  1  0  1  2      1    0    0    0    1    0    0   -1    1   01
+          3         3       4        0        0           1   4    12   1  1  4    1  0  1  0  0  4      1    0    0    0    1    0    0    0    1   0011
+          4         4       6        0        0           2   4     8   1  1  4    1  0  1  0  1  4      1    0    0    0    1    0    0   -1    1   0011
+          5         5      12        0        0           3   4     4   1  1  4    1  0  1  0  2  4      1    0    0    0    1    0    0   -2    1   0011
+          6         6       3        0        0           4   4    16   1  1  4    1  0  1  0  3  4      1    0    0    0    1    0    0   -3    1   0011
+          7         7       3        0        0           5   4    16   1  1  4    1  0  1  1  2  4      1    0    0    0    1    0   -1   -2    1   0011

@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH -t 02:00:00
+#SBATCH -N 1
+#SBATCH -n 8
+#SBATCH -J afm4
+#SBATCH --output=log
+#SBATCH --error=err
+
+module load mpi/impi-5.0.3 intel/mkl-11.2.3 vasp/vasp-5.4.4
+mpirun vasp_std

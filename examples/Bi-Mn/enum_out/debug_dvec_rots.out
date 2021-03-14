@@ -1,0 +1,56 @@
+The integer vectors in the final columns of each
+permutation listing describe how a list 1, 2, ...
+gets permuted. So "2 1" implies that element 2 is
+mapped to position 1, and the first one ends up in 
+second position.
+Number of permutations:   24
+Perm #:     1 Perm:    1
+Perm #:     2 Perm:    1
+Perm #:     3 Perm:    1
+Perm #:     4 Perm:    1
+Perm #:     5 Perm:    1
+Perm #:     6 Perm:    1
+Perm #:     7 Perm:    1
+Perm #:     8 Perm:    1
+Perm #:     9 Perm:    1
+Perm #:    10 Perm:    1
+Perm #:    11 Perm:    1
+Perm #:    12 Perm:    1
+Perm #:    13 Perm:    1
+Perm #:    14 Perm:    1
+Perm #:    15 Perm:    1
+Perm #:    16 Perm:    1
+Perm #:    17 Perm:    1
+Perm #:    18 Perm:    1
+Perm #:    19 Perm:    1
+Perm #:    20 Perm:    1
+Perm #:    21 Perm:    1
+Perm #:    22 Perm:    1
+Perm #:    23 Perm:    1
+Perm #:    24 Perm:    1
+
+Shifts required to move point inside unit cell after operation:
+Perm #:  1 iD: 1  v:  13.5017   0.0000   0.0000
+Perm #:  2 iD: 1  v:  13.5017   0.0000   0.0000
+Perm #:  3 iD: 1  v:  13.5017   0.0000   0.0000
+Perm #:  4 iD: 1  v:  13.5017   0.0000   0.0000
+Perm #:  5 iD: 1  v:  13.5017   0.0000   0.0000
+Perm #:  6 iD: 1  v:  13.5017   0.0000   0.0000
+Perm #:  7 iD: 1  v:   6.7508  11.6928   0.0000
+Perm #:  8 iD: 1  v:   6.7508  11.6928   0.0000
+Perm #:  9 iD: 1  v:   6.7508  11.6928   0.0000
+Perm #: 10 iD: 1  v:   6.7508  11.6928   0.0000
+Perm #: 11 iD: 1  v:   6.7508   3.8976  11.0241
+Perm #: 12 iD: 1  v:   6.7508   3.8976  11.0241
+Perm #: 13 iD: 1  v:   0.0000   0.0000   0.0000
+Perm #: 14 iD: 1  v:   0.0000   0.0000   0.0000
+Perm #: 15 iD: 1  v:   6.7508   3.8976  11.0241
+Perm #: 16 iD: 1  v:   6.7508   3.8976  11.0241
+Perm #: 17 iD: 1  v:   0.0000   0.0000   0.0000
+Perm #: 18 iD: 1  v:   0.0000   0.0000   0.0000
+Perm #: 19 iD: 1  v:   6.7508  11.6928   0.0000
+Perm #: 20 iD: 1  v:   6.7508  11.6928   0.0000
+Perm #: 21 iD: 1  v:   6.7508   3.8976  11.0241
+Perm #: 22 iD: 1  v:   6.7508   3.8976  11.0241
+Perm #: 23 iD: 1  v:   0.0000   0.0000   0.0000
+Perm #: 24 iD: 1  v:   0.0000   0.0000   0.0000

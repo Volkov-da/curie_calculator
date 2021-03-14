@@ -1,0 +1,13 @@
+Bi6Fe2 GGA FM
+    SYSTEM = "Bi6Fe2"
+
+Relaxation:
+    ISIF   =    3
+    EDIFF  =    1E-6
+    ENCUT  =    520
+    IBRION =    2
+    ISTART =    0
+
+Magnetism:
+    ISPIN   =   2
+    MAGMOM  =   0 0 0 0 0 0 2 2

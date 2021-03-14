@@ -1,0 +1,16 @@
+EuO GGA AFM
+    SYSTEM = "EuO"
+
+    NCORE = 4
+
+Relaxation:
+    IBRION =    2
+    EDIFF  =    1E-5
+    EDIFFG  =   1E-6
+    ENCUT  =    450
+    IBRION =    2
+    ISTART =    0
+
+Magnetism:
+    ISPIN   =   2
+    MAGMOM  =   0 7.0

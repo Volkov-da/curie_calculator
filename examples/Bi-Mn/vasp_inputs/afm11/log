@@ -1,0 +1,104 @@
+=========================================
+SLURM_JOB_ID = 27134532
+SLURM_JOB_NODELIST = lnode55
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 8
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 441451
+CUDA_VISIBLE_DEVICES = 
+==========================================
+ running on    8 total cores
+ distrk:  each k-point on    8 cores,    1 groups
+ distr:  one band on    1 cores,    8 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 28 2018 00:24:27) complex          
+  
+ POSCAR found type information on POSCAR  Mn Bi
+ POSCAR found :  2 types and      12 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|      For optimal performance we recommend to set                            |
+|        NCORE= 4 - approx SQRT( number of cores)                             |
+|      NCORE specifies how many cores store one orbital (NPAR=cpu/NCORE).     |
+|      This setting can  greatly improve the performance of VASP for DFT.     |
+|      The default,   NCORE=1            might be grossly inefficient         |
+|      on modern multi-core architectures or massively parallel machines.     |
+|      Do your own testing !!!!                                               |
+|      Unfortunately you need to use the default for GW and RPA calculations. |
+|      (for HF NCORE is supported but not extensively tested yet)             |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+ generate k-points for:    3    2    2
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ WARNING: random wavefunctions but no delay for mixing, default for NELMDL
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.511080493378E+03    0.51108E+03   -0.22086E+04  1536   0.115E+03
+DAV:   2     0.497182275704E+01   -0.50611E+03   -0.48707E+03  1536   0.346E+02
+DAV:   3    -0.681926834747E+02   -0.73165E+02   -0.68360E+02  2496   0.127E+02
+DAV:   4    -0.750268778991E+02   -0.68342E+01   -0.67124E+01  2688   0.499E+01
+DAV:   5    -0.753348388736E+02   -0.30796E+00   -0.30406E+00  2584   0.112E+01    0.235E+01
+DAV:   6    -0.857803008844E+02   -0.10445E+02   -0.22501E+02  2768   0.138E+02    0.577E+01
+DAV:   7    -0.685574023389E+02    0.17223E+02   -0.94269E+01  2624   0.822E+01    0.130E+01
+DAV:   8    -0.695108664512E+02   -0.95346E+00   -0.18954E+01  2832   0.548E+01    0.126E+01
+DAV:   9    -0.691152624281E+02    0.39560E+00   -0.75086E+00  2888   0.349E+01    0.463E+00
+DAV:  10    -0.691201556072E+02   -0.48932E-02   -0.15710E+00  2736   0.141E+01    0.345E+00
+DAV:  11    -0.690599115398E+02    0.60244E-01   -0.50337E-01  2808   0.113E+01    0.187E+00
+DAV:  12    -0.690723686191E+02   -0.12457E-01   -0.15973E-01  2712   0.492E+00    0.131E+00
+DAV:  13    -0.690870797778E+02   -0.14711E-01   -0.53819E-02  2768   0.234E+00    0.929E-01
+DAV:  14    -0.690851502332E+02    0.19295E-02   -0.19801E-02  2600   0.232E+00    0.511E-01
+DAV:  15    -0.690848575364E+02    0.29270E-03   -0.11992E-02  2688   0.152E+00    0.299E-01
+DAV:  16    -0.690845426345E+02    0.31490E-03   -0.50130E-03  2632   0.941E-01    0.102E-01
+DAV:  17    -0.690846253836E+02   -0.82749E-04   -0.80407E-04  2576   0.211E-01    0.791E-02
+DAV:  18    -0.690846491876E+02   -0.23804E-04   -0.14344E-04  2552   0.151E-01    0.461E-02
+DAV:  19    -0.690846815460E+02   -0.32358E-04   -0.75248E-05  2648   0.109E-01    0.299E-02
+DAV:  20    -0.690846940697E+02   -0.12524E-04   -0.33083E-05  2704   0.845E-02    0.192E-02
+DAV:  21    -0.690847021737E+02   -0.81040E-05   -0.15391E-05  2600   0.497E-02    0.923E-03
+DAV:  22    -0.690847051883E+02   -0.30147E-05   -0.54064E-06  1968   0.224E-02    0.382E-03
+DAV:  23    -0.690847058857E+02   -0.69735E-06   -0.11527E-06  1192   0.110E-02
+   1 F= -.69084706E+02 E0= -.69087537E+02  d E =0.849387E-02  mag=    -0.0000

@@ -1,0 +1,18 @@
+SYSTEM = Co-hcp
+
+PREC = High
+NCORE = 4
+ENCUT = 500
+EDIFF = 1e-6
+
+ISMEAR = -5 
+SIGMA = 0.05
+NBANDS = 48
+
+LCHARG = .FALSE.
+LWAVE = .FALSE.
+
+LORBIT = 11
+ISPIN = 2
+
+MAGMOM = 5 -5
