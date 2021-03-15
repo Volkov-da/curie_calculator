@@ -5,6 +5,7 @@ from shutil import copy, rmtree, move
 from siman.calc_manage import smart_structure_read
 from itertools import combinations
 from scipy.constants import physical_constants
+import matplotlib.pyplot as plt
 
 
 PATH_TO_ENUMLIB = '/Users/dmitry.volkov/enumlib'
@@ -636,3 +637,23 @@ def get_results(input_folder, num_of_structures, FAKE_MAGNETIC_ATOMS, SPIN):
                 'z3': z3}
 
     return out_dict
+
+
+def plot_results(Tcs):
+    min_Tc = min(Tcs)
+    max_Tc = max(Tcs)
+    points_num = len(Tcs)
+    plt.figure(figsize=(7, 7), dpi=100)
+    plt.scatter(range(points_num),
+                Tcs,
+                s=2,
+                c='red')
+    plt.grid(alpha=.4)
+    plt.yticks(range(int(round(min_Tc - 100, -2)),
+                     int(round(max_Tc + 100, -2)),
+                     100), fontsize=7)
+    plt.xticks([])
+    plt.axhline(c='black')
+    plt.xlim(0, points_num)
+    plt.ylabel(r'$T_C, K$')
+    plt.savefig('tc.jpg')
