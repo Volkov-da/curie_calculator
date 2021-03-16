@@ -8,7 +8,7 @@ from scipy.constants import physical_constants
 import matplotlib.pyplot as plt
 
 
-PATH_TO_ENUMLIB = '/Users/dmitry.volkov/enumlib'
+PATH_TO_ENUMLIB = '~/enumlib'
 
 
 def create_job_script(out_path, job_id='JobName'):
