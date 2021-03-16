@@ -1,5 +1,6 @@
 .DS_Store
 POTCAR
 *.jpg
+*.pdf
 .ipynb_checkpoints/
 __pycache__/

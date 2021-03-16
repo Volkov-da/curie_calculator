@@ -643,7 +643,7 @@ def plot_results(Tcs):
     min_Tc = min(Tcs)
     max_Tc = max(Tcs)
     points_num = len(Tcs)
-    plt.figure(figsize=(7, 7), dpi=100)
+    plt.figure(figsize=(8, 8), dpi=150)
     plt.scatter(range(points_num),
                 Tcs,
                 s=2,
@@ -656,4 +656,4 @@ def plot_results(Tcs):
     plt.axhline(c='black')
     plt.xlim(0, points_num)
     plt.ylabel(r'$T_C, K$')
-    plt.savefig('tc.jpg')
+    plt.savefig('tc.pdf')
