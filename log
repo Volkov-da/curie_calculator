@@ -1,9 +1,0 @@
-=========================================
-SLURM_JOB_ID = 29304632
-SLURM_JOB_NODELIST = lnode55
-SLURM_GPUS = 
-SLURM_CPUS_ON_NODE = 1
-SLURM_JOB_PARTITION = lenovo
-SLURM_TASK_PID = 731209
-CUDA_VISIBLE_DEVICES = 
-==========================================

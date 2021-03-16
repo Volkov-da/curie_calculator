@@ -2,5 +2,7 @@
 POTCAR
 *.jpg
 *.pdf
+log
+err
 .ipynb_checkpoints/
 __pycache__/
