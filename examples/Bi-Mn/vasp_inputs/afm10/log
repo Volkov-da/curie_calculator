@@ -1,0 +1,68 @@
+=========================================
+SLURM_JOB_ID = 29456375
+SLURM_JOB_NODELIST = lnode57
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 8
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 632105
+CUDA_VISIBLE_DEVICES = 
+==========================================
+ running on    8 total cores
+ distrk:  each k-point on    8 cores,    1 groups
+ distr:  one band on    8 cores,    1 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 28 2018 00:24:27) complex          
+  
+ POSCAR found type information on POSCAR  Mn Bi
+ POSCAR found :  2 types and      12 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|      For optimal performance we recommend to set                            |
+|        NCORE= 4 - approx SQRT( number of cores)                             |
+|      NCORE specifies how many cores store one orbital (NPAR=cpu/NCORE).     |
+|      This setting can  greatly improve the performance of VASP for DFT.     |
+|      The default,   NCORE=1            might be grossly inefficient         |
+|      on modern multi-core architectures or massively parallel machines.     |
+|      Do your own testing !!!!                                               |
+|      Unfortunately you need to use the default for GW and RPA calculations. |
+|      (for HF NCORE is supported but not extensively tested yet)             |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.550192081662E+03    0.55019E+03   -0.23725E+04290336   0.140E+03
+DAV:   2     0.214486578156E+02   -0.52874E+03   -0.51768E+03290752   0.395E+02
+DAV:   3    -0.650929019238E+02   -0.86542E+02   -0.83288E+02479544   0.149E+02
+DAV:   4    -0.743255102510E+02   -0.92326E+01   -0.90106E+01508115   0.613E+01
+DAV:   5    -0.749590803951E+02   -0.63357E+00   -0.62481E+00479776   0.161E+01    0.236E+01
+DAV:   6    -0.856832526720E+02   -0.10724E+02   -0.28015E+02535882   0.158E+02    0.563E+01
+DAV:   7    -0.677948360071E+02    0.17888E+02   -0.10518E+02498876   0.829E+01    0.958E+00
+DAV:   8    -0.686674896502E+02   -0.87265E+00   -0.15959E+01561696   0.329E+01    0.744E+00
+DAV:   9    -0.688495765753E+02   -0.18209E+00   -0.60177E+00541600   0.325E+01    0.697E+00
+DAV:  10    -0.685051255961E+02    0.34445E+00   -0.23100E+00537285   0.183E+01    0.223E+00
+DAV:  11    -0.685618173406E+02   -0.56692E-01   -0.44473E-01490136   0.494E+00    0.171E+00
+DAV:  12    -0.685731323342E+02   -0.11315E-01   -0.15568E-01530002   0.593E+00    0.146E+00
+DAV:  13    -0.685710387612E+02    0.20936E-02   -0.53379E-02492913   0.299E+00    0.446E-01
+DAV:  14    -0.685720183834E+02   -0.97962E-03   -0.14896E-02502424   0.116E+00    0.300E-01
+DAV:  15    -0.685718869596E+02    0.13142E-03   -0.48339E-03519324   0.929E-01    0.163E-01
+DAV:  16    -0.685718449467E+02    0.42013E-04   -0.19409E-03546520   0.585E-01    0.839E-02
+DAV:  17    -0.685718454172E+02   -0.47042E-06   -0.47291E-04503253   0.256E-01    0.576E-02
+DAV:  18    -0.685718406805E+02    0.47366E-05   -0.22009E-04500922   0.220E-01    0.302E-02
+DAV:  19    -0.685718430618E+02   -0.23812E-05   -0.47025E-05496698   0.933E-02    0.971E-03
+DAV:  20    -0.685718452600E+02   -0.21983E-05   -0.12603E-05411585   0.383E-02    0.808E-03
+DAV:  21    -0.685718458875E+02   -0.62745E-06   -0.35089E-06273888   0.342E-02
+   1 F= -.68571846E+02 E0= -.68571495E+02  d E =-.105255E-02  mag=    -0.0000

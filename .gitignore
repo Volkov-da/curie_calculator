@@ -2,7 +2,23 @@
 POTCAR
 *.jpg
 *.pdf
-log
 err
 .ipynb_checkpoints/
 __pycache__/
+
+#vasp outputs
+CHG
+CHGCAR
+CONTCAR
+DOSCAR
+EIGENVAL
+IBZKPT
+OSZICAR
+PCDAT
+REPORT
+vasprun.xml
+WAVECAR
+XDATCAR
+PROCAR
+OUTCAR
+

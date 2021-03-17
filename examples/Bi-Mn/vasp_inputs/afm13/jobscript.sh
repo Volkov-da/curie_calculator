@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --ntasks=8
-#SBATCH --time=06:00:00
+#SBATCH --ntasks=32
+#SBATCH --time=10:00:00
 #SBATCH --job-name=afm13
 #SBATCH --output=log
 #SBATCH --error=err
