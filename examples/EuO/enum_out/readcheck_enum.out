@@ -1,0 +1,19 @@
+Title: Eu1 O1                                                                          
+Lattice type (bulk or surface): BULK
+  3.593   1.796   1.796
+  0.000   3.111   1.037
+  0.000   0.000   2.933
+Number of labels:  3
+Number of d-vectors:   2
+  0.0000   0.0000   0.0000 0/1/
+  3.5927   2.0742   1.4667 2/
+Min and Max cell sizes:  2  4
+Epsilon:   0.1000E-06
+full/part mode: FULL
+Concentration ranges are specified. Will run with using  the fixed-concentration algorithm.
+Type 1 conc:25/**--25/**
+Type 2 conc:25/**--25/**
+Type 3 conc:50/**--50/**
+
+--<< Successfully read the struct_enum.in file >>--
+

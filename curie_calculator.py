@@ -646,7 +646,7 @@ def plot_results(Tcs):
     plt.figure(figsize=(8, 8), dpi=150)
     plt.scatter(range(points_num),
                 Tcs,
-                s=2,
+                s=3,
                 c='red')
     plt.grid(alpha=.4)
     plt.yticks(range(int(round(min_Tc - 100, -2)),

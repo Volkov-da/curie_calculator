@@ -20,8 +20,7 @@ Smearing:
 
 Magnetism:
     ISPIN   =   2
-    MAGMOM  =   7.0 0
-
+    MAGMOM  =   7.0 -7.0 0.0 0.0
 
     
 

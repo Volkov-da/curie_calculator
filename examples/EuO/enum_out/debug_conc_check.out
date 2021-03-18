@@ -1,0 +1,41 @@
+ Original concentration ranges:
+   1    1    2
+   1    1    2
+   0    0    1
+
+ Numbers for given cell size:
+   1    1    2
+   1    1    2
+   0    0    2
+
+ Number of discrete partitions:     1
+
+ generated list:
+   1    1    0
+ Original concentration ranges:
+   1    1    2
+   1    1    2
+   0    0    1
+
+ Numbers for given cell size:
+   1    2    3
+   1    2    3
+   0    0    3
+
+ Number of discrete partitions:     0
+
+ generated list:
+ Original concentration ranges:
+   1    1    2
+   1    1    2
+   0    0    1
+
+ Numbers for given cell size:
+   2    2    4
+   2    2    4
+   0    0    4
+
+ Number of discrete partitions:     1
+
+ generated list:
+   2    2    0

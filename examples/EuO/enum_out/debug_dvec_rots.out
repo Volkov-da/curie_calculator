@@ -1,0 +1,8 @@
+The integer vectors in the final columns of each
+permutation listing describe how a list 1, 2, ...
+gets permuted. So "2 1" implies that element 2 is
+mapped to position 1, and the first one ends up in 
+second position.
+Number of permutations:    2
+Perm #:     1 Perm:    1
+Perm #:     2 Perm:    1
