@@ -7,6 +7,11 @@ err
 __pycache__/
 *.ipynb
 
+#Examples folders
+vasp_inputs/
+enum_out/
+siman_inputs/
+
 
 #vasp outputs
 CHG

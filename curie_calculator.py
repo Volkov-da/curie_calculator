@@ -643,12 +643,17 @@ def get_results(input_folder: str, num_of_structures: int, FAKE_MAGNETIC_ATOMS: 
     return out_dict
 
 
-def submit_all_jobs(input_folder: str):
+def submit_all_jobs(input_folder: str) -> None:
     vasp_inputs_path = os.path.join(input_folder, 'vasp_inputs')
-    for folder_name in tqdm(os.listdir(vasp_inputs_path)):
+    initial_path = os.getcwd()
+
+    for folder_name in os.listdir(vasp_inputs_path):
         if 'afm' in folder_name:
-            jobscript_path = os.path.join(vasp_inputs_path, folder_name, 'jobscript.sh')
-            os.system(f'sbatch {jobscript_path}')
+            os.chdir(initial_path)
+            tmp_path = os.path.join(vasp_inputs_path, folder_name)
+            os.chdir(tmp_path)
+            os.system('sbatch jobscript.sh')
+    os.chdir(initial_path)
 
 
 def input_reader(path_to_input='./INPUT.txt') -> list:
