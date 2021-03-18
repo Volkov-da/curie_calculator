@@ -1,5 +1,4 @@
 PREC = Accurate
-ALGO = Fast
 
 Relaxation:
     EDIFF   =    1E-6
