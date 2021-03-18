@@ -5,6 +5,8 @@ POTCAR
 err
 .ipynb_checkpoints/
 __pycache__/
+*.ipynb
+
 
 #vasp outputs
 CHG
@@ -21,4 +23,3 @@ WAVECAR
 XDATCAR
 PROCAR
 OUTCAR
-

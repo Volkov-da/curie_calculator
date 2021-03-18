@@ -639,14 +639,22 @@ def get_results(input_folder, num_of_structures, FAKE_MAGNETIC_ATOMS, SPIN):
     return out_dict
 
 
-def plot_results(Tcs):
+def submit_jobs(input_folder):
+    vasp_inputs_path = os.path.join(input_path, 'vasp_inputs')
+    for folder_name in tqdm(os.listdir(vasp_inputs_path)):
+        if 'afm' in folder_name:
+            jobscript_path = os.path.join(vasp_inputs_path, folder_name, 'jobscript.sh')
+            os.system(f'sbatch {jobscript_path}')
+
+
+def plot_results(Tcs, input_folder):
     min_Tc = min(Tcs)
     max_Tc = max(Tcs)
     points_num = len(Tcs)
     plt.figure(figsize=(8, 8), dpi=150)
     plt.scatter(range(points_num),
                 Tcs,
-                s=3,
+                s=4,
                 c='red')
     plt.grid(alpha=.4)
     plt.yticks(range(int(round(min_Tc - 100, -2)),
@@ -656,4 +664,4 @@ def plot_results(Tcs):
     plt.axhline(c='black')
     plt.xlim(0, points_num)
     plt.ylabel(r'$T_C, K$')
-    plt.savefig('tc.pdf')
+    plt.savefig(os.path.join(input_folder, 'tc_plot.pdf'))
