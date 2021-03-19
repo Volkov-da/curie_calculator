@@ -1,4 +1,4 @@
 fake_magnetic_atoms = Po Eu
 input_folder = examples/EuO/
-num_of_structures = 9
+num_of_structures = 10
 spin = 2.5

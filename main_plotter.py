@@ -10,4 +10,4 @@ out_dict = get_results(input_folder, num_of_structures, FAKE_MAGNETIC_ATOMS, SPI
 
 Tcs = out_dict['Tc_list']
 
-plot_results(Tcs)
+plot_results(Tcs, input_folder)
