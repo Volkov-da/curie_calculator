@@ -35,7 +35,7 @@ mpirun vasp_std"""
         job.writelines(job_script_text)
 
 
-def poscar_cleaner(in_data):
+def poscar_cleaner(in_data) -> list:
     """
     Args:
         in_data (list) - list of rows from any POSCAR type file
@@ -56,7 +56,7 @@ def poscar_cleaner(in_data):
     return out_data
 
 
-def ratio_corrector(in_data: list):
+def ratio_corrector(in_data: list) -> list:
     out_data = in_data.copy()
     stech_list = [int(i) for i in in_data[5].split()]
     corrected_stech = [sum(stech_list[:2]), *stech_list[2:]]
@@ -66,7 +66,7 @@ def ratio_corrector(in_data: list):
     return out_data
 
 
-def atom_type_corrector(in_data: list, custom_atom_type=None):
+def atom_type_corrector(in_data: list, custom_atom_type=None) -> list:
     """
     Args:
         in_data           (list)  - list of lines from POSCAR type file.
@@ -98,7 +98,7 @@ def poscar_pretiffier(in_path: str, out_path: str):
         out_f.writelines(out_data)
 
 
-def get_number_of_structures(enum_out='struct_enum.out'):
+def get_number_of_structures(enum_out='struct_enum.out') -> int:
     """
     Read file 'struct_enum.out' and
     returns number of generated supercells after
@@ -152,7 +152,7 @@ def run_enum(in_path: str):
     os.system(enum_exe_path)
 
 
-def get_structures(path_to_enum=PATH_TO_ENUMLIB, num_of_structures=None):
+def get_structures(path_to_enum=PATH_TO_ENUMLIB, num_of_structures=None) -> list:
     """
     This function read 'struct_enum.out'
     and generate POSCAR type files for all produced supercells.
@@ -170,7 +170,7 @@ def get_magmom_list(in_incar_data: list):
     return magmom_list
 
 
-def get_true_ratio(magmom_list: list, in_poscar_data: list):
+def get_true_ratio(magmom_list: list, in_poscar_data: list) -> int:
     """
     Args:
         magmom_list    (list) - list of magnetic moments
@@ -185,7 +185,7 @@ def get_true_ratio(magmom_list: list, in_poscar_data: list):
     return true_ratio
 
 
-def magmom_lane_corrector(magmom_list: list, true_ratio: int):
+def magmom_lane_corrector(magmom_list: list, true_ratio: int) -> list:
     """
     Args:
         magmom_list (list)  - list of magnetic atoms from uncorrected INCAR file
@@ -211,7 +211,7 @@ def magmom_lane_corrector(magmom_list: list, true_ratio: int):
     return new_magmom_list
 
 
-def incar_our_list_creator(in_incar_data, new_magmom_list):
+def incar_our_list_creator(in_incar_data: list, new_magmom_list: list):
     """
     Args:
         in_incar_data   (list)
@@ -281,7 +281,7 @@ def vasp_inputs_creator(num_of_structures=None, out_dir='vasp_inputs', input_dir
         copy(os.path.join(input_directory, 'KPOINTS'), os.path.join(tmp_path, 'KPOINTS'))
 
 
-def clean_all(input_folder: str):
+def clean_all(input_folder: str) -> None:
     vasp_usless = [file for file in os.listdir(input_folder) if 'vasp.' in file]
     usless_files = ['debug_conc_check.out',
                     'debug_dvec_rots.out',
@@ -320,7 +320,7 @@ def afm_atoms_creator(in_data: list, custom_atom='Po'):
     return out_data
 
 
-def siman_poscar_writer(in_path: str, out_path: str, custom_atom='Po'):
+def siman_poscar_writer(in_path: str, out_path: str, custom_atom='Po') -> None:
     """
     Args:
         in_path  (str)  -   path to the POSCAR type file which needs to be made
@@ -342,7 +342,7 @@ def siman_inputs_creator(num_of_structures: int, out_dir='siman_inputs'):
     if not os.path.exists(out_dir):
         os.mkdir(out_dir)
     vasp_files = [file_name for file_name in os.listdir() if 'vasp.' in file_name]
-    for i in range(1, num_of_structures):
+    for i in range(1, num_of_structures + 1):
         siman_poscar_writer(f'vasp.{i}', os.path.join(out_dir, f'POSCAR_{i}'))
 
 
@@ -419,7 +419,7 @@ def count_nn(path_to_poscar: str, magnetic_atoms: list):
                             with an opposite spins (up/down).
                             your POSCAR should contain this two types of atoms.
     Returns:
-        dict(distance : number_of_neibours)
+        dict{distance : number_of_neibours}
     """
     if not os.path.exists(path_to_poscar):
         print(f'File {path_to_poscar} does not exist!')
@@ -446,7 +446,7 @@ def count_nn(path_to_poscar: str, magnetic_atoms: list):
     return dist_neighbNum
 
 
-def get_coefficients(poscars_to_check, fake_magnetic_atoms, up_to=2):
+def get_coefficients(poscars_to_check: list, fake_magnetic_atoms: list, up_to=2):
     """
     As a result this function will return coefficients,
     For E0, J1 and J2 for the Hisenber model in a form of matrix.
@@ -492,15 +492,15 @@ def get_exchange_couplings(nn_matrix, energies_afm, spin: float):
                                  -41.59929])
 
         get_exchange_coeff(nn_matrix, energies_afm)
-        >>>-41.609258249 -0.000105484126 -5.0685185185e-05
+        >>>-41.609258249 0.000105484126 5.0685185185e-05
     """
     nn_matrix = nn_matrix * spin * (spin + 1)
     nn_matrix = np.append(np.ones([len(nn_matrix), 1]), nn_matrix, 1)
     E0, J1, J2 = np.linalg.solve(nn_matrix, energies_afm)
-    return E0, J1, J2
+    return E0, abs(J1), abs(J2)
 
 
-def calculate_Tc(J1: float, J2: float, z1: int, z2: int):
+def calculate_Tc(J1: float, J2: float, z1: int, z2: int) -> float:
     k_B = physical_constants['Boltzmann constant in eV/K'][0]
     T_c = (J1 * z1 + J2 * z2) / (3 * k_B)
     return T_c

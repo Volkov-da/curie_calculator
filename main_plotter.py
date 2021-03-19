@@ -1,13 +1,8 @@
-from curie_calculator import get_results, plot_results
+from curie_calculator import get_results, plot_results, input_reader
 import matplotlib.pyplot as plt
 
-FAKE_MAGNETIC_ATOMS = ['Po', 'Eu']
-input_folder = 'examples/EuO/'
-num_of_structures = 9
-SPIN = 5/2
-
-out_dict = get_results(input_folder, num_of_structures, FAKE_MAGNETIC_ATOMS, SPIN)
-
+fake_magnetic_atoms, input_folder, num_of_structures, spin = input_reader()
+out_dict = get_results(input_folder, num_of_structures, fake_magnetic_atoms, spin)
 Tcs = out_dict['Tc_list']
-
 plot_results(Tcs, input_folder)
+print(out_dict)
