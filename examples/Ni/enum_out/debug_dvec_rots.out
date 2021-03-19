@@ -1,0 +1,54 @@
+The integer vectors in the final columns of each
+permutation listing describe how a list 1, 2, ...
+gets permuted. So "2 1" implies that element 2 is
+mapped to position 1, and the first one ends up in 
+second position.
+Number of permutations:   48
+Perm #:     1 Perm:    1
+Perm #:     2 Perm:    1
+Perm #:     3 Perm:    1
+Perm #:     4 Perm:    1
+Perm #:     5 Perm:    1
+Perm #:     6 Perm:    1
+Perm #:     7 Perm:    1
+Perm #:     8 Perm:    1
+Perm #:     9 Perm:    1
+Perm #:    10 Perm:    1
+Perm #:    11 Perm:    1
+Perm #:    12 Perm:    1
+Perm #:    13 Perm:    1
+Perm #:    14 Perm:    1
+Perm #:    15 Perm:    1
+Perm #:    16 Perm:    1
+Perm #:    17 Perm:    1
+Perm #:    18 Perm:    1
+Perm #:    19 Perm:    1
+Perm #:    20 Perm:    1
+Perm #:    21 Perm:    1
+Perm #:    22 Perm:    1
+Perm #:    23 Perm:    1
+Perm #:    24 Perm:    1
+Perm #:    25 Perm:    1
+Perm #:    26 Perm:    1
+Perm #:    27 Perm:    1
+Perm #:    28 Perm:    1
+Perm #:    29 Perm:    1
+Perm #:    30 Perm:    1
+Perm #:    31 Perm:    1
+Perm #:    32 Perm:    1
+Perm #:    33 Perm:    1
+Perm #:    34 Perm:    1
+Perm #:    35 Perm:    1
+Perm #:    36 Perm:    1
+Perm #:    37 Perm:    1
+Perm #:    38 Perm:    1
+Perm #:    39 Perm:    1
+Perm #:    40 Perm:    1
+Perm #:    41 Perm:    1
+Perm #:    42 Perm:    1
+Perm #:    43 Perm:    1
+Perm #:    44 Perm:    1
+Perm #:    45 Perm:    1
+Perm #:    46 Perm:    1
+Perm #:    47 Perm:    1
+Perm #:    48 Perm:    1

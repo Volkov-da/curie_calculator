@@ -1,4 +1,6 @@
 PREC = Accurate
+    LWAVE   =    .FALSE.             # WAVECAR off
+    LCHARG  =    .FALSE.             # CHGCAR & CHG off
 
 Relaxation:
     EDIFF   =    1E-6
