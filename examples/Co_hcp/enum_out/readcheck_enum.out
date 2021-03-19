@@ -1,0 +1,18 @@
+Title: Co2                                                                             
+Lattice type (bulk or surface): BULK
+  2.492  -1.246   0.000
+  0.000   2.158   0.000
+  0.000   0.000   4.016
+Number of labels:  2
+Number of d-vectors:   2
+  1.2459   0.7193   3.0117 0/1/
+ -0.0000   1.4387   1.0039 0/1/
+Min and Max cell sizes:  1  6
+Epsilon:   0.1000E-06
+full/part mode: FULL
+Concentration ranges are specified. Will run with using  the fixed-concentration algorithm.
+Type 1 conc: 1/ 2-- 1/ 2
+Type 2 conc: 1/ 2-- 1/ 2
+
+--<< Successfully read the struct_enum.in file >>--
+

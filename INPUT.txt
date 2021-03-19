@@ -1,4 +1,4 @@
-fake_magnetic_atoms = Po Ni
-input_folder = examples/Ni/
-num_of_structures = 10
-spin = 1
+fake_magnetic_atoms = Po Co
+input_folder = examples/Co_hcp/
+num_of_structures = 4
+spin = 1.5
