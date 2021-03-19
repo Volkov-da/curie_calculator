@@ -7,6 +7,7 @@ NCORE = 4
 Relaxation:
     ISIF    =    3
     EDIFF   =    1E-6
+    EDIFFG  =    1E-5
     ENCUT   =    520
     IBRION  =    2
     LORBIT  =    11
@@ -26,4 +27,4 @@ Files:
 
 Magnetism
     ISPIN   =    2
-    MAGMOM  =    2 * 2.0
+    MAGMOM  =    2.0 2.0
