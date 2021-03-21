@@ -502,7 +502,7 @@ def get_exchange_couplings(nn_matrix, energies_afm, spin: float):
 
 def calculate_Tc(J1: float, J2: float, z1: int, z2: int) -> float:
     k_B = physical_constants['Boltzmann constant in eV/K'][0]
-    T_c = (J1 * z1 + J2 * z2) / (3 * k_B)
+    T_c = 2 * (J1 * z1 + J2 * z2) / (3 * k_B)
     return T_c
 
 
