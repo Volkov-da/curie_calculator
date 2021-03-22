@@ -1,11 +1,9 @@
 .DS_Store
 POTCAR
-*.jpg
-*.pdf
+
 err
 .ipynb_checkpoints/
 __pycache__/
-*.ipynb
 
 #vasp outputs
 CHG

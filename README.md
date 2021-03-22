@@ -6,3 +6,7 @@ Code is currently under development. Now it working fine for few materials (e.g 
 ```
 git clone --recursive https://github.com/Volkov-da/curie_calculator.git
 ```
+
+```
+pip3 install siman
+```
