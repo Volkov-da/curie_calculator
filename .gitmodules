@@ -1,0 +1,3 @@
+[submodule "enumlib"]
+	path = enumlib
+	url = https://github.com/msg-byu/enumlib.git
