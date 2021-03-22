@@ -21,3 +21,42 @@ vasprun.xml
 WAVECAR
 XDATCAR
 PROCAR
+
+
+\#*#
+\#*
+.#*
+
+# Compiled Object files
+src/compile.log
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.x
+
+# version files
+version.enum
