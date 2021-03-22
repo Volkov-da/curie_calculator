@@ -657,6 +657,19 @@ def submit_all_jobs(input_folder: str) -> None:
 
 
 def input_reader(path_to_input='./INPUT.txt') -> list:
+    """
+    Read INPUT.txt file and return input data
+    Return:
+        input_folder        (str)
+        num_of_structures   (int)
+        fake_magnetic_atoms (list)
+        spin                (float)
+    Example:
+        examples/Bi-Mn/
+        14
+        ['Po', 'Mn']
+        2.5
+    """
     with open(path_to_input) as in_f:
         in_data = in_f.readlines()
     inputs_dict = dict()
@@ -670,31 +683,46 @@ def input_reader(path_to_input='./INPUT.txt') -> list:
         elif 'spin' in line:
             spin = float(line.split('=')[1])
 
-    return fake_magnetic_atoms, input_folder, num_of_structures, spin
+    return input_folder, num_of_structures, fake_magnetic_atoms, spin
 
 
-def plot_results(Tcs: list, input_folder: str):
-    min_Tc = min(Tcs)
-    max_Tc = max(Tcs)
-    points_num = len(Tcs)
-    plt.figure(figsize=(8, 8), dpi=150)
-    plt.scatter(range(points_num),
-                Tcs,
-                s=4,
-                c='red')
+def plot_TCs(TCs: list, input_folder: str):
+    plt.figure(figsize=(8, 6), dpi=100)
+    plt.scatter(range(1, len(TCs) + 1), TCs, s=4, c='red')
+    plt.ylabel('$T_C, K$', fontsize=16)
     plt.grid(alpha=.4)
-    plt.yticks(range(int(round(min_Tc - 100, -2)),
-                     int(round(max_Tc + 100, -2)),
-                     100), fontsize=7)
+
+    text = f'mean: {TCs.mean():.2f} K\nmax  : {TCs.max():.2f} K\nmin   : {TCs.min():.2f} K'
+    props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
+
+    plt.text(1, max(TCs), text, verticalalignment='top', bbox=props)
     plt.xticks([])
-    plt.axhline(c='black')
-    plt.xlim(0, points_num)
-    plt.ylabel(r'$T_C, K$')
     plt.savefig(os.path.join(input_folder, 'tc_plot.pdf'))
 
 
+def plot_Etot(energies_afm: list, nn_matrix: list, input_folder: str):
+    strucutre_ids = range(1, len(energies_afm) + 1)
+    plt.figure(figsize=(8, 6), dpi=100)
+    plt.scatter(strucutre_ids, energies_afm)
+    plt.grid(alpha=.4)
+    plt.xlabel('afm structure id')
+    plt.ylabel('$E_{tot}, eV$', fontsize=16)
+
+    for i in strucutre_ids:
+        plt.annotate(nn_matrix[i - 1], (i + 0.05, energies_afm[i - 1]))
+
+    text = f"""
+$dE$    :  {(energies_afm.max() - energies_afm.min()) * 1000 :.2f}   meV
+max : {energies_afm.max() * 1000:.2f}  meV
+min  : {energies_afm.min() * 1000:.2f}   meV
+"""
+    props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
+    plt.text(1, min(energies_afm), text, verticalalignment='bottom', bbox=props)
+    plt.savefig(os.path.join(input_folder, 'Etot_plot.pdf'))
+
+
 def main_runner():
-    fake_magnetic_atoms, input_folder, num_of_structures, spin = input_reader()
+    input_folder, num_of_structures, fake_magnetic_atoms, spin = input_reader()
     initial_path = os.getcwd()
     run_enum(input_folder)
     get_structures(num_of_structures=num_of_structures)
