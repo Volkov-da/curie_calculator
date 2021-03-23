@@ -656,6 +656,7 @@ def input_reader(path_to_input='./INPUT.txt') -> list:
 
 
 def plot_TCs(TCs: list, input_folder: str):
+    TCs = np.array(TCs)
     plt.figure(figsize=(8, 6), dpi=100)
     plt.scatter(range(1, len(TCs) + 1), TCs, s=4, c='red')
     plt.ylabel('$T_C, K$', fontsize=16)

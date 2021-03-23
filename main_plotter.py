@@ -1,4 +1,4 @@
-from curie_calculator import get_results, plot_results, input_reader
+from curie_calculator import get_results, plot_TCs, plot_Etot, input_reader
 import matplotlib.pyplot as plt
 
 input_folder, num_of_structures, fake_magnetic_atoms, spin = input_reader()
