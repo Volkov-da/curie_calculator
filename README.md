@@ -4,9 +4,11 @@ Code is currently under development. Now it working fine for few materials (e.g 
 
 
 ```
-git clone --recursive https://github.com/Volkov-da/curie_calculator.git
-```
+1. git clone --recursive https://github.com/Volkov-da/curie_calculator.git
 
-```
-pip3 install siman
+2. pip3 install siman
+
+3. chmod +x install.sh
+
+4. ./install.sh
 ```
