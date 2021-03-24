@@ -25,6 +25,6 @@ Files:
    LWAVE    =    False
 
 
-Magnetism
+Magnetism:
     ISPIN   =    2
     MAGMOM  =    1.587 1.587

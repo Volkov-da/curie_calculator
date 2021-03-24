@@ -8,7 +8,7 @@ Code is currently under development. Now it working fine for few materials (e.g 
 
 2. pip3 install siman
 
-3. chmod +x install.sh
+3. chmod +x install.sh (if needed)
 
 4. ./install.sh
 ```
