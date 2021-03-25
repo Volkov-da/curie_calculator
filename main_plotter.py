@@ -11,4 +11,6 @@ plot_E_tot(out_dict['energies_afm'], out_dict['nn_matrix'], input_folder)
 plot_TCs(out_dict['Tc_list'], input_folder)
 plot_E_geom(out_dict['Eg_list'], out_dict['combination_list'], input_folder)
 
+print(out_dict)
+
 print(f'Success! Now you can check your "{input_folder}" folder for results.')

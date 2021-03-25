@@ -1,10 +1,10 @@
 =========================================
-SLURM_JOB_ID = 29456390
-SLURM_JOB_NODELIST = lnode45
+SLURM_JOB_ID = 31883057
+SLURM_JOB_NODELIST = lnode46
 SLURM_GPUS = 
 SLURM_CPUS_ON_NODE = 8
 SLURM_JOB_PARTITION = lenovo
-SLURM_TASK_PID = 3308910
+SLURM_TASK_PID = 1318407
 CUDA_VISIBLE_DEVICES = 
 ==========================================
  running on    8 total cores
@@ -39,30 +39,64 @@ CUDA_VISIBLE_DEVICES =
  ----------------------------------------------------------------------------- 
 
  LDA part: xc-table for Pade appr. of Perdew
+ generate k-points for:    3    2    2
+
+
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
  POSCAR, INCAR and KPOINTS ok, starting setup
  FFT: planning ...
  WAVECAR not read
  entering main loop
        N       E                     dE             d eps       ncg     rms          rms(c)
-DAV:   1     0.550360921125E+03    0.55036E+03   -0.23729E+04290336   0.140E+03
-DAV:   2     0.214865332864E+02   -0.52887E+03   -0.51783E+03290632   0.395E+02
-DAV:   3    -0.652096649453E+02   -0.86696E+02   -0.83407E+02479866   0.149E+02
-DAV:   4    -0.744414265868E+02   -0.92318E+01   -0.90043E+01508594   0.612E+01
-DAV:   5    -0.750719792859E+02   -0.63055E+00   -0.62154E+00477752   0.161E+01    0.236E+01
-DAV:   6    -0.855555320361E+02   -0.10484E+02   -0.27775E+02529060   0.158E+02    0.562E+01
-DAV:   7    -0.677813574745E+02    0.17774E+02   -0.11234E+02498712   0.849E+01    0.911E+00
-DAV:   8    -0.686940726841E+02   -0.91272E+00   -0.12802E+01527300   0.235E+01    0.556E+00
-DAV:   9    -0.688785820052E+02   -0.18451E+00   -0.34421E+00553392   0.259E+01    0.658E+00
-DAV:  10    -0.686292835387E+02    0.24930E+00   -0.15265E+00539600   0.182E+01    0.234E+00
-DAV:  11    -0.686958453894E+02   -0.66562E-01   -0.31694E-01515280   0.494E+00    0.171E+00
-DAV:  12    -0.687058786637E+02   -0.10033E-01   -0.93189E-02503784   0.474E+00    0.109E+00
-DAV:  13    -0.687092582138E+02   -0.33796E-02   -0.45459E-02506474   0.302E+00    0.444E-01
-DAV:  14    -0.687092616451E+02   -0.34313E-05   -0.10605E-02492776   0.154E+00    0.162E-01
-DAV:  15    -0.687094622304E+02   -0.20059E-03   -0.31891E-03521370   0.671E-01    0.122E-01
-DAV:  16    -0.687094327791E+02    0.29451E-04   -0.80485E-04486240   0.398E-01    0.667E-02
-DAV:  17    -0.687094394679E+02   -0.66888E-05   -0.19430E-04496850   0.193E-01    0.373E-02
-DAV:  18    -0.687094453051E+02   -0.58372E-05   -0.84075E-05514272   0.124E-01    0.261E-02
-DAV:  19    -0.687094461828E+02   -0.87769E-06   -0.41742E-05501154   0.981E-02    0.122E-02
-DAV:  20    -0.687094500184E+02   -0.38356E-05   -0.13212E-05429552   0.434E-02    0.861E-03
-DAV:  21    -0.687094505734E+02   -0.55503E-06   -0.35245E-06258981   0.322E-02
-   1 F= -.68709451E+02 E0= -.68709433E+02  d E =-.532679E-04  mag=     0.0000
+DAV:   1     0.549466248580E+03    0.54947E+03   -0.23750E+04  1376   0.140E+03
+DAV:   2     0.209448862059E+02   -0.52852E+03   -0.51735E+03  1376   0.394E+02
+DAV:   3    -0.652794322560E+02   -0.86224E+02   -0.82936E+02  2296   0.149E+02
+DAV:   4    -0.743792271218E+02   -0.90998E+01   -0.88655E+01  2392   0.612E+01
+DAV:   5    -0.749880809805E+02   -0.60885E+00   -0.60296E+00  2272   0.160E+01    0.235E+01
+DAV:   6    -0.847840395559E+02   -0.97960E+01   -0.27189E+02  2524   0.156E+02    0.543E+01
+DAV:   7    -0.680383791569E+02    0.16746E+02   -0.10072E+02  2344   0.833E+01    0.938E+00
+DAV:   8    -0.689000093233E+02   -0.86163E+00   -0.13797E+01  2608   0.310E+01    0.689E+00
+DAV:   9    -0.690558187730E+02   -0.15581E+00   -0.48327E+00  2544   0.307E+01    0.632E+00
+DAV:  10    -0.687900781414E+02    0.26574E+00   -0.15560E+00  2544   0.168E+01    0.233E+00
+DAV:  11    -0.688227335590E+02   -0.32655E-01   -0.45418E-01  2448   0.757E+00    0.186E+00
+DAV:  12    -0.688334625990E+02   -0.10729E-01   -0.13952E-01  2432   0.482E+00    0.108E+00
+DAV:  13    -0.688376639231E+02   -0.42013E-02   -0.44360E-02  2384   0.275E+00    0.565E-01
+DAV:  14    -0.688378528634E+02   -0.18894E-03   -0.15746E-02  2392   0.191E+00    0.266E-01
+DAV:  15    -0.688378541506E+02   -0.12872E-05   -0.39259E-03  2296   0.965E-01    0.129E-01
+DAV:  16    -0.688378837977E+02   -0.29647E-04   -0.12112E-03  2336   0.416E-01    0.787E-02
+DAV:  17    -0.688378907002E+02   -0.69025E-05   -0.33389E-04  2464   0.279E-01    0.456E-02
+DAV:  18    -0.688378971059E+02   -0.64058E-05   -0.98143E-05  2352   0.148E-01    0.256E-02
+DAV:  19    -0.688379033065E+02   -0.62006E-05   -0.37242E-05  2320   0.830E-02    0.160E-02
+DAV:  20    -0.688379054079E+02   -0.21014E-05   -0.17362E-05  2216   0.621E-02    0.860E-03
+DAV:  21    -0.688379072428E+02   -0.18349E-05   -0.53577E-06  1440   0.394E-02    0.482E-03
+DAV:  22    -0.688379078015E+02   -0.55869E-06   -0.19337E-06  1224   0.186E-02
+   1 F= -.68837908E+02 E0= -.68837985E+02  d E =0.230488E-03  mag=     0.0001

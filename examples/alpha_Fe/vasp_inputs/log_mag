@@ -1,0 +1,287 @@
+afm10/OUTCAR: magnetization (x)
+afm10/OUTCAR- 
+afm10/OUTCAR-# of ion       s       p       d       tot
+afm10/OUTCAR-------------------------------------------
+afm10/OUTCAR-    1        0.019   0.023   2.021   2.063
+afm10/OUTCAR-    2        0.019   0.023   2.021   2.063
+afm10/OUTCAR-    3        0.005   0.020   2.076   2.101
+afm10/OUTCAR-    4       -0.005  -0.020  -2.076  -2.101
+afm10/OUTCAR-    5       -0.019  -0.023  -2.021  -2.063
+afm10/OUTCAR-    6       -0.019  -0.023  -2.021  -2.063
+afm10/OUTCAR---------------------------------------------------
+afm10/OUTCAR-tot          0.000   0.000   0.000   0.000
+afm10/OUTCAR- 
+afm10/OUTCAR-    CHARGE:  cpu time    0.0405: real time    0.0406
+afm10/OUTCAR-    FORLOC:  cpu time    0.0014: real time    0.0015
+--
+afm10/OUTCAR: magnetization (x)
+afm10/OUTCAR- 
+afm10/OUTCAR-# of ion       s       p       d       tot
+afm10/OUTCAR-------------------------------------------
+afm10/OUTCAR-    1        0.019   0.023   2.021   2.063
+afm10/OUTCAR-    2        0.019   0.023   2.021   2.063
+afm10/OUTCAR-    3        0.005   0.020   2.076   2.101
+afm10/OUTCAR-    4       -0.005  -0.020  -2.076  -2.101
+afm10/OUTCAR-    5       -0.019  -0.023  -2.021  -2.063
+afm10/OUTCAR-    6       -0.019  -0.023  -2.021  -2.063
+afm10/OUTCAR---------------------------------------------------
+afm10/OUTCAR-tot          0.000   0.000   0.000   0.000
+afm10/OUTCAR- 
+afm10/OUTCAR- BZINTS: Fermi energy:  6.173719; 48.000000 electrons
+afm10/OUTCAR-         Band energy: 174.245693;  BLOECHL correction: -0.055371
+--
+afm16/OUTCAR: magnetization (x)
+afm16/OUTCAR- 
+afm16/OUTCAR-# of ion       s       p       d       tot
+afm16/OUTCAR-------------------------------------------
+afm16/OUTCAR-    1       -0.006  -0.047   2.339   2.286
+afm16/OUTCAR-    2       -0.006  -0.047   2.339   2.286
+afm16/OUTCAR-    3        0.009  -0.006   1.933   1.936
+afm16/OUTCAR-    4        0.009  -0.006   1.933   1.936
+afm16/OUTCAR-    5       -0.011   0.009  -2.081  -2.083
+afm16/OUTCAR-    6       -0.011   0.009  -2.081  -2.083
+afm16/OUTCAR-    7       -0.014  -0.052   2.297   2.232
+afm16/OUTCAR-    8        0.003   0.039  -2.435  -2.394
+afm16/OUTCAR---------------------------------------------------
+afm16/OUTCAR-tot         -0.025  -0.103   4.244   4.116
+afm16/OUTCAR- 
+--
+afm16/OUTCAR: magnetization (x)
+afm16/OUTCAR- 
+afm16/OUTCAR-# of ion       s       p       d       tot
+afm16/OUTCAR-------------------------------------------
+afm16/OUTCAR-    1       -0.006  -0.047   2.339   2.286
+afm16/OUTCAR-    2       -0.006  -0.047   2.339   2.286
+afm16/OUTCAR-    3        0.009  -0.006   1.933   1.936
+afm16/OUTCAR-    4        0.009  -0.006   1.933   1.936
+afm16/OUTCAR-    5       -0.011   0.009  -2.081  -2.083
+afm16/OUTCAR-    6       -0.011   0.009  -2.081  -2.083
+afm16/OUTCAR-    7       -0.014  -0.052   2.297   2.232
+afm16/OUTCAR-    8        0.003   0.039  -2.435  -2.394
+afm16/OUTCAR---------------------------------------------------
+afm16/OUTCAR-tot         -0.025  -0.103   4.244   4.116
+afm16/OUTCAR- 
+--
+afm17/OUTCAR: magnetization (x)
+afm17/OUTCAR- 
+afm17/OUTCAR-# of ion       s       p       d       tot
+afm17/OUTCAR-------------------------------------------
+afm17/OUTCAR-    1        0.009   0.012   1.918   1.940
+afm17/OUTCAR-    2        0.015   0.003   1.541   1.559
+afm17/OUTCAR-    3        0.026   0.046   1.848   1.921
+afm17/OUTCAR-    4        0.008   0.009   2.192   2.209
+afm17/OUTCAR-    5       -0.008  -0.009  -2.192  -2.209
+afm17/OUTCAR-    6       -0.026  -0.046  -1.848  -1.921
+afm17/OUTCAR-    7       -0.015  -0.003  -1.541  -1.559
+afm17/OUTCAR-    8       -0.009  -0.012  -1.918  -1.940
+afm17/OUTCAR---------------------------------------------------
+afm17/OUTCAR-tot          0.000   0.000  -0.000  -0.000
+afm17/OUTCAR- 
+--
+afm17/OUTCAR: magnetization (x)
+afm17/OUTCAR- 
+afm17/OUTCAR-# of ion       s       p       d       tot
+afm17/OUTCAR-------------------------------------------
+afm17/OUTCAR-    1        0.009   0.012   1.918   1.940
+afm17/OUTCAR-    2        0.015   0.003   1.541   1.559
+afm17/OUTCAR-    3        0.026   0.046   1.848   1.921
+afm17/OUTCAR-    4        0.008   0.009   2.192   2.209
+afm17/OUTCAR-    5       -0.008  -0.009  -2.192  -2.209
+afm17/OUTCAR-    6       -0.026  -0.046  -1.848  -1.921
+afm17/OUTCAR-    7       -0.015  -0.003  -1.541  -1.559
+afm17/OUTCAR-    8       -0.009  -0.012  -1.918  -1.940
+afm17/OUTCAR---------------------------------------------------
+afm17/OUTCAR-tot          0.000   0.000  -0.000  -0.000
+afm17/OUTCAR- 
+--
+afm18/OUTCAR: magnetization (x)
+afm18/OUTCAR- 
+afm18/OUTCAR-# of ion       s       p       d       tot
+afm18/OUTCAR-------------------------------------------
+afm18/OUTCAR-    1        0.018   0.025   1.935   1.979
+afm18/OUTCAR-    2        0.005  -0.011   1.635   1.629
+afm18/OUTCAR-    3        0.018   0.025   1.935   1.979
+afm18/OUTCAR-    4       -0.000  -0.013   2.333   2.319
+afm18/OUTCAR-    5        0.000   0.013  -2.333  -2.319
+afm18/OUTCAR-    6       -0.018  -0.025  -1.935  -1.979
+afm18/OUTCAR-    7       -0.018  -0.025  -1.935  -1.979
+afm18/OUTCAR-    8       -0.005   0.011  -1.635  -1.629
+afm18/OUTCAR---------------------------------------------------
+afm18/OUTCAR-tot         -0.000  -0.000   0.000   0.000
+afm18/OUTCAR- 
+--
+afm18/OUTCAR: magnetization (x)
+afm18/OUTCAR- 
+afm18/OUTCAR-# of ion       s       p       d       tot
+afm18/OUTCAR-------------------------------------------
+afm18/OUTCAR-    1        0.018   0.025   1.935   1.979
+afm18/OUTCAR-    2        0.005  -0.011   1.635   1.629
+afm18/OUTCAR-    3        0.018   0.025   1.935   1.979
+afm18/OUTCAR-    4       -0.000  -0.013   2.333   2.319
+afm18/OUTCAR-    5        0.000   0.013  -2.333  -2.319
+afm18/OUTCAR-    6       -0.018  -0.025  -1.935  -1.979
+afm18/OUTCAR-    7       -0.018  -0.025  -1.935  -1.979
+afm18/OUTCAR-    8       -0.005   0.011  -1.635  -1.629
+afm18/OUTCAR---------------------------------------------------
+afm18/OUTCAR-tot         -0.000  -0.000   0.000   0.000
+afm18/OUTCAR- 
+--
+afm1/OUTCAR: magnetization (x)
+afm1/OUTCAR- 
+afm1/OUTCAR-# of ion       s       p       d       tot
+afm1/OUTCAR-------------------------------------------
+afm1/OUTCAR-    1        0.019   0.026   1.463   1.507
+afm1/OUTCAR-    2       -0.019  -0.026  -1.463  -1.507
+afm1/OUTCAR---------------------------------------------------
+afm1/OUTCAR-tot         -0.000  -0.000  -0.000  -0.000
+afm1/OUTCAR- 
+afm1/OUTCAR-    CHARGE:  cpu time    0.0170: real time    0.0170
+afm1/OUTCAR-    FORLOC:  cpu time    0.0004: real time    0.0004
+afm1/OUTCAR-    FORNL :  cpu time    0.0237: real time    0.0238
+afm1/OUTCAR-    STRESS:  cpu time    0.0585: real time    0.0586
+afm1/OUTCAR-    FORCOR:  cpu time    0.0166: real time    0.0166
+afm1/OUTCAR-    FORHAR:  cpu time    0.0017: real time    0.0017
+--
+afm1/OUTCAR: magnetization (x)
+afm1/OUTCAR- 
+afm1/OUTCAR-# of ion       s       p       d       tot
+afm1/OUTCAR-------------------------------------------
+afm1/OUTCAR-    1        0.019   0.026   1.463   1.507
+afm1/OUTCAR-    2       -0.019  -0.026  -1.463  -1.507
+afm1/OUTCAR---------------------------------------------------
+afm1/OUTCAR-tot         -0.000  -0.000  -0.000  -0.000
+afm1/OUTCAR- 
+afm1/OUTCAR- BZINTS: Fermi energy:  6.076535; 16.000000 electrons
+afm1/OUTCAR-         Band energy:  58.666481;  BLOECHL correction: -0.052614
+afm1/OUTCAR-
+afm1/OUTCAR- total amount of memory used by VASP MPI-rank0    33038. kBytes
+afm1/OUTCAR-=======================================================================
+afm1/OUTCAR-
+--
+afm2/OUTCAR: magnetization (x)
+afm2/OUTCAR- 
+afm2/OUTCAR-# of ion       s       p       d       tot
+afm2/OUTCAR-------------------------------------------
+afm2/OUTCAR-    1        0.014  -0.001   2.110   2.123
+afm2/OUTCAR-    2        0.014  -0.001   2.110   2.123
+afm2/OUTCAR-    3       -0.014   0.001  -2.110  -2.123
+afm2/OUTCAR-    4       -0.014   0.001  -2.110  -2.123
+afm2/OUTCAR---------------------------------------------------
+afm2/OUTCAR-tot         -0.000   0.000  -0.000  -0.000
+afm2/OUTCAR- 
+afm2/OUTCAR-    CHARGE:  cpu time    0.0656: real time    0.0657
+afm2/OUTCAR-    FORLOC:  cpu time    0.0009: real time    0.0009
+afm2/OUTCAR-    FORNL :  cpu time    0.1555: real time    0.1559
+afm2/OUTCAR-    STRESS:  cpu time    0.2147: real time    0.2152
+--
+afm2/OUTCAR: magnetization (x)
+afm2/OUTCAR- 
+afm2/OUTCAR-# of ion       s       p       d       tot
+afm2/OUTCAR-------------------------------------------
+afm2/OUTCAR-    1        0.014  -0.001   2.110   2.123
+afm2/OUTCAR-    2        0.014  -0.001   2.110   2.123
+afm2/OUTCAR-    3       -0.014   0.001  -2.110  -2.123
+afm2/OUTCAR-    4       -0.014   0.001  -2.110  -2.123
+afm2/OUTCAR---------------------------------------------------
+afm2/OUTCAR-tot         -0.000   0.000  -0.000  -0.000
+afm2/OUTCAR- 
+afm2/OUTCAR- BZINTS: Fermi energy:  6.174671; 32.000000 electrons
+afm2/OUTCAR-         Band energy: 115.191919;  BLOECHL correction: -0.036206
+afm2/OUTCAR-
+afm2/OUTCAR- total amount of memory used by VASP MPI-rank0    39562. kBytes
+--
+afm3/OUTCAR: magnetization (x)
+afm3/OUTCAR- 
+afm3/OUTCAR-# of ion       s       p       d       tot
+afm3/OUTCAR-------------------------------------------
+afm3/OUTCAR-    1        0.013   0.028   1.910   1.951
+afm3/OUTCAR-    2        0.013   0.028   1.910   1.951
+afm3/OUTCAR-    3       -0.013  -0.028  -1.910  -1.951
+afm3/OUTCAR-    4       -0.013  -0.028  -1.910  -1.951
+afm3/OUTCAR---------------------------------------------------
+afm3/OUTCAR-tot          0.000   0.000  -0.000   0.000
+afm3/OUTCAR- 
+afm3/OUTCAR-    CHARGE:  cpu time    0.0989: real time    0.0991
+afm3/OUTCAR-    FORLOC:  cpu time    0.0009: real time    0.0009
+afm3/OUTCAR-    FORNL :  cpu time    0.2611: real time    0.2618
+afm3/OUTCAR-    STRESS:  cpu time    0.3464: real time    0.3473
+--
+afm3/OUTCAR: magnetization (x)
+afm3/OUTCAR- 
+afm3/OUTCAR-# of ion       s       p       d       tot
+afm3/OUTCAR-------------------------------------------
+afm3/OUTCAR-    1        0.013   0.028   1.910   1.951
+afm3/OUTCAR-    2        0.013   0.028   1.910   1.951
+afm3/OUTCAR-    3       -0.013  -0.028  -1.910  -1.951
+afm3/OUTCAR-    4       -0.013  -0.028  -1.910  -1.951
+afm3/OUTCAR---------------------------------------------------
+afm3/OUTCAR-tot          0.000   0.000  -0.000   0.000
+afm3/OUTCAR- 
+afm3/OUTCAR- BZINTS: Fermi energy:  6.116733; 32.000000 electrons
+afm3/OUTCAR-         Band energy: 114.245395;  BLOECHL correction: -0.030494
+afm3/OUTCAR-
+afm3/OUTCAR- total amount of memory used by VASP MPI-rank0    42742. kBytes
+--
+afm5/OUTCAR: magnetization (x)
+afm5/OUTCAR- 
+afm5/OUTCAR-# of ion       s       p       d       tot
+afm5/OUTCAR-------------------------------------------
+afm5/OUTCAR-    1        0.010  -0.004   2.008   2.014
+afm5/OUTCAR-    2        0.010  -0.004   2.008   2.014
+afm5/OUTCAR-    3       -0.002  -0.034   2.413   2.377
+afm5/OUTCAR-    4        0.002   0.034  -2.413  -2.377
+afm5/OUTCAR-    5       -0.010   0.004  -2.008  -2.014
+afm5/OUTCAR-    6       -0.010   0.004  -2.008  -2.014
+afm5/OUTCAR---------------------------------------------------
+afm5/OUTCAR-tot          0.000   0.000  -0.000  -0.000
+afm5/OUTCAR- 
+afm5/OUTCAR-    CHARGE:  cpu time    0.1416: real time    0.1421
+afm5/OUTCAR-    FORLOC:  cpu time    0.0017: real time    0.0017
+--
+afm5/OUTCAR: magnetization (x)
+afm5/OUTCAR- 
+afm5/OUTCAR-# of ion       s       p       d       tot
+afm5/OUTCAR-------------------------------------------
+afm5/OUTCAR-    1        0.010  -0.004   2.008   2.014
+afm5/OUTCAR-    2        0.010  -0.004   2.008   2.014
+afm5/OUTCAR-    3       -0.002  -0.034   2.413   2.377
+afm5/OUTCAR-    4        0.002   0.034  -2.413  -2.377
+afm5/OUTCAR-    5       -0.010   0.004  -2.008  -2.014
+afm5/OUTCAR-    6       -0.010   0.004  -2.008  -2.014
+afm5/OUTCAR---------------------------------------------------
+afm5/OUTCAR-tot          0.000   0.000  -0.000  -0.000
+afm5/OUTCAR- 
+afm5/OUTCAR- BZINTS: Fermi energy:  6.175556; 48.000000 electrons
+afm5/OUTCAR-         Band energy: 173.281602;  BLOECHL correction: -0.030691
+--
+afm9/OUTCAR: magnetization (x)
+afm9/OUTCAR- 
+afm9/OUTCAR-# of ion       s       p       d       tot
+afm9/OUTCAR-------------------------------------------
+afm9/OUTCAR-    1        0.016   0.021   1.550   1.587
+afm9/OUTCAR-    2        0.021   0.030   2.071   2.122
+afm9/OUTCAR-    3        0.014   0.027   2.119   2.160
+afm9/OUTCAR-    4       -0.014  -0.027  -2.119  -2.160
+afm9/OUTCAR-    5       -0.021  -0.030  -2.071  -2.122
+afm9/OUTCAR-    6       -0.016  -0.021  -1.550  -1.587
+afm9/OUTCAR---------------------------------------------------
+afm9/OUTCAR-tot         -0.000  -0.000   0.000   0.000
+afm9/OUTCAR- 
+afm9/OUTCAR-    CHARGE:  cpu time    0.0375: real time    0.0375
+afm9/OUTCAR-    FORLOC:  cpu time    0.0014: real time    0.0014
+--
+afm9/OUTCAR: magnetization (x)
+afm9/OUTCAR- 
+afm9/OUTCAR-# of ion       s       p       d       tot
+afm9/OUTCAR-------------------------------------------
+afm9/OUTCAR-    1        0.016   0.021   1.550   1.587
+afm9/OUTCAR-    2        0.021   0.030   2.071   2.122
+afm9/OUTCAR-    3        0.014   0.027   2.119   2.160
+afm9/OUTCAR-    4       -0.014  -0.027  -2.119  -2.160
+afm9/OUTCAR-    5       -0.021  -0.030  -2.071  -2.122
+afm9/OUTCAR-    6       -0.016  -0.021  -1.550  -1.587
+afm9/OUTCAR---------------------------------------------------
+afm9/OUTCAR-tot         -0.000  -0.000   0.000   0.000
+afm9/OUTCAR- 
+afm9/OUTCAR- BZINTS: Fermi energy:  6.174972; 48.000000 electrons
+afm9/OUTCAR-         Band energy: 174.220629;  BLOECHL correction: -0.086688
