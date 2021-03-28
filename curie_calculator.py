@@ -417,15 +417,3 @@ def input_reader(path_to_input='./INPUT.txt') -> list:
             spin = float(line.split('=')[1])
 
     return input_folder, num_of_structures, fake_magnetic_atoms, spin
-
-
-def main_runner():
-    input_folder, num_of_structures, fake_magnetic_atoms, spin = input_reader()
-    initial_path = os.getcwd()
-    run_enum(input_folder)
-    get_structures(num_of_structures=num_of_structures)
-    vasp_inputs_creator(num_of_structures=num_of_structures)
-    siman_inputs_creator(num_of_structures=num_of_structures)
-    enum_out_collector()
-    os.chdir(initial_path)
-    submit_all_jobs(input_folder)
