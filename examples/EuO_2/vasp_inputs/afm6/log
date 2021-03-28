@@ -1,0 +1,212 @@
+=========================================
+SLURM_JOB_ID = 32594625
+SLURM_JOB_NODELIST = lnode24
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 8
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 3375300
+CUDA_VISIBLE_DEVICES = 
+==========================================
+ running on    8 total cores
+ distrk:  each k-point on    8 cores,    1 groups
+ distr:  one band on    1 cores,    8 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 28 2018 00:24:27) complex          
+  
+ POSCAR found type information on POSCAR  Eu O 
+ POSCAR found :  2 types and       8 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|      For optimal performance we recommend to set                            |
+|        NCORE= 4 - approx SQRT( number of cores)                             |
+|      NCORE specifies how many cores store one orbital (NPAR=cpu/NCORE).     |
+|      This setting can  greatly improve the performance of VASP for DFT.     |
+|      The default,   NCORE=1            might be grossly inefficient         |
+|      on modern multi-core architectures or massively parallel machines.     |
+|      Do your own testing !!!!                                               |
+|      Unfortunately you need to use the default for GW and RPA calculations. |
+|      (for HF NCORE is supported but not extensively tested yet)             |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|  ADVICE TO THIS USER RUNNING 'VASP/VAMP'   (HEAR YOUR MASTER'S VOICE ...):  |
+|                                                                             |
+|      You have a (more or less) 'small supercell' and for smaller cells      |
+|      it is recommended  to use the reciprocal-space projection scheme!      |
+|      The real space optimization is not  efficient for small cells and it   |
+|      is also less accurate ...                                              |
+|      Therefore set LREAL=.FALSE. in the  INCAR file                         |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ augmentation electrons   95.8662616869995     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   95.8662616869995     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   95.8662616869995     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   95.8662616869995     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   95.8662616869995     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   95.8662616869995     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   95.8662616869995     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   95.8662616869995     
+ soft         electrons  0.000000000000000E+000
+ total        electrons   95.8662616869995     
+ total        electrons   95.8662616869995     
+ total        electrons   95.8662616869995     
+ total        electrons   95.8662616869995     
+ total        electrons   95.8662616869995     
+ total        electrons   95.8662616869995     
+ total        electrons   95.8662616869995     
+ total        electrons   95.8662616869995     
+ augmentation electrons  6.077815877515827E-003
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons  6.077815877515827E-003
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons  6.077815877515827E-003
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons  6.077815877515827E-003
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons  6.077815877515827E-003
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons  6.077815877515827E-003
+ augmentation electrons  6.077815877515827E-003
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons  6.077815877515827E-003
+ soft         electrons  0.000000000000000E+000
+ soft         electrons  0.000000000000000E+000
+ total        electrons  6.077815877515827E-003
+ total        electrons  6.077815877515827E-003
+ total        electrons  6.077815877515827E-003
+ total        electrons  6.077815877515827E-003
+ total        electrons  6.077815877515827E-003
+ total        electrons  6.077815877515827E-003
+ total        electrons  6.077815877515827E-003
+ total        electrons  6.077815877515827E-003
+ augmentation electrons   4268.63288338449     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   4268.63288338449     
+ augmentation electrons   4268.63288338449     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   4268.63288338449     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   4268.63288338449     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   4268.63288338449     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   4268.63288338449     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   4268.63288338449     
+ soft         electrons  0.000000000000000E+000
+ soft         electrons  0.000000000000000E+000
+ total        electrons   4268.63288338449     
+ total        electrons   4268.63288338449     
+ total        electrons   4268.63288338449     
+ total        electrons   4268.63288338449     
+ total        electrons   4268.63288338449     
+ total        electrons   4268.63288338449     
+ total        electrons   4268.63288338449     
+ total        electrons   4268.63288338449     
+ augmentation electrons   4268.27601660009     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   4268.27601660009     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   4268.27601660009     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   4268.27601660009     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   4268.27601660009     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   4268.27601660009     
+ augmentation electrons   4268.27601660009     
+ soft         electrons  0.000000000000000E+000
+ augmentation electrons   4268.27601660009     
+ soft         electrons  0.000000000000000E+000
+ soft         electrons  0.000000000000000E+000
+ total        electrons   4268.27601660009     
+ total        electrons   4268.27601660009     
+ total        electrons   4268.27601660009     
+ total        electrons   4268.27601660009     
+ total        electrons   4268.27601660009     
+ total        electrons   4268.27601660009     
+ total        electrons   4268.27601660009     
+ total        electrons   4268.27601660009     
+ initial charge from wavefunction
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.201128486804E+03    0.20113E+03   -0.45241E+04 17104   0.677E+03
+DAV:   2    -0.125772009225E+04   -0.14588E+04   -0.13772E+04 14752   0.178E+03
+DAV:   3    -0.159720206633E+04   -0.33948E+03   -0.27990E+03 15008   0.363E+02
+DAV:   4    -0.167859109253E+04   -0.81389E+02   -0.80514E+02 20432   0.114E+02
+DAV:   5    -0.168521459550E+04   -0.66235E+01   -0.65898E+01 17888   0.332E+01    0.260E+02
+DAV:   6    -0.158646363689E+04    0.98751E+02   -0.13993E+04 19648   0.294E+02    0.246E+02
+DAV:   7    -0.219490493603E+03    0.13670E+04   -0.16605E+03 16520   0.259E+02    0.206E+02
+DAV:   8    -0.273256776894E+03   -0.53766E+02   -0.17478E+03 21152   0.342E+02    0.174E+02
+DAV:   9    -0.869935689527E+03   -0.59668E+03   -0.11225E+04 23768   0.861E+02    0.191E+02
+DAV:  10    -0.231453711908E+03    0.63848E+03   -0.16255E+03 21616   0.214E+02    0.152E+02
+DAV:  11    -0.557650527179E+03   -0.32620E+03   -0.30099E+02 23144   0.224E+02    0.141E+02
+DAV:  12    -0.506289337568E+03    0.51361E+02   -0.61246E+01 23384   0.558E+01    0.136E+02
+DAV:  13    -0.571700799250E+03   -0.65411E+02   -0.77974E+00 23176   0.410E+01    0.133E+02
+DAV:  14    -0.587032858954E+03   -0.15332E+02   -0.31272E+00 24608   0.994E+00    0.131E+02
+DAV:  15    -0.554549395021E+03    0.32483E+02   -0.10772E+00 23504   0.127E+01    0.127E+02
+DAV:  16    -0.488314265246E+03    0.66235E+02   -0.32235E+00 16728   0.265E+01    0.123E+02
+DAV:  17    -0.481186930387E+03    0.71273E+01   -0.13536E+00 22736   0.652E+00    0.122E+02
+DAV:  18    -0.450943988788E+03    0.30243E+02   -0.66257E-01 18952   0.213E+01    0.121E+02
+DAV:  19    -0.476338257976E+03   -0.25394E+02   -0.40045E-01 18992   0.143E+01    0.121E+02
+DAV:  20    -0.407739700204E+03    0.68599E+02   -0.25009E+00 16024   0.378E+01    0.119E+02
+DAV:  21    -0.337173901386E+03    0.70566E+02   -0.55120E+00 20224   0.409E+01    0.115E+02
+DAV:  22    -0.336441306523E+03    0.73259E+00   -0.19205E+00 22880   0.785E+00    0.115E+02
+DAV:  23    -0.296338670399E+03    0.40103E+02   -0.13046E+00 17568   0.178E+01    0.113E+02
+DAV:  24    -0.203777657620E+03    0.92561E+02   -0.19434E+01 19040   0.335E+01    0.101E+02
+DAV:  25    -0.157864606608E+03    0.45913E+02   -0.98438E+00 22952   0.171E+01    0.923E+01
+DAV:  26    -0.149946923372E+03    0.79177E+01   -0.17520E+00 24576   0.973E+00    0.902E+01
+DAV:  27    -0.150093909595E+03   -0.14699E+00   -0.35922E-01 24360   0.436E+00    0.900E+01
+DAV:  28    -0.150228625150E+03   -0.13472E+00   -0.52461E-01 21704   0.423E+00    0.900E+01
+DAV:  29    -0.149126232547E+03    0.11024E+01   -0.20774E+00 19848   0.613E+00    0.896E+01
+DAV:  30    -0.147852876928E+03    0.12734E+01   -0.13885E+00 17248   0.850E+00    0.888E+01
+DAV:  31    -0.147315700779E+03    0.53718E+00   -0.71251E+00 16616   0.107E+01    0.882E+01
+DAV:  32    -0.146528477757E+03    0.78722E+00   -0.26961E+00 16040   0.120E+01    0.881E+01
+DAV:  33    -0.141984174210E+03    0.45443E+01   -0.98956E+00 19576   0.138E+01    0.863E+01
+DAV:  34    -0.139605449263E+03    0.23787E+01   -0.43323E+00 19360   0.143E+01    0.860E+01
+DAV:  35    -0.138294040400E+03    0.13114E+01   -0.10103E+01 19408   0.147E+01    0.850E+01
+DAV:  36    -0.136794046393E+03    0.15000E+01   -0.54184E+00 18192   0.154E+01    0.849E+01
+DAV:  37    -0.136268730243E+03    0.52532E+00   -0.97697E+00 16976   0.155E+01    0.842E+01
+DAV:  38    -0.133973488625E+03    0.22952E+01   -0.57931E+00 18248   0.168E+01    0.836E+01
+DAV:  39    -0.131602686084E+03    0.23708E+01   -0.98328E+00 19184   0.169E+01    0.821E+01
+DAV:  40    -0.132522602525E+03   -0.91992E+00   -0.77603E+00 17336   0.179E+01    0.827E+01
+DAV:  41    -0.133305795989E+03   -0.78319E+00   -0.10117E+01 15968   0.176E+01    0.827E+01
+DAV:  42    -0.122950595060E+03    0.10355E+02   -0.68355E+00 15744   0.206E+01    0.806E+01
+DAV:  43    -0.123438557664E+03   -0.48796E+00   -0.10027E+01 19248   0.198E+01    0.801E+01
+DAV:  44    -0.119092389842E+03    0.43462E+01   -0.74285E+00 18728   0.205E+01    0.791E+01
+DAV:  45    -0.119708795075E+03   -0.61641E+00   -0.10923E+01 18656   0.205E+01    0.790E+01
+DAV:  46    -0.118003861409E+03    0.17049E+01   -0.74896E+00 17104   0.205E+01    0.786E+01
+DAV:  47    -0.118235346770E+03   -0.23149E+00   -0.12299E+01 17360   0.212E+01    0.784E+01
+DAV:  48    -0.117344389494E+03    0.89096E+00   -0.77162E+00 16432   0.209E+01    0.782E+01
+DAV:  49    -0.117601492454E+03   -0.25710E+00   -0.13253E+01 15776   0.215E+01    0.780E+01
+DAV:  50    -0.117286418638E+03    0.31507E+00   -0.77711E+00 16344   0.211E+01    0.781E+01
+DAV:  51    -0.273469120878E+04   -0.26174E+04   -0.33084E+04 22976   0.113E+03    0.369E+02
+DAV:  52    -0.170381557490E+04    0.10309E+04   -0.21584E+03 23648   0.470E+02    0.261E+02
+DAV:  53    -0.132055238365E+04    0.38326E+03   -0.27373E+02 22936   0.839E+01    0.218E+02
+DAV:  54    -0.127845789349E+04    0.42094E+02   -0.34874E+01 24568   0.361E+01    0.210E+02
+DAV:  55    -0.118341943809E+04    0.95038E+02   -0.10960E+01 23712   0.181E+01    0.198E+02
+Error EDDDAV: Call to ZHEGV failed. Returncode =   7 1   8
