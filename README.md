@@ -12,3 +12,9 @@ Code is currently under development. Now it working fine for few materials (e.g 
 
 4. ./install.sh
 ```
+
+Export path to enumlib executables (you might need to specify absolute path):
+
+```
+5. export PATH="home/username/curie_calculator/enumlib/src:$PATH"
+```
