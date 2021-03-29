@@ -1,4 +1,4 @@
-pymatgen v2019.10.16 with grid density = 1513 / atom
+pymatgen with grid density = 15131 / number of atoms
 0
-Monkhorst
-8 8 2
+Gamma
+17 17 6
