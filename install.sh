@@ -9,3 +9,4 @@ make
 cd ../../src
 make
 make enum.x
+make makestr.x
