@@ -112,6 +112,27 @@ def submit_all_jobs(input_folder: str) -> None:
     os.chdir(initial_path)
 
 
+LDAUJ_dict = {'Co': 0, 'Cr': 0, 'Fe': 0, 'Mn': 0, 'Mo': 0, 'Ni': 0, 'V': 0, 'W': 0,
+              'Nb': 0, 'Sc': 0, 'Ru': 0, 'Rh': 0, 'Pd': 0, 'Cu': 0, 'Y': 0, 'Os': 0, 'Ti': 0, 'Zr': 0, 'Re': 0, 'Hf': 0, 'Pt': 0, 'La': 0}
+
+LDAUU_dict = {'Co': 3.32, 'Cr': 3.7, 'Fe': 5.3, 'Mn': 3.9, 'Mo': 4.38, 'Ni': 6.2, 'V': 3.25, 'W': 6.2,
+              'Nb': 1.45, 'Sc': 4.18, 'Ru': 4.29, 'Rh': 4.17, 'Pd': 2.96, 'Cu': 7.71, 'Y': 3.23, 'Os': 2.47, 'Ti': 5.89, 'Zr': 5.55,
+              'Re': 1.28, 'Hf': 4.77, 'Pt': 2.95, 'La': 5.3}
+
+
+LDAUL_dict = {'Co': 2, 'Cr': 2, 'Fe': 2, 'Mn': 2, 'Mo': 2, 'Ni': 2, 'V': 2, 'W': 2,
+              'Nb': 2, 'Sc': 2, 'Ru': 2, 'Rh': 2, 'Pd': 2, 'Cu': 2, 'Y': 2, 'Os': 2, 'Ti': 2, 'Zr': 2, 'Re': 2, 'Hf': 2, 'Pt': 2, 'La': 2}
+
+relx_dict = {'ISMEAR': 0, 'SIGMA': 0.01, 'ISIF': 4, 'EDIFF': 1E-4, 'POTIM': 0.3,
+             'EDIFFG': -0.01, 'SYMPREC': 1E-8, 'NCORE': 4, 'LCHARG': False, 'ICHARG': 2,
+             'LDAU': True, 'LDAUJ': LDAUJ_dict, 'LDAUL': LDAUL_dict, 'LDAUU': LDAUU_dict, 'LWAVE': False,
+             'LDAUPRINT': 1, 'LDAUTYPE': 2, 'LASPH': True, 'LMAXMIX': 4}
+
+stat_dict = {'ISMEAR': -5, 'EDIFF': 1E-6, 'SYMPREC': 1E-8,  'NCORE': 4, 'ICHARG': 2,
+             'LDAU': True, 'LDAUJ': LDAUJ_dict, 'LDAUL': LDAUL_dict, 'LDAUU': LDAUU_dict, 'NELM': 120, 'LVHAR': False,
+             'LDAUPRINT': 1, 'LDAUTYPE': 2, 'LASPH': True, 'LMAXMIX': 4, 'LCHARG': True, 'LWAVE': False, 'LVTOT': False}
+
+
 def write_static_set(structure, vasp_static_path: str, static_dict: dict) -> None:
     """
     Args:
@@ -233,36 +254,5 @@ def main_runner(input_path: str):
     vasprun_checker(input_path)
 
 
-stat_dict = {'ISMEAR': -5,
-             'EDIFF': 1E-6,
-             'SYMPREC': 1E-8,
-             'NCORE': 4,
-             'NSIM': 4,
-             'ICHARG': 2,
-             'NELM': 120,
-             'LVHAR': False,
-             'LASPH': True,
-             'LMAXMIX': 4,
-             'LCHARG': False,
-             'LWAVE': False,
-             'LVTOT': False,
-             'LAECHG': False}
-
-relx_dict = {'ISIF': 4,
-             'ISMEAR': 0,
-             'SIGMA': 0.01,
-             'EDIFF': 1E-4,
-             'POTIM': 0.3,
-             'EDIFFG': -0.01,
-             'SYMPREC': 1E-8,
-             'NCORE': 4,
-             'NSIM': 4,
-             'LCHARG': False,
-             'ICHARG': 2,
-             'LWAVE': False,
-             'LASPH': True,
-             'LMAXMIX': 4}
-
-if __name__ == '__main__':
-    input_path = '../examples/EuO_2/'
-    main_runner(input_path)
+input_path = '../examples/Ni_2/'
+main_runner(input_path)
