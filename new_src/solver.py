@@ -11,6 +11,7 @@ from itertools import combinations
 import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore")
+%matplotlib inline
 
 k_B = physical_constants['Boltzmann constant in eV/K'][0]
 
@@ -155,7 +156,7 @@ def sorted_matrix_getter(input_path: str) -> list:
     nn_spin_matrix = nn_matrix * spin * (spin + 1)
     full_matrix = np.append(nn_spin_matrix, E_list.reshape(len(E_list), 1), axis=1)
     sorted_matrix = full_matrix[np.argsort(full_matrix[:, -1])]
-    return nn_matrix, sorted_matrix
+    return nn_matrix, sorted_matrix, good_struct_list, bad_struct_list
 
 
 def exchange_coupling(matrix: list, energies: list) -> list:
@@ -189,42 +190,86 @@ def Tc_list_getter(j_vector_list: list, z_vector: list) -> list:
         z_vector_tmp = z_vector[:len(j_vector)]
         T_c = round(sum(j_vector * z_vector_tmp) / (3 * k_B), 1)
         T_c_list.append(T_c)
+    T_c_list = np.array(T_c_list)
     return T_c_list
 
 
-def solve(input_path, magnetic_atom, spin):
-    nn_matrix, sorted_matrix = sorted_matrix_getter(input_path)
-    E_geom, j_vector_list = j_vector_list_getter(sorted_matrix)
-
-    z_vector = get_nn_list(path_to_poscar=os.path.join(input_path, 'POSCAR'),
-                           magnetic_atom=magnetic_atom)
-
-    Tc_list = Tc_list_getter(j_vector_list, z_vector)
+def write_output(j_vector_list, good_struct_list, bad_struct_list, nn_matrix, E_geom, Tc_list):
+    j_out_str = 'Exchange coupling vector J, meV: \n \n'
+    for i in j_vector_list:
+        tmp_out_str = str(len(i)) + ' : ' + str(np.round(i * 1000, 2)) + '\n'
+        j_out_str += tmp_out_str
 
     output_text = f"""
-nn_matrix:
-    {nn_matrix}
+    good_struct_list
+        {good_struct_list}
 
-E_geom, eV:
-    {E_geom}
+    bad_struct_list
+        {bad_struct_list}
 
-j_vector_list:
-    {j_vector_list}
+    nn_matrix:
+        {nn_matrix}
 
-Tc_list, K:
-    {Tc_list}
-    """
+    E_geom, eV:
+        {E_geom}
+
+        {j_out_str}
+
+    Raw Tc_list, K:
+        {Tc_list}
+
+    Estimated value of Tc, K:
+        {round(Tc_list.mean())} K
+        """
 
     out_path = os.path.join(input_path, 'OUTPUT.txt')
     with open(out_path, 'w') as out_f:
         out_f.writelines(output_text)
 
 
-input_path = '../examples/EuO_2/'
-magnetic_atom = 'Eu'
-spin = 2.5
+def plot_j_values(j_vector_list: list, input_path: str) -> None:
+    plt.figure(figsize=(7, 5), dpi=100)
+    j_vector_list_mev = [i * 1000 for i in j_vector_list]
+    for y in j_vector_list_mev:
+        x = range(1, len(y) + 1)
+        plt.plot(x, y)
+        plt.scatter(x, y, label=len(x))
+    plt.xlabel('Coordination sphere number', fontsize=14)
+    plt.ylabel('J, meV', fontsize=14)
+    plt.grid(alpha=.4)
+    plt.legend()
+    plt.savefig(os.path.join(input_path, 'J_vectors_plot.pdf'), bbox_inches='tight')
 
+
+def plot_E_tot(sorted_matrix: list, nn_matrix: list) -> None:
+    E_tot_mev = [i[-1] * 1000 for i in sorted_matrix]
+    x = range(1, len(E_tot_mev) + 1)
+    plt.figure(figsize=(7, 5), dpi=100)
+    plt.scatter(x, E_tot_mev, color='r')
+    plt.grid(alpha=.4)
+    plt.xlabel('Spins (\u2191 - \u2193)', fontsize=14)
+    plt.ylabel(r'$E_{tot},  meV$', fontsize=14)
+    combination_list = [[int(p) for p in i[1:6]] for i in nn_matrix]
+    plt.xticks(x, combination_list, rotation=45, ha='right')
+    plt.title('Total energy of different spin configurations')
+    plt.savefig(os.path.join(input_path, 'E_tot_plot.pdf'), bbox_inches='tight')
+
+
+def solver(input_path: str, magnetic_atom: str, spin: float):
+    nn_matrix, sorted_matrix, good_struct_list, bad_struct_list = sorted_matrix_getter(input_path)
+    E_geom, j_vector_list = j_vector_list_getter(sorted_matrix)
+
+    z_vector = get_nn_list(path_to_poscar=os.path.join(input_path, 'POSCAR'),
+                           magnetic_atom=magnetic_atom)
+    Tc_list = Tc_list_getter(j_vector_list, z_vector)
+    write_output(j_vector_list, good_struct_list, bad_struct_list, nn_matrix, E_geom, Tc_list)
+    plot_j_values(j_vector_list, input_path)
+    plot_E_tot(sorted_matrix, nn_matrix)
+
+
+input_path = '../examples/Fe/'
+magnetic_atom = 'Fe'
+spin = 2
 
 if __name__ == '__main__':
-    solve(input_path, magnetic_atom, spin)
-    print('All done successfully!')
+    solver(input_path, magnetic_atom, spin)
