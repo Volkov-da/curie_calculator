@@ -131,7 +131,7 @@ relx_dict = {'ISMEAR': 0, 'SIGMA': 0.01, 'ISIF': 4, 'EDIFF': 1E-4, 'POTIM': 0.3,
 
 stat_dict = {'ISMEAR': -5, 'EDIFF': 1E-6, 'SYMPREC': 1E-8,  'NCORE': 4, 'ICHARG': 2,
              'LDAU': True, 'LDAUJ': LDAUJ_dict, 'LDAUL': LDAUL_dict, 'LDAUU': LDAUU_dict, 'NELM': 120, 'LVHAR': False,
-             'LDAUPRINT': 1, 'LDAUTYPE': 2, 'LASPH': True, 'LMAXMIX': 4, 'LCHARG': True, 'LWAVE': False, 'LVTOT': False}
+             'LDAUPRINT': 1, 'LDAUTYPE': 2, 'LASPH': True, 'LMAXMIX': 4, 'LWAVE': False, 'LVTOT': False}
 
 
 def write_static_set(structure, vasp_static_path: str, static_dict: dict) -> None:
@@ -225,9 +225,17 @@ def static_changer(vasprun_path: str):
     contcar_path = os.path.join(base_path, 'CONTCAR')
     poscar_path = os.path.join(base_path, 'POSCAR')
 
+    log_relax = os.path.join(base_path, 'log_relax')
+    log = os.path.join(base_path, 'log')
+
+    out_relax = os.path.join(base_path, 'OUTCAR_relax')
+    out = os.path.join(base_path, 'OUTCAR')
+
     copy(inc_path, inc_relax_path)  # INCAR -> INCAR_relax
     copy(inc_stat_path, inc_path)  # INCAR_stat -> INCAR
     copy(contcar_path, poscar_path)  # CONTCAR -> POSCAR
+    copy(log, log_relax)  # log -> log_relax
+    copy(out, out_relax)  # OUTCAR -> OUTCAR_relax
 
 
 def vasprun_checker(input_path):
@@ -243,15 +251,18 @@ def vasprun_checker(input_path):
                 try:
                     vasprun = Vasprun(vasprun_path, parse_dos=False,
                                       parse_eigen=False, exception_on_bad_xml=False)
-                    if vasprun.converged:
+                    if vasprun.converged and vasprun.converged_ionic and vasprun.converged_electronic:
                         print(f'Converged! {vasprun_path}')
-                        tmp_vasprun.remove(vasprun_path)
                         static_changer(vasprun_path)
+                        tmp_vasprun.remove(vasprun_path)
                         print('Prepared for SP calculations')
-
                         initial_path = os.getcwd()
+                        print('initial_path:')
+                        print(initial_path)
                         base_path = '/'.join(vasprun_path.split('/')[:-1])
                         os.chdir(base_path)
+                        print('dir after changes')
+                        print(os.getcwd())
                         os.system('sbatch jobscript.sh')
                         os.chdir(initial_path)
 
