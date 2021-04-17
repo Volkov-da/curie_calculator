@@ -11,7 +11,6 @@ from itertools import combinations
 import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore")
-%matplotlib inline
 
 k_B = physical_constants['Boltzmann constant in eV/K'][0]
 
@@ -201,22 +200,22 @@ def write_output(j_vector_list, good_struct_list, bad_struct_list, nn_matrix, E_
         j_out_str += tmp_out_str
 
     output_text = f"""
-    good_struct_list
+good_struct_list
         {good_struct_list}
 
-    bad_struct_list
+bad_struct_list
         {bad_struct_list}
 
-    nn_matrix:
-        {nn_matrix}
+nn_matrix:
+{nn_matrix}
 
-    E_geom, eV:
-        {E_geom}
+E_geom, eV:
+{E_geom}
 
         {j_out_str}
 
-    Raw Tc_list, K:
-        {Tc_list}
+Raw Tc_list, K:
+{Tc_list}
 
     Estimated value of Tc, K:
         {round(Tc_list.mean())} K
@@ -265,11 +264,12 @@ def solver(input_path: str, magnetic_atom: str, spin: float):
     write_output(j_vector_list, good_struct_list, bad_struct_list, nn_matrix, E_geom, Tc_list)
     plot_j_values(j_vector_list, input_path)
     plot_E_tot(sorted_matrix, nn_matrix)
+    print('All done sucessufeully!')
 
 
-input_path = '../examples/Fe/'
-magnetic_atom = 'Fe'
-spin = 2
+input_path = '../examples/Ni/'
+magnetic_atom = 'Ni'
+spin = 1
 
 if __name__ == '__main__':
     solver(input_path, magnetic_atom, spin)
