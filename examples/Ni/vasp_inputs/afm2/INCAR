@@ -1,20 +1,30 @@
+ALGO = Normal
+EDIFF = 1e-06
+ENCUT = 520
+IBRION = -1
+ICHARG = 2
+ISIF = 3
+ISMEAR = -5
+ISPIN = 2
+LAECHG = True
+LASPH = True
+LCHARG = True
+LDAU = True
+LDAUJ = 0
+LDAUL = 2
+LDAUPRINT = 1
+LDAUTYPE = 2
+LDAUU = 6.2
+LMAXMIX = 4
+LORBIT = 11
+LREAL = Auto
+LVHAR = False
+LVTOT = False
+LWAVE = False
+MAGMOM = 2*-5.0 2*5.0
+NCORE = 4
+NELM = 120
+NSW = 0
 PREC = Accurate
-    LWAVE   =    .FALSE.             # WAVECAR off
-    LCHARG  =    .FALSE.             # CHGCAR & CHG off
-
-Relaxation:
-    EDIFF   =    1E-6
-    ENCUT   =    520
-    IBRION  =    2      # ionic relaxation (conjugate gradient algorithm).
-
-    LASPH   =    True
-    LORBIT  =    11     # magnetization densities are written to the OUTCAR
-    LREAL   =    False
-
-Smearing:
-    ISMEAR  =    1     # MP smearing used since we have a metal.
-    SIGMA   =    0.2   # width of the smearing in eV recommended for metals
-
-Magnetism:
-    ISPIN    =    2
-    MAGMOM  =   1.0 -1.0
+SIGMA = 0.05
+SYMPREC = 1e-08

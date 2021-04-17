@@ -1,0 +1,31 @@
+
+    good_struct_list
+        ['../examples/EuO/vasp_inputs/fm0', '../examples/EuO/vasp_inputs/afm1', '../examples/EuO/vasp_inputs/afm2', '../examples/EuO/vasp_inputs/afm5', '../examples/EuO/vasp_inputs/afm3']
+
+    bad_struct_list
+        ['../examples/EuO/vasp_inputs/afm6', '../examples/EuO/vasp_inputs/afm7', '../examples/EuO/vasp_inputs/afm4']
+
+    nn_matrix:
+        [[  1.  12.   6.  24.  12.]
+ [  1.   0.   6.   0. -12.]
+ [  1.  -6.   0.   0.   0.]
+ [  1.   4.  -6.   8. -12.]
+ [  1.   4.  -2.  -8.   4.]]
+
+    E_geom, eV:
+        [2.3824834  2.38170344 2.37788729 2.38022239]
+
+        Exchange coupling vector J, meV: 
+ 
+1 : [0.1]
+2 : [0.03 0.39]
+3 : [0.66 0.07 0.56]
+4 : [0.27 0.03 0.22 0.15]
+
+
+    Raw Tc_list, K:
+        [ 4.8 10.3 84.1 40.1]
+
+    Estimated value of Tc, K:
+        35 K
+        
