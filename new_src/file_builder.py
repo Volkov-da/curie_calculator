@@ -3,6 +3,7 @@ from pymatgen.analysis.magnetism.analyzer import MagneticStructureEnumerator, Co
 from pymatgen.io.vasp.inputs import Poscar, Incar, Kpoints
 from pymatgen.io.vasp.sets import MPRelaxSet, MPStaticSet, MPSOCSet
 from shutil import copy
+from tqdm import tqdm
 import os
 
 from pymatgen.io.vasp.outputs import Vasprun
@@ -97,7 +98,7 @@ def get_siman_inputs(input_path: str):
     vasp_inputs_path = os.path.join(input_path, 'vasp_inputs')
     afm_foldrs = [os.path.join(vasp_inputs_path, i)
                   for i in [i for i in os.listdir(vasp_inputs_path) if 'afm' in i]]
-    for folder in afm_foldrs:
+    for folder in tqdm(afm_foldrs):
         tmp_out_path = os.path.join(out_path, 'POSCAR_' + folder.split("/")[-1])
         siman_POSCAR_writer(in_path=os.path.join(folder, 'POSCAR'), out_path=tmp_out_path)
 
@@ -189,7 +190,7 @@ def get_VASP_inputs(input_path: str, relx_dict: dict, static_dict: dict) -> None
     if not os.path.exists(os.path.join(input_path, 'vasp_inputs')):
         os.mkdir(os.path.join(input_path, 'vasp_inputs'))
 
-    for i, magnetic_structure in enumerate(enum_struct_list.ordered_structures):
+    for i, magnetic_structure in tqdm(enumerate(enum_struct_list.ordered_structures)):
 
         magnetic_type = enum_struct_list.ordered_structure_origins[i]
 
@@ -284,8 +285,9 @@ def file_builder(input_path: str):
     copy(os.path.join(input_path, 'POSCAR'), os.path.join(
         input_path, 'siman_inputs', 'POSCAR_fm0'))
     submit_all_jobs(input_path)
+    sleep(7)
     vasprun_checker(input_path)
 
 
-input_path = '../examples/Fe/'
+input_path = '../examples/Fe_1/'
 file_builder(input_path)
