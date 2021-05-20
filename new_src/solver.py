@@ -135,7 +135,7 @@ def energy_list_getter(good_struct_list: list, initial_atoms_num: int) -> list:
     return np.array(E_list)
 
 
-def nn_matrix_getter(good_struct_list: list, magnetic_atom: str) -> list:
+def nn_matrix_getter(input_path: str, good_struct_list: list, magnetic_atom: str) -> list:
     good_structures_number = len(good_struct_list)
     nn_matrix = []
     for struct_folder in tqdm(good_struct_list):
@@ -147,11 +147,11 @@ def nn_matrix_getter(good_struct_list: list, magnetic_atom: str) -> list:
     return np.array(nn_matrix)
 
 
-def sorted_matrix_getter(input_path: str) -> list:
+def sorted_matrix_getter(input_path: str, magnetic_atom: str, spin: float) -> list:
     good_struct_list, bad_struct_list = find_good_structures(input_path)
     initial_atoms_num = len(Structure.from_file(os.path.join(input_path, 'POSCAR')))
     E_list = energy_list_getter(good_struct_list, initial_atoms_num)
-    nn_matrix = nn_matrix_getter(good_struct_list, magnetic_atom)
+    nn_matrix = nn_matrix_getter(input_path, good_struct_list, magnetic_atom)
     nn_spin_matrix = nn_matrix * spin * (spin + 1)
     full_matrix = np.append(nn_spin_matrix, E_list.reshape(len(E_list), 1), axis=1)
     sorted_matrix = full_matrix[np.argsort(full_matrix[:, -1])]
@@ -193,7 +193,7 @@ def Tc_list_getter(j_vector_list: list, z_vector: list) -> list:
     return T_c_list
 
 
-def write_output(j_vector_list, good_struct_list, bad_struct_list, nn_matrix, E_geom, Tc_list):
+def write_output(input_path: str, j_vector_list : list, good_struct_list, bad_struct_list, nn_matrix, E_geom, Tc_list):
     j_out_str = 'Exchange coupling vector J, meV: \n \n'
     for i in j_vector_list:
         tmp_out_str = str(len(i)) + ' : ' + str(np.round(i * 1000, 2)) + '\n'
@@ -212,12 +212,12 @@ nn_matrix:
 E_geom, eV:
 {E_geom}
 
-        {j_out_str}
+    {j_out_str}
 
 Raw Tc_list, K:
 {Tc_list}
 
-    Estimated value of Tc, K:
+Estimated value of Tc, K:
         {round(Tc_list.mean())} K
         """
 
@@ -226,50 +226,53 @@ Raw Tc_list, K:
         out_f.writelines(output_text)
 
 
-def plot_j_values(j_vector_list: list, input_path: str) -> None:
-    plt.figure(figsize=(7, 5), dpi=100)
+def plot_j_values(input_path : str, j_vector_list : list) -> None:
+    plt.figure(figsize=(7,5), dpi=100)
     j_vector_list_mev = [i * 1000 for i in j_vector_list]
     for y in j_vector_list_mev:
         x = range(1, len(y) + 1)
         plt.plot(x, y)
         plt.scatter(x, y, label=len(x))
-    plt.xlabel('Coordination sphere number', fontsize=14)
-    plt.ylabel('J, meV', fontsize=14)
+    plt.xlabel('Coordination sphere number', fontsize = 14)
+    plt.ylabel('J, meV', fontsize = 14)
+    plt.xticks(range(1, len(j_vector_list[-1]) + 1))
     plt.grid(alpha=.4)
     plt.legend()
     plt.savefig(os.path.join(input_path, 'J_vectors_plot.pdf'), bbox_inches='tight')
 
-
-def plot_E_tot(sorted_matrix: list, nn_matrix: list) -> None:
-    E_tot_mev = [i[-1] * 1000 for i in sorted_matrix]
-    x = range(1, len(E_tot_mev) + 1)
+def plot_E_tot(input_path: str, sorted_matrix : list, nn_matrix : list) -> None:
+    
+    E_tot_mev = np.array([i[-1] * 1000 for i in sorted_matrix])
+    E_tot_norm = E_tot_mev - E_tot_mev.min()
+    max_E_geom = max(E_tot_mev)
+    min_E_geom = min(E_tot_mev)
+    dE_geom = max_E_geom - min_E_geom
+    text = f"""$dE$    :  {dE_geom:.2f}   meV
+max : {max_E_geom:.2f}  meV
+min  : {min_E_geom:.2f}   meV"""
+    props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
+    
+    x = range(1, len(E_tot_norm) + 1)
     plt.figure(figsize=(7, 5), dpi=100)
-    plt.scatter(x, E_tot_mev, color='r')
+    plt.scatter(x, E_tot_norm, color='r')
+    plt.plot(x, E_tot_norm, color='r')
+    plt.text(1, max(E_tot_norm), text, verticalalignment='top', bbox=props)
     plt.grid(alpha=.4)
-    plt.xlabel('Spins (\u2191 - \u2193)', fontsize=14)
-    plt.ylabel(r'$E_{tot},  meV$', fontsize=14)
+    plt.xlabel('Spins (\u2191 - \u2193)', fontsize =12)
+    plt.ylabel(r'$E_{tot},  meV$', fontsize =12)
     combination_list = [[int(p) for p in i[1:6]] for i in nn_matrix]
-    plt.xticks(x, combination_list, rotation=45, ha='right')
-    plt.title('Total energy of different spin configurations')
+    plt.xticks(x, combination_list, rotation=10, ha='right')
     plt.savefig(os.path.join(input_path, 'E_tot_plot.pdf'), bbox_inches='tight')
 
 
 def solver(input_path: str, magnetic_atom: str, spin: float):
-    nn_matrix, sorted_matrix, good_struct_list, bad_struct_list = sorted_matrix_getter(input_path)
+    nn_matrix, sorted_matrix, good_struct_list, bad_struct_list = sorted_matrix_getter(input_path, magnetic_atom, spin)
     E_geom, j_vector_list = j_vector_list_getter(sorted_matrix)
 
     z_vector = get_nn_list(path_to_poscar=os.path.join(input_path, 'POSCAR'),
                            magnetic_atom=magnetic_atom)
     Tc_list = Tc_list_getter(j_vector_list, z_vector)
-    write_output(j_vector_list, good_struct_list, bad_struct_list, nn_matrix, E_geom, Tc_list)
-    plot_j_values(j_vector_list, input_path)
-    plot_E_tot(sorted_matrix, nn_matrix)
+    write_output(input_path, j_vector_list, good_struct_list, bad_struct_list, nn_matrix, E_geom, Tc_list)
+    plot_j_values(input_path, j_vector_list)
+    plot_E_tot(input_path, sorted_matrix, nn_matrix)
     print('All done sucessufeully!')
-
-
-input_path = '../examples/Ni/'
-magnetic_atom = 'Ni'
-spin = 1
-
-if __name__ == '__main__':
-    solver(input_path, magnetic_atom, spin)
