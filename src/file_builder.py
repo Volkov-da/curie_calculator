@@ -70,7 +70,8 @@ def up_down_spin_counter(in_data: list) -> list:
 
 def spin_row_replacer(in_data: list) -> list:
     out_data = in_data.copy()
-    out_data[6] = ' '.join(str(i) for i in up_down_spin_counter(in_data)) + '\n'
+    out_data[6] = ' '.join(str(i)
+                           for i in up_down_spin_counter(in_data)) + '\n'
     return out_data
 
 
@@ -99,8 +100,10 @@ def get_siman_inputs(input_path: str):
     afm_foldrs = [os.path.join(vasp_inputs_path, i)
                   for i in [i for i in os.listdir(vasp_inputs_path) if 'afm' in i]]
     for folder in tqdm(afm_foldrs):
-        tmp_out_path = os.path.join(out_path, 'POSCAR_' + folder.split("/")[-1])
-        siman_POSCAR_writer(in_path=os.path.join(folder, 'POSCAR'), out_path=tmp_out_path)
+        tmp_out_path = os.path.join(
+            out_path, 'POSCAR_' + folder.split("/")[-1])
+        siman_POSCAR_writer(in_path=os.path.join(
+            folder, 'POSCAR'), out_path=tmp_out_path)
 
 
 def submit_all_jobs(input_folder: str) -> None:
@@ -273,7 +276,8 @@ def vasprun_checker(input_path):
 
 
 def file_builder(input_path: str):
-    assert os.path.exists(input_path), f'Input path: {input_path} does not exist!'
+    assert os.path.exists(
+        input_path), f'Input path: {input_path} does not exist!'
     assert os.path.exists(os.path.join(input_path, 'POSCAR')
                           ), f'Please specify POSCAR file in you input folder: {input_path}'
 
@@ -289,7 +293,7 @@ def file_builder(input_path: str):
     sleep(7)
     vasprun_checker(input_path)
 
-    
+
 if __name__ == '__main__':
     input_path = os.getcwd()
     print(input_path)
