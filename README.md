@@ -1,6 +1,8 @@
-# Magnetic critical temperature Calculator
+# Magnetic critical temperature Calculator :magnet:
+![Algo Details](/images/algo.png)
+
 ---
-## Installation
+## Installation :computer:
 Code is currently under development. Now it working fine for few materials (e.g EuO).
 
 
@@ -22,7 +24,7 @@ Add this to your `.bashrc` or `.zshrc` etc. file.
 ```
 ---
 
-## How to run examples
+## How to run examples :compass:
 
 ```
 cd examples/EuS
