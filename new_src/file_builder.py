@@ -284,10 +284,13 @@ def file_builder(input_path: str):
     get_siman_inputs(input_path)
     copy(os.path.join(input_path, 'POSCAR'), os.path.join(
         input_path, 'siman_inputs', 'POSCAR_fm0'))
+    print('All files written. Starting VASP calculations!')
     submit_all_jobs(input_path)
     sleep(7)
     vasprun_checker(input_path)
 
 
-input_path = '../examples/Fe_1/'
-file_builder(input_path)
+if __name__ == '__main__':
+    input_path = os.getcwd()
+    print(input_path)
+    file_builder(input_path)

@@ -1,30 +1,24 @@
-from siman.calc_manage import smart_structure_read
 import os
+import numpy as np
 from tqdm import tqdm
+from pymatgen.core import Structure
+from pymatgen.io.vasp.outputs import Vasprun, Chgcar, Oszicar, Outcar, Potcar
+from siman.calc_manage import smart_structure_read
+
 from itertools import combinations
 from scipy.constants import physical_constants
-import numpy as np
+from itertools import combinations
+import matplotlib.pyplot as plt
+import warnings
+warnings.filterwarnings("ignore")
+
+k_B = physical_constants['Boltzmann constant in eV/K'][0]
 
 
-def get_magmom_list(in_incar_data: list) -> list:
-    magmom_line = [line for line in in_incar_data if 'MAGMOM' in line]
-    magmom_list = [float(i) for i in magmom_line[0].split()[2:]]
-    return magmom_list
-
-
-def get_true_ratio(magmom_list: list, in_poscar_data: list) -> int:
-    """
-    Args:
-        magmom_list    (list) - list of magnetic moments
-        in_poscar_data (list) - list of string in correct POSCAR
-
-    Return:
-        true_ratio (int)
-    """
-    true_num_atoms = len(in_poscar_data[8:])
-    current_num_atoms = len(magmom_list)
-    true_ratio = int(true_num_atoms / current_num_atoms)
-    return true_ratio
+def get_ratio(path_to_structure: str, initial_atoms_num: float) -> float:
+    tmp_strucuture = Structure.from_file(path_to_structure)
+    ratio = len(tmp_strucuture) / initial_atoms_num
+    return ratio
 
 
 def count_nn(path_to_poscar: str, magnetic_atoms: list) -> dict:
@@ -68,201 +62,227 @@ def count_nn(path_to_poscar: str, magnetic_atoms: list) -> dict:
     return dist_neighbNum
 
 
-def get_coefficients(poscars_to_check: list, magnetic_atoms: list, up_to=3) -> list:
-    """
-    As a result this function will return coefficients,
-    For E0, J1 and J2 for the Hisenber model in a form of matrix.
-    Combaining obtained matrix with calculated energies (E_afm) of AFM configurations,
-    One can calculate E0, J1, J2, solving a system of linear equations.
+def get_nn_list(path_to_poscar: str, magnetic_atom: str) -> list:
+    nn_list = list(count_nn(path_to_poscar, magnetic_atoms=[magnetic_atom, 'Po']).values())
+    return nn_list
 
-    Args:
-        poscars_to_check - List of paths to POCARs files that should be checked.
-        up_to - how many coordinations spheres to check, default check first two.
 
-    Example:
-        poscars_to_check = ['/EuO/POSCARS2siman/POSCAR_1',
-                            '/EuO/POSCARS2siman/POSCAR_2',
-                            '/EuO/POSCARS2siman/POSCAR_3']
-        get_coefficients(poscars_to_check)
-        >>> np.array([[0,  6],
-                      [4, -6],
-                      [-6,  0]]
+def is_good_structure(struct_folder: str) -> bool:
     """
+
+    Check if structures after relaxation are sutable for
+    futher Heisenberg hamiltonian calculations
+
+    Return:
+        True/False
+
+    """
+
+    vasprun_path = os.path.join(struct_folder, 'vasprun.xml')
+    osz_path = os.path.join(struct_folder, 'OSZICAR')
+    assert os.path.exists(vasprun_path), 'File vasprun.xml absent! Cant continue :('
+    assert os.path.exists(osz_path), 'File OSZICAR absent! Cant continue :('
+
+    try:
+        vasprun = Vasprun(vasprun_path, parse_dos=False, parse_eigen=False)
+    except Exception:
+        return False
+
+    osz = Oszicar(osz_path)
+    mag_mom = abs(osz.ionic_steps[-1]['mag'])
+
+    mag_crit = False
+    converg_crit = False
+
+    if os.path.basename(struct_folder) == 'fm0' and mag_mom > 1.0:
+        mag_crit = True
+
+    if os.path.basename(struct_folder) != 'fm0' and mag_mom < 0.1:
+        mag_crit = True
+
+    if vasprun.converged * vasprun.converged_electronic * vasprun.converged_ionic:
+        converg_crit = True
+
+    return bool(converg_crit * mag_crit)
+
+
+def find_good_structures(input_path: str) -> list:
+    good_struct_list = []
+    bad_struct_list = []
+
+    vasp_inputs_path = os.path.join(input_path, 'vasp_inputs')
+
+    assert os.path.exists(vasp_inputs_path), f'Path "{vasp_inputs_path}" Does not exist!'
+
+    for magnetic_conf in os.listdir(vasp_inputs_path):
+        struct_folder = os.path.join(vasp_inputs_path, magnetic_conf)
+        if is_good_structure(struct_folder):
+            good_struct_list.append(struct_folder)
+        else:
+            bad_struct_list.append(struct_folder)
+    return good_struct_list, bad_struct_list
+
+
+def energy_list_getter(good_struct_list: list, initial_atoms_num: int) -> list:
+    E_list = []
+    for struct_folder in tqdm(good_struct_list):
+        vasprun_path = os.path.join(struct_folder, 'vasprun.xml')
+        poscar_path = os.path.join(struct_folder, 'POSCAR')
+        vasprun = Vasprun(vasprun_path, parse_dos=False, parse_eigen=False)
+        ratio = get_ratio(poscar_path, initial_atoms_num)
+        E_tot = vasprun.final_energy / ratio
+        E_list.append(E_tot)
+    return np.array(E_list)
+
+
+def nn_matrix_getter(input_path: str, good_struct_list: list, magnetic_atom: str) -> list:
+    good_structures_number = len(good_struct_list)
     nn_matrix = []
-    for path_to_poscar in tqdm(poscars_to_check):
-        # get a list with number of nearest
-        nn_ls = list(count_nn(path_to_poscar, magnetic_atoms=magnetic_atoms).values())
-        # neighbours for the structure
-        nn_matrix.append(nn_ls)  # add list to he matrix
-    nn_matrix = np.array(nn_matrix)
-    return nn_matrix[..., :up_to]
-
-
-def get_exchange_couplings(nn_matrix: list, energies_afm: list, spin: float) -> list:
-    """
-    Returns three float numbers: E0, J1, J2 respectively.
-        E0 - is the part of total energy independent of the spin configuration
-        J1, J2 - are the first and second nearest neighbor exchange constants
-
-    Example:
-        nn_matrix = np.array([[ 0  6],
-                              [ 4 -6],
-                              [-6  0]])
-
-        energies_afm = np.array([-41.614048,
-                                 -41.611114,
-                                 -41.59929])
-
-        get_exchange_coeff(nn_matrix, energies_afm)
-        >>>-41.609258249 0.000105484126 5.0685185185e-05
-    """
-    nn_matrix = nn_matrix * spin * (spin + 1)
+    for struct_folder in tqdm(good_struct_list):
+        siman_path = os.path.join(input_path, 'siman_inputs',
+                                  f'POSCAR_{struct_folder.split("/")[-1]}')
+        nn_list = get_nn_list(path_to_poscar=siman_path, magnetic_atom=magnetic_atom)
+        nn_matrix.append(nn_list[:good_structures_number - 1])
     nn_matrix = np.append(np.ones([len(nn_matrix), 1]), nn_matrix, 1)
-    E0, J1, J2, J3 = np.linalg.solve(nn_matrix, energies_afm)
-    return E0, abs(J1), abs(J2), abs(J3)
+    return np.array(nn_matrix)
 
 
-def calculate_Tc(J1: float, J2: float, J3: float, z1: int, z2: int, z3: int) -> float:
-    k_B = physical_constants['Boltzmann constant in eV/K'][0]
-    T_c = 2 * (J1 * z1 + J2 * z2 + J3 * z3) / (3 * k_B)
-    return T_c
+def sorted_matrix_getter(input_path: str, magnetic_atom: str, spin: float) -> list:
+    good_struct_list, bad_struct_list = find_good_structures(input_path)
+    initial_atoms_num = len(Structure.from_file(os.path.join(input_path, 'POSCAR')))
+    E_list = energy_list_getter(good_struct_list, initial_atoms_num)
+    nn_matrix = nn_matrix_getter(input_path, good_struct_list, magnetic_atom)
+    nn_spin_matrix = nn_matrix * spin * (spin + 1)
+    full_matrix = np.append(nn_spin_matrix, E_list.reshape(len(E_list), 1), axis=1)
+    sorted_matrix = full_matrix[np.argsort(full_matrix[:, -1])]
+    return nn_matrix, sorted_matrix, good_struct_list, bad_struct_list
 
 
-def total_num_neighbours(path_to_poscar: str, magnetic_atoms: list) -> list:
-    """
-    Return total number of magnetic_atoms in first,
-    second and third coordination spheres z1, z2, z3 respectively.
-    Since this number is constant for particular structure and will be the
-    same for all generated supercells you can use whatever POSCAR file you want.
-
-    Args:
-        path_to_poscar  (str)
-        magnetic_atoms  (list)  - list of atoms which suppose to be magnetic in
-        given structure.e.g [Fe, Co] or just [Fe] if there is only one type
-        of magnetic atoms.
-
-    Example:
-        # BCC Iron case
-        path_to_poscar = './vasp_inputs/afm1/POSCAR'
-        total_num_neighbours(path_to_poscar, magnetic_atoms = ['Fe'])
-        >>> [8, 6, 12, 24]
-
-    """
-    assert os.path.exists(path_to_poscar), f'File {path_to_poscar} does not exist!'
-    num_neighb = [abs(i) for i in list(
-        count_nn(path_to_poscar, magnetic_atoms=magnetic_atoms).values())]
-    return num_neighb[:4]
+def exchange_coupling(matrix: list, energies: list) -> list:
+    determinant = np.linalg.det(matrix)
+    if determinant:
+        solution_vector = np.linalg.solve(matrix, energies)
+        return abs(solution_vector)
 
 
-def get_E_tot(in_path: str) -> float:
-    """
-    Args:
-        in_path (str) - direct path to the log file from the VASP run
-    Return:
-        E_tot (float) - total calculated energies
+def j_vector_list_getter(sorted_matrix: list) -> list:
+    energies = sorted_matrix[..., -1]
+    matrix = sorted_matrix[..., :-1]
 
-    This function suppose to parse log type file from the VASP run
-    and return the total energy of the structure (   1 F= -...)
-    """
-    with open(in_path) as in_f:
-        text = in_f.readlines()
-    lst_line = text[-1]
-    E_tot = float(lst_line.split()[2])
-    return E_tot
+    matrix_size = matrix.shape[0]
+    results = []
+    for i in range(2, matrix_size + 1):
+        tmp_matrix = matrix[:i, :i]
+        tmp_energies = energies[:i]
+        solution_vector = exchange_coupling(tmp_matrix, tmp_energies)
+        if solution_vector is not None:
+            results.append(solution_vector)
 
-
-def get_all_energies(in_path: str, num_of_structures: int) -> dict:
-    """
-    Args:
-        in_path           (str)
-        num_of_structures (int)
-    Return:
-        E_dict (dict) {id_of_structure : E_tot}
-
-    Function parse all the folder with VASP calculations
-    for AFM structures and returns the dictionary in format
-    {id_of_structure : E_tot}
-    """
-    incar_path = os.path.join(in_path, 'vasp_inputs', f'afm1', 'INCAR')
-    with open(incar_path) as in_data:
-        incar_data = in_data.readlines()
-    magmom_list = get_magmom_list(incar_data)
-    E_dict = dict()
-    for i in range(num_of_structures):
-        tmp_path = os.path.join(in_path, 'vasp_inputs', f'afm{i + 1}')
-        log_path = os.path.join(tmp_path, 'log')
-        poscar_path = os.path.join(tmp_path, 'POSCAR')
-        with open(poscar_path) as in_data:
-            poscar_data = in_data.readlines()
-        ratio = get_true_ratio(magmom_list, poscar_data)
-
-        E = get_E_tot(log_path)
-        E_dict[i + 1] = E / ratio
-    return E_dict
+    E_geom_list = np.array([i[0] for i in results])
+    j_vectors_list = [i[1:] for i in results]
+    return E_geom_list, j_vectors_list
 
 
-def get_Tc_list(num_of_structures: int, nn_matrix, energies_afm: list, z1: int, z2: int, z3: int, spin: float):
-    all_combinations = list(combinations(range(0, num_of_structures), 4))
-    Tc_list = []
-    Eg_list = []  # energy from the geometrly itself
-    J1_list = []
-    J2_list = []
-    J3_list = []
-    combination_list = []
-    num_of_singular_matrix = 0
-
-    for combination in all_combinations:
-        matrix = nn_matrix[(combination), ...]
-        energies = energies_afm[(combination), ...]
-        try:
-            Eg, J1, J2, J3 = get_exchange_couplings(matrix,
-                                                    energies,
-                                                    spin=spin)
-            Tc = calculate_Tc(J1, J2, J3, z1=z1, z2=z2, z3=z3)
-            Tc_list.append(Tc)
-            Eg_list.append(Eg)
-            J1_list.append(J1)
-            J2_list.append(J2)
-            J3_list.append(J3)
-            combination_list.append(combination)
-        except:
-            num_of_singular_matrix += 1
-    return Tc_list, Eg_list, J1_list, J2_list, J3_list, combination_list, num_of_singular_matrix
+def Tc_list_getter(j_vector_list: list, z_vector: list) -> list:
+    T_c_list = []
+    for j_vector in j_vector_list:
+        z_vector_tmp = z_vector[:len(j_vector)]
+        T_c = round(sum(j_vector * z_vector_tmp) / (3 * k_B), 1)
+        T_c_list.append(T_c)
+    T_c_list = np.array(T_c_list)
+    return T_c_list
 
 
-def get_results(input_folder: str, num_of_structures: int, magnetic_atoms: list, SPIN: float):
-    En_dict = get_all_energies(input_folder, num_of_structures)
+def write_output(input_path: str, j_vector_list: list, good_struct_list, bad_struct_list, nn_matrix, E_geom, Tc_list):
+    j_out_str = 'Exchange coupling vector J, meV: \n \n'
+    for i in j_vector_list:
+        tmp_out_str = str(len(i)) + ' : ' + str(np.round(i * 1000, 2)) + '\n'
+        j_out_str += tmp_out_str
 
-    energies_afm = np.array(list(En_dict.values()), dtype='float')
+    output_text = f"""
+good_struct_list
+        {good_struct_list}
 
-    z1, z2, z3, z4 = total_num_neighbours(path_to_poscar=os.path.join(input_folder, 'vasp_inputs/afm1/POSCAR'),
-                                          magnetic_atoms=magnetic_atoms)
+bad_struct_list
+        {bad_struct_list}
 
-    siman_input_path = os.path.join(input_folder, 'siman_inputs')
+nn_matrix:
+{nn_matrix}
 
-    poscars_to_check = [os.path.join(
-        siman_input_path, f'POSCAR_{i}') for i in range(1, num_of_structures + 1)]
+E_geom, eV:
+{E_geom}
 
-    nn_matrix = get_coefficients(poscars_to_check, magnetic_atoms=magnetic_atoms)
+    {j_out_str}
 
-    Tc_list, Eg_list, J1_list, J2_list, J3_list, combination_list, num_of_singular_matrix = get_Tc_list(num_of_structures=num_of_structures,
-                                                                                                        nn_matrix=nn_matrix,
-                                                                                                        energies_afm=energies_afm,
-                                                                                                        z1=z1,
-                                                                                                        z2=z2,
-                                                                                                        z3=z3,
-                                                                                                        spin=SPIN)
-    out_dict = {'Tc_list': Tc_list,
-                'num_of_singular_matrix': num_of_singular_matrix,
-                'Eg_list': Eg_list,
-                'J1_list': J1_list,
-                'J2_list': J2_list,
-                'J3_list': J3_list,
-                'energies_afm': energies_afm,
-                'nn_matrix': nn_matrix,
-                'combination_list': combination_list,
-                'z1': z1,
-                'z2': z2,
-                'z3': z3}
+Raw Tc_list, K:
+{Tc_list}
 
-    return out_dict
+Estimated value of Tc, K:
+        {round(Tc_list.mean())} K
+        """
+
+    out_path = os.path.join(input_path, 'OUTPUT.txt')
+    with open(out_path, 'w') as out_f:
+        out_f.writelines(output_text)
+
+
+def plot_j_values(input_path: str, j_vector_list: list) -> None:
+    plt.figure(figsize=(7, 5), dpi=100)
+    j_vector_list_mev = [i * 1000 for i in j_vector_list]
+    for y in j_vector_list_mev:
+        x = range(1, len(y) + 1)
+        plt.plot(x, y)
+        plt.scatter(x, y, label=len(x))
+    plt.xlabel('Coordination sphere number', fontsize=14)
+    plt.ylabel('J, meV', fontsize=14)
+    plt.xticks(range(1, len(j_vector_list[-1]) + 1))
+    plt.grid(alpha=.4)
+    plt.legend()
+    plt.savefig(os.path.join(input_path, 'J_vectors_plot.pdf'), bbox_inches='tight')
+
+
+def plot_E_tot(input_path: str, sorted_matrix: list, nn_matrix: list) -> None:
+
+    E_tot_mev = np.array([i[-1] * 1000 for i in sorted_matrix])
+    E_tot_norm = E_tot_mev - E_tot_mev.min()
+    max_E_geom = max(E_tot_mev)
+    min_E_geom = min(E_tot_mev)
+    dE_geom = max_E_geom - min_E_geom
+    text = f"""$dE$    :  {dE_geom:.2f}   meV
+max : {max_E_geom:.2f}  meV
+min  : {min_E_geom:.2f}   meV"""
+    props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
+
+    x = range(1, len(E_tot_norm) + 1)
+    plt.figure(figsize=(7, 5), dpi=100)
+    plt.scatter(x, E_tot_norm, color='r')
+    plt.plot(x, E_tot_norm, color='r')
+    plt.text(1, max(E_tot_norm), text, verticalalignment='top', bbox=props)
+    plt.grid(alpha=.4)
+    plt.xlabel('Spins (\u2191 - \u2193)', fontsize=12)
+    plt.ylabel(r'$E_{tot},  meV$', fontsize=12)
+    combination_list = [[int(p) for p in i[1:6]] for i in nn_matrix]
+    plt.xticks(x, combination_list, rotation=10, ha='right')
+    plt.savefig(os.path.join(input_path, 'E_tot_plot.pdf'), bbox_inches='tight')
+
+
+def solver(input_path: str, magnetic_atom: str, spin: float):
+    nn_matrix, sorted_matrix, good_struct_list, bad_struct_list = sorted_matrix_getter(
+        input_path, magnetic_atom, spin)
+    E_geom, j_vector_list = j_vector_list_getter(sorted_matrix)
+
+    z_vector = get_nn_list(path_to_poscar=os.path.join(input_path, 'POSCAR'),
+                           magnetic_atom=magnetic_atom)
+    Tc_list = Tc_list_getter(j_vector_list, z_vector)
+    write_output(input_path, j_vector_list, good_struct_list,
+                 bad_struct_list, nn_matrix, E_geom, Tc_list)
+    plot_j_values(input_path, j_vector_list)
+    plot_E_tot(input_path, sorted_matrix, nn_matrix)
+    print('All done sucessufeully!')
+
+
+if __name__ == '__main__':
+    input_path = os.getcwd()
+    magnetic_atom = input('Enter mangetic atom (str): ')
+    magnetic_atom = float(input('Enter spin (flaot): '))
+    solver(input_path, magnetic_atom, spin)

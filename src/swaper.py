@@ -22,9 +22,6 @@ def non_conv_swp(calc_fold: str) -> None:
     copy(conctcar_path, poscar_path)  # CONTCAR -> POSCAR
 
 
-input_path = '../examples/EuO_2/'
-
-
 def swaper(input_path: str) -> None:
     initial_path = os.getcwd()
     converged_msg = ' reached required accuracy - stopping structural energy minimisation'
@@ -39,12 +36,12 @@ def swaper(input_path: str) -> None:
                 last_line = log_text[-1]
                 if converged_msg in last_line:
                     stat_swp(calc_fold=calc_fold)
-                    print('Converged', calc_fold)
+                    print('Converged', calc_fold, end=' ')
                     os.chdir(calc_fold)
                     os.system('sbatch jobscript.sh')
                     os.chdir(initial_path)
                 elif swp_msg in last_line:
-                    print('Need swap')
+                    print('Need swap', end=' ')
                     non_conv_swp(calc_fold)
                     os.chdir(calc_fold)
                     os.system('sbatch jobscript.sh')
@@ -52,4 +49,5 @@ def swaper(input_path: str) -> None:
 
 
 if __name__ == '__main__':
+    input_path = os.getcwd()
     swaper(input_path)

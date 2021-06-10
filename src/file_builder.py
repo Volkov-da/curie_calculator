@@ -289,10 +289,8 @@ def file_builder(input_path: str):
     sleep(7)
     vasprun_checker(input_path)
 
-
-input_path = None
-if not input_path:
+    
+if __name__ == '__main__':
     input_path = os.getcwd()
-print(input_path)
-
-file_builder(input_path)
+    print(input_path)
+    file_builder(input_path)

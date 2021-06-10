@@ -19,3 +19,10 @@ Add this to your `.bashrc` or `.zshrc` etc. file.
 ```
 5. export PATH="home/username/curie_calculator/enumlib/src:$PATH"
 ```
+
+
+```
+cd examples/EuS
+python ../../new_src/curie_calculator.py
+python ../../new_src/swaper.py
+```
