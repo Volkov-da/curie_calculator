@@ -284,5 +284,5 @@ def solver(input_path: str, magnetic_atom: str, spin: float):
 if __name__ == '__main__':
     input_path = os.getcwd()
     magnetic_atom = input('Enter mangetic atom (str): ')
-    magnetic_atom = float(input('Enter spin (flaot): '))
+    magnetic_atom = float(input('Enter spin (float): '))
     solver(input_path, magnetic_atom, spin)
