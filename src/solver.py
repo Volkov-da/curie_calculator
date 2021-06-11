@@ -165,7 +165,12 @@ def exchange_coupling(matrix: list, energies: list) -> list:
         return abs(solution_vector)
 
 
-def j_vector_list_getter(sorted_matrix: list) -> list:
+def j_vector_exact(sorted_matrix: list) -> list:
+    """
+    Exact solution of the system in case of nonzero determinant.
+    If mapped coefficients form a singular matrix, the least stable structure
+    excluded from the calculations until the determinant becomes nonzero.
+    """
     energies = sorted_matrix[..., -1]
     matrix = sorted_matrix[..., :-1]
 
@@ -179,7 +184,28 @@ def j_vector_list_getter(sorted_matrix: list) -> list:
             results.append(solution_vector)
 
     E_geom_list = np.array([i[0] for i in results])
-    j_vectors_list = [i[1:] for i in results]
+    j_vectors_list = [abs(i[1:]) for i in results]
+    return E_geom_list, j_vectors_list
+
+
+def j_vector_lstsq(sorted_matrix: list) -> list:
+    """
+    Estimate exchange coupling for the number of coordination spheres by the
+    list squares method. Starting from the N by N system, step by step excluding
+    one of the variables from the fitting, till the N by 2 system with only
+    2 variables (Eg, J_1).
+    """
+    num_of_variables = sorted_matrix.shape[0]
+    energies = sorted_matrix[..., -1]
+    matrix = sorted_matrix[..., :-1]
+
+    results = []
+    for i in range(2, num_of_variables + 1):
+        tmp_matrix = matrix[..., :i]
+        x_lstsq = np.linalg.lstsq(tmp_matrix, energies)[0]
+        results.append(x_lstsq)
+    E_geom_list = np.array([i[0] for i in results])
+    j_vectors_list = [abs(i[1:]) for i in results]
     return E_geom_list, j_vectors_list
 
 
@@ -193,40 +219,48 @@ def Tc_list_getter(j_vector_list: list, z_vector: list) -> list:
     return T_c_list
 
 
-def write_output(input_path: str, j_vector_list: list, good_struct_list, bad_struct_list, nn_matrix, E_geom, Tc_list):
-    j_out_str = 'Exchange coupling vector J, meV: \n \n'
-    for i in j_vector_list:
-        tmp_out_str = str(len(i)) + ' : ' + str(np.round(i * 1000, 2)) + '\n'
-        j_out_str += tmp_out_str
+def write_output(input_path: str, j_exact_list: list, j_lstsq_list: list, good_struct_list, bad_struct_list, nn_matrix, Egeom_exact_list, Egeom_lstsq_list, Tc_exact, Tc_lstsq):
+    output_text = ''
 
-    output_text = f"""
-good_struct_list
-        {good_struct_list}
+    j_exact_str = 'Exchange coupling vector by exact solution (J, meV): \n \n'
+    for i in j_exact_list:
+        j_exact_str += '\t' + str(len(i)) + ' : ' + str(np.round(i * 1000, 2)) + '\n'
 
-bad_struct_list
-        {bad_struct_list}
+    j_lstsq_str = 'Exchange coupling vector by least squares method (J, meV): \n \n'
+    for i in j_lstsq_list:
+        j_lstsq_str += '\t' + str(len(i)) + ' : ' + str(np.round(i * 1000, 2)) + '\n'
 
-nn_matrix:
-{nn_matrix}
+    good_structures_str = 'good structures:\n\t' + \
+        ' '.join([i.split('/')[-1] for i in sorted(good_struct_list)]) + '\n'
+    bad_structures_str = 'bad structures: \n\t' + \
+        ' '.join([i.split('/')[-1] for i in sorted(bad_struct_list)]) + '\n'
 
-E_geom, eV:
-{E_geom}
+    output_text += good_structures_str
+    output_text += '\n'
+    output_text += bad_structures_str
+    output_text += '\n'
+    output_text += 'nn_matrix:\n' + str(nn_matrix) + '\n'
 
-    {j_out_str}
+    output_text += '\n'
+    output_text += '-' * 79 + '\n'
+    output_text += 'Exact solution method: \n\n'
+    output_text += 'E_geom, eV:\n\n\t' + str(Egeom_exact_list) + '\n\n'
+    output_text += j_exact_str + '\n'
+    output_text += '\n' + 'Critical temperature (Tc, K):' + '\n\n\t' + str(Tc_exact) + '\n'
 
-Raw Tc_list, K:
-{Tc_list}
-
-Estimated value of Tc, K:
-        {round(Tc_list.mean())} K
-        """
+    output_text += '\n'
+    output_text += '-' * 79 + '\n'
+    output_text += 'Least squares method: \n\n'
+    output_text += 'E_geom, eV:\n\n\t' + str(Egeom_lstsq_list) + '\n\n'
+    output_text += j_lstsq_str + '\n'
+    output_text += '\n' + 'Critical temperature (Tc, K):' + '\n\n\t' + str(Tc_lstsq) + '\n'
 
     out_path = os.path.join(input_path, 'OUTPUT.txt')
     with open(out_path, 'w') as out_f:
         out_f.writelines(output_text)
 
 
-def plot_j_values(input_path: str, j_vector_list: list) -> None:
+def plot_j_values(input_path: str, j_vector_list: list, filename: str) -> None:
     plt.figure(figsize=(7, 5), dpi=100)
     j_vector_list_mev = [i * 1000 for i in j_vector_list]
     for y in j_vector_list_mev:
@@ -238,7 +272,21 @@ def plot_j_values(input_path: str, j_vector_list: list) -> None:
     plt.xticks(range(1, len(j_vector_list[-1]) + 1))
     plt.grid(alpha=.4)
     plt.legend()
-    plt.savefig(os.path.join(input_path, 'J_vectors_plot.pdf'), bbox_inches='tight')
+    abs_filename = os.path.join(input_path, f'{filename}.pdf')
+    plt.savefig(abs_filename, bbox_inches='tight')
+
+
+def plot_Tcs(input_path: str, Tc_lstsq: list, Tc_exact: list):
+    plt.figure(figsize=(8, 6), dpi=100)
+    plt.scatter(range(1, len(Tc_lstsq) + 1), Tc_lstsq, label='least squares', marker='v')
+    plt.scatter(range(1, len(Tc_exact) + 1), Tc_exact, label='exact solution')
+    plt.plot(range(1, len(Tc_lstsq) + 1), Tc_lstsq)
+    plt.plot(range(1, len(Tc_exact) + 1), Tc_exact)
+    plt.xlabel('Number of considered exchanges', fontsize=14)
+    plt.ylabel(r'$T_C, K$', fontsize=14)
+    plt.legend()
+    plt.grid(alpha=.4)
+    plt.savefig(os.path.join(input_path, 'Tcs_plot.pdf'), bbox_inches='tight')
 
 
 def plot_E_tot(input_path: str, sorted_matrix: list, nn_matrix: list) -> None:
@@ -269,16 +317,29 @@ min  : {min_E_geom:.2f}   meV"""
 def solver(input_path: str, magnetic_atom: str, spin: float):
     nn_matrix, sorted_matrix, good_struct_list, bad_struct_list = sorted_matrix_getter(
         input_path, magnetic_atom, spin)
-    E_geom, j_vector_list = j_vector_list_getter(sorted_matrix)
+
+    Egeom_exact_list, j_exact_list = j_vector_exact(sorted_matrix)
+    Egeom_lstsq_list, j_lstsq_list = j_vector_lstsq(sorted_matrix)
 
     z_vector = get_nn_list(path_to_poscar=os.path.join(input_path, 'POSCAR'),
                            magnetic_atom=magnetic_atom)
-    Tc_list = Tc_list_getter(j_vector_list, z_vector)
-    write_output(input_path, j_vector_list, good_struct_list,
-                 bad_struct_list, nn_matrix, E_geom, Tc_list)
-    plot_j_values(input_path, j_vector_list)
+
+    Tc_exact = Tc_list_getter(j_exact_list, z_vector)
+    Tc_lstsq = Tc_list_getter(j_lstsq_list, z_vector)
+
+    write_output(input_path, j_exact_list, j_lstsq_list,
+                 good_struct_list, bad_struct_list,
+                 nn_matrix, Egeom_exact_list,
+                 Egeom_lstsq_list, Tc_exact, Tc_lstsq)
+    print('OUTPUT.txt written')
+
+    plot_j_values(input_path, j_exact_list, filename='J_exact')
+    plot_j_values(input_path, j_lstsq_list, filename='J_lstsq')
+    plot_Tcs(input_path, Tc_lstsq, Tc_exact)
     plot_E_tot(input_path, sorted_matrix, nn_matrix)
-    print('All done sucessufeully!')
+    print('All graphs are plotted')
+
+    print('Calculations completed successfully!')
 
 
 if __name__ == '__main__':

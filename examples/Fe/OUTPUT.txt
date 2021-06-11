@@ -1,12 +1,11 @@
+good structures:
+	afm2 afm3 afm4 afm5 afm6 afm7 fm0
 
-    good_struct_list
-        ['../examples/Fe/vasp_inputs/fm0', '../examples/Fe/vasp_inputs/afm6', '../examples/Fe/vasp_inputs/afm7', '../examples/Fe/vasp_inputs/afm2', '../examples/Fe/vasp_inputs/afm5', '../examples/Fe/vasp_inputs/afm4', '../examples/Fe/vasp_inputs/afm3']
+bad structures: 
+	afm1
 
-    bad_struct_list    
-        ['../examples/Fe/vasp_inputs/afm1']
-
-    nn_matrix:
-        [[  1.   8.   6.   8.  12.  24.   6.]
+nn_matrix:
+[[  1.   8.   6.   8.  12.  24.   6.]
  [  1.   0.   2.  -8.   4.   0.  -6.]
  [  1.   0.   2.   0.   0.   0.   2.]
  [  1.   8.  -6.  -8. -12.  24.  -6.]
@@ -14,22 +13,44 @@
  [  1.   4.  -2.   0.   0.  -4.   2.]
  [  1.   0.  -2.   8.   4.   0.  -6.]]
 
-    E_geom, eV:
-        [0.96315683 0.9688341  0.96389655 0.91823434 0.95074429 0.94619234]
-        
-        Exchange coupling vector J, meV: 
+-------------------------------------------------------------------------------
+Exact solution method: 
+
+E_geom, eV:
+
+	[1.40460371 1.41288306 1.40568248 1.33909174 1.38650209 1.37986382]
+
+Exchange coupling vector by exact solution (J, meV): 
  
-1 : [0.39]
-2 : [6.07 8.52]
-3 : [3.6  6.05 1.23]
-4 : [19.23 16.78  4.09  5.71]
-5 : [0.94 0.53 0.02 2.42 2.03]
-6 : [2.94 0.53 0.02 2.13 0.04 2.28]
+	1 : [0.57]
+	2 : [ 8.85 12.42]
+	3 : [5.25 8.82 1.8 ]
+	4 : [28.04 24.48  5.96  8.32]
+	5 : [1.38 0.77 0.04 3.53 2.96]
+	6 : [4.28 0.77 0.04 3.11 0.06 3.32]
 
 
-    Raw Tc_list, K:
-        [  12.1  385.5  290.  1376.1  343.2  259.4]
+Critical temperature (Tc, K):
 
-    Estimated value of Tc, K:    
-        444 K
-        
+	[  17.7  562.1  422.9 2006.8  500.5  378.3]
+
+-------------------------------------------------------------------------------
+Least squares method: 
+
+E_geom, eV:
+
+	[-1.3806365  -1.38367335 -1.38312041 -1.38132003 -1.38126135 -1.37986382]
+
+Exchange coupling vector by least squares method (J, meV): 
+ 
+	1 : [4.23]
+	2 : [4.53 8.2 ]
+	3 : [4.48 6.71 2.13]
+	4 : [4.3  5.5  1.74 0.91]
+	5 : [4.32 5.49 1.74 0.93 0.02]
+	6 : [4.28 0.77 0.04 3.11 0.06 3.32]
+
+
+Critical temperature (Tc, K):
+
+	[130.8 330.5 360.1 357.1 359.4 378.3]

@@ -2,7 +2,7 @@
 ![Algo Details](/images/algo.png)
 
 ---
-## Installation :computer:
+## :computer: Installation
 Code is currently under development. Now it working fine for few materials (e.g EuO).
 
 
@@ -24,7 +24,7 @@ Add this to your `.bashrc` or `.zshrc` etc. file.
 ```
 ---
 
-## How to run examples :compass:
+## :compass: How to run examples
 
 ```
 cd examples/EuS
