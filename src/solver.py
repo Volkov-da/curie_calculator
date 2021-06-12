@@ -333,7 +333,9 @@ def solver(input_path: str, magnetic_atom: str, spin: float):
                  Egeom_lstsq_list, Tc_exact, Tc_lstsq)
     print('OUTPUT.txt written')
 
-    plot_j_values(input_path, j_exact_list, filename='J_exact')
+    if len(j_exact_list):
+        plot_j_values(input_path, j_exact_list, filename='J_exact')
+
     plot_j_values(input_path, j_lstsq_list, filename='J_lstsq')
     plot_Tcs(input_path, Tc_lstsq, Tc_exact)
     plot_E_tot(input_path, sorted_matrix, nn_matrix)

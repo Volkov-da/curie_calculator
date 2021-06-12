@@ -9,7 +9,7 @@ import os
 from pymatgen.io.vasp.outputs import Vasprun
 import numpy as np
 import warnings
-from time import sleep
+from time import sleep, gmtime, strftime
 warnings.filterwarnings('ignore')
 
 
@@ -191,7 +191,7 @@ def vasprun_checker(input_path):
                              for i in os.listdir(vasp_inputs_path)])
     tmp_vasprun = vasprun_pathes.copy()
     while 1:
-        print(len(vasprun_pathes))
+        print(strftime("%H:%M:%S", gmtime()), len(vasprun_pathes))
         for i, vasprun_path in enumerate(vasprun_pathes):
             print(i + 1, end=' ')
             if os.path.exists(vasprun_path):
@@ -212,9 +212,9 @@ def vasprun_checker(input_path):
 
         vasprun_pathes = tmp_vasprun.copy()
         print('\n')
-        sleep(20)
+        sleep(30)
         if not vasprun_pathes:
-            print('vasprun_checker done!')
+            print(strftime("%H:%M:%S", gmtime()), 'vasprun_checker done!')
             break
 
 
@@ -231,9 +231,9 @@ def file_builder(input_path: str):
     get_siman_inputs(input_path)
     copy(os.path.join(input_path, 'POSCAR'), os.path.join(
         input_path, 'siman_inputs', 'POSCAR_fm0'))
-    print('All files written. Starting VASP calculations!')
+    print(strftime("%H:%M:%S", gmtime()), 'All files written. Starting VASP calculations!')
     submit_all_jobs(input_path)
-    sleep(10)
+    sleep(20)
     vasprun_checker(input_path)
 
 

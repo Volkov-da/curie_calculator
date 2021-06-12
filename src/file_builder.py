@@ -9,7 +9,7 @@ import os
 from pymatgen.io.vasp.outputs import Vasprun
 import numpy as np
 import warnings
-from time import sleep
+from time import sleep, gmtime, strftime
 warnings.filterwarnings('ignore')
 
 
@@ -271,7 +271,7 @@ def vasprun_checker(input_path):
         print('\n')
         sleep(20)
         if not vasprun_pathes:
-            print('All done!')
+            print(strftime("%H:%M:%S", gmtime()), 'All done!')
             break
 
 
