@@ -314,7 +314,9 @@ min  : {min_E_geom:.2f}   meV"""
     plt.savefig(os.path.join(input_path, 'E_tot_plot.pdf'), bbox_inches='tight')
 
 
-def solver(input_path: str, magnetic_atom: str, spin: float):
+def solver(input_path: str, magnetic_atom: str):
+    spin_dict = {'Eu': 2.5, 'Fe': 2, 'Co': 1.5, 'Ni': 1, 'Cu': 0.5, 'Sm': 3, 'Nd': 1}
+    spin = spin_dict[magnetic_atom]
     nn_matrix, sorted_matrix, good_struct_list, bad_struct_list = sorted_matrix_getter(
         input_path, magnetic_atom, spin)
 
@@ -341,11 +343,10 @@ def solver(input_path: str, magnetic_atom: str, spin: float):
     plot_E_tot(input_path, sorted_matrix, nn_matrix)
     print('All graphs are plotted')
 
-    print('Calculations completed successfully!')
+    print('Calculations completed successfully!\n')
 
 
 if __name__ == '__main__':
     input_path = os.getcwd()
     magnetic_atom = input('Enter mangetic atom (str): ')
-    spin = float(input('Enter spin (float): '))
-    solver(input_path, magnetic_atom, spin)
+    solver(input_path, magnetic_atom)

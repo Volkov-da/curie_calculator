@@ -212,7 +212,7 @@ def vasprun_checker(input_path):
 
         vasprun_pathes = tmp_vasprun.copy()
         print('\n')
-        sleep(30)
+        sleep(120)
         if not vasprun_pathes:
             print(strftime("%H:%M:%S", gmtime()), 'vasprun_checker done!')
             break
