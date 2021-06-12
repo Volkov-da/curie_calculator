@@ -12,22 +12,23 @@ git clone --recursive https://github.com/Volkov-da/curie_calculator.git
 pip3 install siman
 
 chmod +x install.sh (if needed)
+chmod +x src/curie_calculator.py
 
 ./install.sh
 ```
 
 Export path to enumlib executables (you might need to specify absolute path):
-Add this to your `.bashrc` or `.zshrc` etc. file.
+Add this to your `.bashrc` or `.zshrc` file.
 
 ```
-5. export PATH="home/username/curie_calculator/enumlib/src:$PATH"
+export PATH="home/username/curie_calculator/enumlib/src:$PATH"
+export PATH="/Users/dmitry.volkov/curie_calculator/src:$PATH"
 ```
 ---
 
 ## :compass: How to run examples
 
 ```
-cd examples/EuS
-python ../../src/stat_file_builder.py
-python ../../src/solver.py
+cd examples/EuO_test
+curie_calculator.py
 ```

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from stat_file_builder import file_builder
 from solver import solver
 from time import gmtime, strftime
