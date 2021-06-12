@@ -28,7 +28,6 @@ Add this to your `.bashrc` or `.zshrc` etc. file.
 
 ```
 cd examples/EuS
-python ../../new_src/file_builder.py
-python ../../new_src/swaper.py
-python ../../new_src/solver.py
+python ../../src/stat_file_builder.py
+python ../../src/solver.py
 ```

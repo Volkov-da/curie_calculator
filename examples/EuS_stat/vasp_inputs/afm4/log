@@ -1,0 +1,64 @@
+=========================================
+SLURM_JOB_ID = 43480271
+SLURM_JOB_NODELIST = lnode59
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 8
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 956290
+CUDA_VISIBLE_DEVICES = 
+==========================================
+ running on    8 total cores
+ distrk:  each k-point on    8 cores,    1 groups
+ distr:  one band on    4 cores,    2 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 28 2018 00:24:27) complex          
+  
+ POSCAR found type information on POSCAR  Eu S 
+ POSCAR found :  2 types and       8 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|  ADVICE TO THIS USER RUNNING 'VASP/VAMP'   (HEAR YOUR MASTER'S VOICE ...):  |
+|                                                                             |
+|      You have a (more or less) 'small supercell' and for smaller cells      |
+|      it is recommended  to use the reciprocal-space projection scheme!      |
+|      The real space optimization is not  efficient for small cells and it   |
+|      is also less accurate ...                                              |
+|      Therefore set LREAL=.FALSE. in the  INCAR file                         |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+
+
+ VERY BAD NEWS! internal error in subroutine SGRCON:
+ Found some non-integer element in rotation matrix       2
+
+
+ VERY BAD NEWS! internal error in subroutine SGRCON:
+ Found some non-integer element in rotation matrix       2
+
+
+ VERY BAD NEWS! internal error in subroutine SGRCON:
+ Found some non-integer element in rotation matrix       2
+
+
+ VERY BAD NEWS! internal error in subroutine SGRCON:
+ Found some non-integer element in rotation matrix       2
+
+
+
+ VERY BAD NEWS! internal error in subroutine SGRCON:
+ Found some non-integer element in rotation matrix       2
+
+ VERY BAD NEWS! internal error in subroutine SGRCON:
+ Found some non-integer element in rotation matrix       2
+
+
+
+
+ VERY BAD NEWS! internal error in subroutine SGRCON:
+ Found some non-integer element in rotation matrix       2
+ VERY BAD NEWS! internal error in subroutine SGRCON:
+ Found some non-integer element in rotation matrix       2
