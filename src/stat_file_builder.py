@@ -128,14 +128,10 @@ LDAUU_dict = {'Co': 3.32, 'Cr': 3.7, 'Fe': 5.3, 'Mn': 3.9, 'Mo': 4.38, 'Ni': 6.2
 LDAUL_dict = {'Co': 2, 'Cr': 2, 'Fe': 2, 'Mn': 2, 'Mo': 2, 'Ni': 2, 'V': 2, 'W': 2,
               'Nb': 2, 'Sc': 2, 'Ru': 2, 'Rh': 2, 'Pd': 2, 'Cu': 2, 'Y': 2, 'Os': 2, 'Ti': 2, 'Zr': 2, 'Re': 2, 'Hf': 2, 'Pt': 2, 'La': 2}
 
-relx_dict = {'ISMEAR': 0, 'SIGMA': 0.01, 'ISIF': 4, 'EDIFF': 1E-4, 'POTIM': 0.3,
-             'EDIFFG': -0.01, 'SYMPREC': 1E-8, 'NCORE': 4, 'LCHARG': False, 'ICHARG': 2,
-             'LDAU': True, 'LDAUJ': LDAUJ_dict, 'LDAUL': LDAUL_dict, 'LDAUU': LDAUU_dict, 'LWAVE': False,
-             'LDAUPRINT': 1, 'LDAUTYPE': 2, 'LASPH': True, 'LMAXMIX': 4}
 
 stat_dict = {'ISMEAR': -5, 'EDIFF': 1E-6, 'SYMPREC': 1E-8,  'NCORE': 4, 'ICHARG': 2,
              'LDAU': True, 'LDAUJ': LDAUJ_dict, 'LDAUL': LDAUL_dict, 'LDAUU': LDAUU_dict, 'NELM': 120, 'LVHAR': False,
-             'LDAUPRINT': 1, 'LDAUTYPE': 2, 'LASPH': True, 'LMAXMIX': 4, 'LWAVE': False, 'LVTOT': False}
+             'LDAUPRINT': 1, 'LDAUTYPE': 2, 'LASPH': True, 'LMAXMIX': 4, 'LWAVE': False, 'LVTOT': False, 'LAECHG' : False}
 
 
 def write_static_set(structure, vasp_static_path: str, static_dict: dict) -> None:
@@ -159,7 +155,7 @@ def write_static_set(structure, vasp_static_path: str, static_dict: dict) -> Non
     create_job_script(vasp_static_path)
 
 
-def get_VASP_inputs(input_path: str, relx_dict: dict, static_dict: dict) -> None:
+def get_VASP_inputs(input_path: str, static_dict: dict) -> None:
 
     init_structure = Structure.from_file(os.path.join(input_path, 'POSCAR'))
     enum_struct_list = MagneticStructureEnumerator(init_structure,
@@ -225,7 +221,6 @@ def file_builder(input_path: str):
                           ), f'Please specify POSCAR file in you input folder: {input_path}'
 
     get_VASP_inputs(input_path=input_path,
-                    relx_dict=relx_dict,
                     static_dict=stat_dict)
 
     get_siman_inputs(input_path)
