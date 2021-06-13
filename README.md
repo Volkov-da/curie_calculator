@@ -30,7 +30,7 @@ export PATH="/home/username/curie_calculator/src:$PATH"
 
 ## :compass: How to run examples
 
-To run any example, you simply need a _POSCAR_ file in the folder. Also, it is important to have automated access to pseudopotential (_POTCAR_) files used in VASP (i.e., POT_GGA_PAW_PBE or POT_LDA_PAW). For these purposes please check how to prepare _.pmgrc.yaml_ file.
+To run any example, you simply need a `POSCAR` file in the folder. Also, it is important to have automated access to pseudopotential (`POTCAR`) files used in VASP (i.e., `POT_GGA_PAW_PBE` or `POT_LDA_PAW` folders). For these purposes please check how to use `.pmgrc.yaml` file.
 
 ```
 cd examples/EuO_test
