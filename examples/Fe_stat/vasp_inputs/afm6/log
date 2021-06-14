@@ -1,10 +1,10 @@
 =========================================
-SLURM_JOB_ID = 43483070
-SLURM_JOB_NODELIST = lnode16
+SLURM_JOB_ID = 43763078
+SLURM_JOB_NODELIST = lnode27
 SLURM_GPUS = 
 SLURM_CPUS_ON_NODE = 8
 SLURM_JOB_PARTITION = lenovo
-SLURM_TASK_PID = 2032491
+SLURM_TASK_PID = 2724283
 CUDA_VISIBLE_DEVICES = 
 ==========================================
  running on    8 total cores
@@ -33,102 +33,6 @@ CUDA_VISIBLE_DEVICES =
  POSCAR, INCAR and KPOINTS ok, starting setup
  FFT: planning ...
  WAVECAR not read
- augmentation electrons   27.9525478560759     
- augmentation electrons   27.9525478560759     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   27.9525478560759     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   27.9525478560759     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   27.9525478560759     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   27.9525478560759     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   27.9525478560759     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   27.9525478560759     
- soft         electrons  0.000000000000000E+000
- soft         electrons  0.000000000000000E+000
- total        electrons   27.9525478560759     
- total        electrons   27.9525478560759     
- total        electrons   27.9525478560759     
- total        electrons   27.9525478560759     
- total        electrons   27.9525478560759     
- total        electrons   27.9525478560759     
- total        electrons   27.9525478560759     
- total        electrons   27.9525478560759     
- augmentation electrons -1.712531212758744E-016
- soft         electrons  0.000000000000000E+000
- augmentation electrons -1.712531212758744E-016
- soft         electrons  0.000000000000000E+000
- augmentation electrons -1.712531212758744E-016
- soft         electrons  0.000000000000000E+000
- augmentation electrons -1.712531212758744E-016
- soft         electrons  0.000000000000000E+000
- augmentation electrons -1.712531212758744E-016
- soft         electrons  0.000000000000000E+000
- augmentation electrons -1.712531212758744E-016
- soft         electrons  0.000000000000000E+000
- augmentation electrons -1.712531212758744E-016
- augmentation electrons -1.712531212758744E-016
- soft         electrons  0.000000000000000E+000
- soft         electrons  0.000000000000000E+000
- total        electrons -1.712531212758744E-016
- total        electrons -1.712531212758744E-016
- total        electrons -1.712531212758744E-016
- total        electrons -1.712531212758744E-016
- total        electrons -1.712531212758744E-016
- total        electrons -1.712531212758744E-016
- total        electrons -1.712531212758744E-016
- total        electrons -1.712531212758744E-016
- augmentation electrons   79.5013508236659     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   79.5013508236659     
- augmentation electrons   79.5013508236659     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   79.5013508236659     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   79.5013508236659     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   79.5013508236659     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   79.5013508236659     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   79.5013508236659     
- soft         electrons  0.000000000000000E+000
- soft         electrons  0.000000000000000E+000
- total        electrons   79.5013508236659     
- total        electrons   79.5013508236659     
- total        electrons   79.5013508236659     
- total        electrons   79.5013508236659     
- total        electrons   79.5013508236659     
- total        electrons   79.5013508236659     
- total        electrons   79.5013508236659     
- total        electrons   79.5013508236659     
- augmentation electrons   78.0760653836658     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   78.0760653836658     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   78.0760653836658     
- augmentation electrons   78.0760653836658     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   78.0760653836658     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   78.0760653836658     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   78.0760653836658     
- soft         electrons  0.000000000000000E+000
- augmentation electrons   78.0760653836658     
- soft         electrons  0.000000000000000E+000
- soft         electrons  0.000000000000000E+000
- total        electrons   78.0760653836658     
- total        electrons   78.0760653836658     
- total        electrons   78.0760653836658     
- total        electrons   78.0760653836658     
- total        electrons   78.0760653836658     
- total        electrons   78.0760653836658     
- total        electrons   78.0760653836658     
- total        electrons   78.0760653836658     
  entering main loop
        N       E                     dE             d eps       ncg     rms          rms(c)
 DAV:   1     0.282887815539E+03    0.28289E+03   -0.17655E+04 36098   0.246E+03
@@ -152,51 +56,3 @@ DAV:  18    -0.813307642632E+01   -0.10923E-04   -0.20167E-05 32144   0.296E-02 
 DAV:  19    -0.813307897073E+01   -0.25444E-05   -0.17203E-06 20768   0.106E-02    0.102E-03
 DAV:  20    -0.813307932889E+01   -0.35816E-06   -0.20231E-07 17508   0.413E-03
    1 F= -.81330793E+01 E0= -.81330793E+01  d E =0.000000E+00  mag=     0.0000
- augmentation electrons   16.8116181496010     
- soft         electrons   11.1522442089203     
- augmentation electrons   16.8116181496010     
- soft         electrons   11.1522442089203     
- augmentation electrons   16.8116181496010     
- augmentation electrons   16.8116181496010     
- soft         electrons   11.1522442089203     
- augmentation electrons   16.8116181496010     
- soft         electrons   11.1522442089203     
- augmentation electrons   16.8116181496010     
- soft         electrons   11.1522442089203     
- augmentation electrons   16.8116181496010     
- soft         electrons   11.1522442089203     
- augmentation electrons   16.8116181496010     
- soft         electrons   11.1522442089203     
- soft         electrons   11.1522442089203     
- total        electrons   27.9638623585213     
- total        electrons   27.9638623585213     
- total        electrons   27.9638623585213     
- total        electrons   27.9638623585213     
- total        electrons   27.9638623585213     
- total        electrons   27.9638623585213     
- total        electrons   27.9638623585213     
- total        electrons   27.9638623585213     
- augmentation electrons -2.377248788446029E-016
- soft         electrons   11.1522442089203     
- augmentation electrons -2.377248788446029E-016
- soft         electrons   11.1522442089203     
- augmentation electrons -2.377248788446029E-016
- soft         electrons   11.1522442089203     
- augmentation electrons -2.377248788446029E-016
- soft         electrons   11.1522442089203     
- augmentation electrons -2.377248788446029E-016
- augmentation electrons -2.377248788446029E-016
- soft         electrons   11.1522442089203     
- augmentation electrons -2.377248788446029E-016
- soft         electrons   11.1522442089203     
- augmentation electrons -2.377248788446029E-016
- soft         electrons   11.1522442089203     
- soft         electrons   11.1522442089203     
- total        electrons -2.377248788446029E-016
- total        electrons -2.377248788446029E-016
- total        electrons -2.377248788446029E-016
- total        electrons -2.377248788446029E-016
- total        electrons -2.377248788446029E-016
- total        electrons -2.377248788446029E-016
- total        electrons -2.377248788446029E-016
- total        electrons -2.377248788446029E-016

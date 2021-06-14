@@ -1,10 +1,10 @@
 =========================================
-SLURM_JOB_ID = 43761644
-SLURM_JOB_NODELIST = lnode50
+SLURM_JOB_ID = 43771865
+SLURM_JOB_NODELIST = lnode15
 SLURM_GPUS = 
 SLURM_CPUS_ON_NODE = 8
 SLURM_JOB_PARTITION = lenovo
-SLURM_TASK_PID = 2615272
+SLURM_TASK_PID = 3244926
 CUDA_VISIBLE_DEVICES = 
 ==========================================
  running on    8 total cores
