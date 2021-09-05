@@ -256,6 +256,8 @@ def write_output(input_path: str, j_exact_list: list, j_lstsq_list: list, good_s
     output_text += '\n' + 'Critical temperature (Tc, K):' + '\n\n\t' + str(Tc_lstsq) + '\n'
 
     out_path = os.path.join(input_path, 'OUTPUT.txt')
+
+    print('\n', output_text, '\n')
     with open(out_path, 'w') as out_f:
         out_f.writelines(output_text)
 

@@ -1,13 +1,11 @@
 from pymatgen.core import Structure
-from pymatgen.analysis.magnetism.analyzer import MagneticStructureEnumerator, CollinearMagneticStructureAnalyzer
-from pymatgen.io.vasp.inputs import Poscar, Incar, Kpoints
-from pymatgen.io.vasp.sets import MPRelaxSet, MPStaticSet, MPSOCSet
+from pymatgen.analysis.magnetism.analyzer import MagneticStructureEnumerator
+from pymatgen.io.vasp.sets import MPRelaxSet, MPStaticSet
 from shutil import copy
 from tqdm import tqdm
 import os
 
 from pymatgen.io.vasp.outputs import Vasprun
-import numpy as np
 import warnings
 from time import sleep, gmtime, strftime
 warnings.filterwarnings('ignore')
@@ -78,10 +76,8 @@ def spin_row_replacer(in_data: list) -> list:
 def siman_POSCAR_writer(in_path: str, out_path: str) -> None:
     """
     Args:
-        in_path  (str)  -   path to the POSCAR type file which needs to be made
-                            readable for siman
-        out_path (str)  -   path where refactored version of this file will be
-                            written
+        in_path  (str)  -   path to the POSCAR type file which needs to be made readable for siman
+        out_path (str)  -   path where refactored version of this file will be written
     """
     with open(in_path) as in_f:
         in_data = in_f.readlines()
@@ -126,7 +122,8 @@ LDAUU_dict = {'Co': 3.32, 'Cr': 3.7, 'Fe': 5.3, 'Mn': 3.9, 'Mo': 4.38, 'Ni': 6.2
 
 
 LDAUL_dict = {'Co': 2, 'Cr': 2, 'Fe': 2, 'Mn': 2, 'Mo': 2, 'Ni': 2, 'V': 2, 'W': 2,
-              'Nb': 2, 'Sc': 2, 'Ru': 2, 'Rh': 2, 'Pd': 2, 'Cu': 2, 'Y': 2, 'Os': 2, 'Ti': 2, 'Zr': 2, 'Re': 2, 'Hf': 2, 'Pt': 2, 'La': 2}
+              'Nb': 2, 'Sc': 2, 'Ru': 2, 'Rh': 2, 'Pd': 2, 'Cu': 2, 'Y': 2, 'Os': 2,
+              'Ti': 2, 'Zr': 2, 'Re': 2, 'Hf': 2, 'Pt': 2, 'La': 2}
 
 relx_dict = {'ISMEAR': 0, 'SIGMA': 0.01, 'ISIF': 4, 'EDIFF': 1E-4, 'POTIM': 0.3,
              'EDIFFG': -0.01, 'SYMPREC': 1E-8, 'NCORE': 4, 'LCHARG': False, 'ICHARG': 2,
@@ -163,8 +160,8 @@ def write_relax_set(structure, vasp_relax_path: str, relax_dict: dict) -> None:
     """
     Args:
         structure        (pymatgen.core.structure.Structure)
-        vasp_static_path (str)  -  path to the folder for static VASP run
-        static_dict      (dict) - dictionary with VASP INCAR keywords
+        vasp_relax_path (str)  -  path to the folder for static VASP run
+        relax_dict      (dict) - dictionary with VASP INCAR keywords
 
     Write the following files into specified folder:
         INCAR

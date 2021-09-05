@@ -1,12 +1,13 @@
 .DS_Store
-POTCAR
 
+venv
 err
 thesis_plots.ipynb
 .ipynb_checkpoints/
 __pycache__/
 
 #vasp outputs
+POTCAR
 CHG
 CHGCAR
 CONTCAR
@@ -18,7 +19,6 @@ REPORT
 WAVECAR
 XDATCAR
 PROCAR
-OUTCAR*
 
 
 \#*#
