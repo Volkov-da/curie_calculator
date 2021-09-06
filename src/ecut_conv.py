@@ -43,6 +43,7 @@ def get_ecut_files(input_path: str, ecut_range: list) -> None:
 def en_per_atom_list(input_path: str) -> list:
     _, struct_list = find_good_structures(input_path, folder='encut')  # TODO: rewrite
     struct_list = sorted(struct_list)
+    print(struct_list)
     ecut_opt_path = os.path.join(input_path, 'encut')
     folder_list = os.listdir(ecut_opt_path)
     initial_atoms_num = len(Structure.from_file(os.path.join(input_path, 'POSCAR')))
@@ -72,6 +73,39 @@ def plot_encut(input_path: str, en_per_atom: list, ecut_range: list) -> None:
     plt.savefig(os.path.join(input_path, 'Encut.pdf'), bbox_inches='tight')
 
 
+def write_kpoints(file_name, Rk):
+    with open(file_name, 'w') as f:
+        st = f"""Automatic mesh
+    0              ! number of k-points = 0 -> automatic generation scheme 
+    Auto           ! fully automatic
+      {Rk}           ! length (R_k)"""
+        f.write(st)
+
+
+def get_kpoints_files(input_path: str, Ecut: int, kpoints_range: list) -> None:
+    kpoints_opt_path = os.path.join(input_path, 'kpoints')
+    if not os.path.exists(kpoints_opt_path):
+        os.mkdir(kpoints_opt_path)
+
+    structure = Structure.from_file(os.path.join(input_path, 'POSCAR'))
+    for kpoints in kpoints_range:
+        user_settings = {'ENCUT': Ecut,
+                         'EDIFF': 1E-7, 'NCORE': 4,
+                         'LDAU': False,
+                         'LVHAR': False,
+                         'LCHARG': False,
+                         'LAECHG': False,
+                         'LASPH': False}
+        kpoints_path = os.path.join(input_path, 'kpoints', str(kpoints))
+        file_name = os.path.join(kpoints_path, 'KPOINTS')
+        if not os.path.exists(kpoints_path):
+            os.mkdir(kpoints_path)
+        static_set = MPStaticSet(structure, user_incar_settings=user_settings)
+        static_set.get_vasp_input().write_input(kpoints_path)
+        write_kpoints(file_name, Rk=kpoints)
+        create_job_script(out_path=kpoints_path, ntasks=24)
+
+
 def check_readiness(input_path: str, submit_path: str) -> None:
     submit_full_path = os.path.join(input_path, submit_path)
     initial_path = os.getcwd()
@@ -97,13 +131,22 @@ def check_readiness(input_path: str, submit_path: str) -> None:
 
 
 if __name__ == '__main__':
+    ecut_range = np.arange(400, 1000, 20)
+    kpoints_range = np.arange(20, 150, 10)
+
     input_path = os.getcwd()
     print(input_path)
-    ecut_range = np.arange(500, 1000, 20)
     get_ecut_files(input_path, ecut_range)
     submit_all_jobs(input_path=input_path, submit_path='encut')
+    sleep(10)
     check_readiness(input_path, submit_path='encut')
     en_per_atom = en_per_atom_list(input_path)
     Ecut = get_ecut(en_per_atom, ecut_range)
     plot_encut(input_path, en_per_atom, ecut_range=ecut_range)
     print(f'Estimated value of Encut: {Ecut} eV')
+
+    print(f'Starting KPOINTS optimization.')
+    get_kpoints_files(input_path, Ecut, kpoints_range)
+    submit_all_jobs(input_path=input_path, submit_path='kpoints')
+    check_readiness(input_path, submit_path='kpoints')
+    print(f'Kpoints optimization fineshed!')
