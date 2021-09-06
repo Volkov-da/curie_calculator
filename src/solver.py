@@ -2,12 +2,9 @@ import os
 import numpy as np
 from tqdm import tqdm
 from pymatgen.core import Structure
-from pymatgen.io.vasp.outputs import Vasprun, Chgcar, Oszicar, Outcar, Potcar
+from pymatgen.io.vasp.outputs import Vasprun, Oszicar
 from siman.calc_manage import smart_structure_read
-
-from itertools import combinations
 from scipy.constants import physical_constants
-from itertools import combinations
 import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore")
@@ -69,51 +66,38 @@ def get_nn_list(path_to_poscar: str, magnetic_atom: str) -> list:
 
 def is_good_structure(struct_folder: str) -> bool:
     """
-
     Check if structures after relaxation are sutable for
     futher Heisenberg hamiltonian calculations
 
     Return:
         True/False
-
     """
-
     vasprun_path = os.path.join(struct_folder, 'vasprun.xml')
     osz_path = os.path.join(struct_folder, 'OSZICAR')
     assert os.path.exists(vasprun_path), 'File vasprun.xml absent! Cant continue :('
     assert os.path.exists(osz_path), 'File OSZICAR absent! Cant continue :('
-
     try:
         vasprun = Vasprun(vasprun_path, parse_dos=False, parse_eigen=False)
     except Exception:
         return False
-
     osz = Oszicar(osz_path)
     mag_mom = abs(osz.ionic_steps[-1]['mag'])
-
     mag_crit = False
     converg_crit = False
-
     if os.path.basename(struct_folder) == 'fm0' and mag_mom > 1.0:
         mag_crit = True
-
     if os.path.basename(struct_folder) != 'fm0' and mag_mom < 0.1:
         mag_crit = True
-
     if vasprun.converged * vasprun.converged_electronic * vasprun.converged_ionic:
         converg_crit = True
-
     return bool(converg_crit * mag_crit)
 
 
-def find_good_structures(input_path: str) -> list:
+def find_good_structures(input_path: str, folder: str) -> list:
     good_struct_list = []
     bad_struct_list = []
-
-    vasp_inputs_path = os.path.join(input_path, 'vasp_inputs')
-
+    vasp_inputs_path = os.path.join(input_path, folder)
     assert os.path.exists(vasp_inputs_path), f'Path "{vasp_inputs_path}" Does not exist!'
-
     for magnetic_conf in os.listdir(vasp_inputs_path):
         struct_folder = os.path.join(vasp_inputs_path, magnetic_conf)
         if is_good_structure(struct_folder):
@@ -148,7 +132,7 @@ def nn_matrix_getter(input_path: str, good_struct_list: list, magnetic_atom: str
 
 
 def sorted_matrix_getter(input_path: str, magnetic_atom: str, spin: float) -> list:
-    good_struct_list, bad_struct_list = find_good_structures(input_path)
+    good_struct_list, bad_struct_list = find_good_structures(input_path, folder='vasp_inputs')
     initial_atoms_num = len(Structure.from_file(os.path.join(input_path, 'POSCAR')))
     E_list = energy_list_getter(good_struct_list, initial_atoms_num)
     nn_matrix = nn_matrix_getter(input_path, good_struct_list, magnetic_atom)
@@ -263,7 +247,7 @@ def write_output(input_path: str, j_exact_list: list, j_lstsq_list: list, good_s
 
 
 def plot_j_values(input_path: str, j_vector_list: list, filename: str) -> None:
-    plt.figure(figsize=(7, 5), dpi=100)
+    plt.figure(figsize=(7, 5), dpi=200)
     j_vector_list_mev = [i * 1000 for i in j_vector_list]
     for y in j_vector_list_mev:
         x = range(1, len(y) + 1)
@@ -278,8 +262,16 @@ def plot_j_values(input_path: str, j_vector_list: list, filename: str) -> None:
     plt.savefig(abs_filename, bbox_inches='tight')
 
 
-def plot_Tcs(input_path: str, Tc_lstsq: list, Tc_exact: list):
-    plt.figure(figsize=(8, 6), dpi=100)
+def plot_Tcs(input_path: str, Tc_lstsq: list, Tc_exact: list)-> None:
+    """
+Function plot the values of curie temperature versus coordination sphere number, i.e. shows how number of considered
+nearest neighbours affect critical temperature
+    Args:
+        input_path: (str) path to your initial working folder
+        Tc_lstsq: (list) Curie temperatures (K) calculated by least squares method for overdetermined system.
+        Tc_exact: (list) Curie temperatures (K) calculated by exact solution of matrix.
+    """
+    plt.figure(figsize=(8, 6), dpi=200)
     plt.scatter(range(1, len(Tc_lstsq) + 1), Tc_lstsq, label='least squares', marker='v')
     plt.scatter(range(1, len(Tc_exact) + 1), Tc_exact, label='exact solution')
     plt.plot(range(1, len(Tc_lstsq) + 1), Tc_lstsq)
