@@ -6,7 +6,6 @@ from tqdm import tqdm
 import os
 
 from pymatgen.io.vasp.outputs import Vasprun
-import numpy as np
 import warnings
 from time import sleep, gmtime, strftime
 warnings.filterwarnings('ignore')
