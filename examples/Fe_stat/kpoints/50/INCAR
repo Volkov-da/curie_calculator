@@ -1,6 +1,6 @@
 ALGO = Normal
 EDIFF = 1e-07
-ENCUT = 900
+ENCUT = 920
 IBRION = -1
 ISIF = 3
 ISMEAR = -5

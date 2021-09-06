@@ -5,8 +5,8 @@
   <i name="version" type="string">5.4.4.18Apr17-6-g9f103f2a35  </i>
   <i name="subversion" type="string">(build Apr 28 2018 00:24:27) complex            parallel </i>
   <i name="platform" type="string">LinuxIFC </i>
-  <i name="date" type="string">2021 09 06 </i>
-  <i name="time" type="string">23:54:46 </i>
+  <i name="date" type="string">2021 09 07 </i>
+  <i name="time" type="string">01:10:15 </i>
  </generator>
  <incar>
   <i type="string" name="PREC">accurate</i>
@@ -953,7 +953,7 @@
  <calculation>
   <scstep>
    <time name="dav">    0.44    0.44</time>
-   <time name="total">    0.49    0.49</time>
+   <time name="total">    0.48    0.49</time>
    <energy>
     <i name="alphaZ">    218.87048721 </i>
     <i name="ewald">  -3616.56080017 </i>
@@ -970,8 +970,8 @@
    </energy>
   </scstep>
   <scstep>
-   <time name="dav">    0.43    0.43</time>
-   <time name="total">    0.47    0.47</time>
+   <time name="dav">    0.42    0.42</time>
+   <time name="total">    0.46    0.46</time>
    <energy>
     <i name="e_fr_energy">     -9.99272756 </i>
     <i name="e_wo_entrp">     -9.99272756 </i>
@@ -1006,8 +1006,8 @@
    </energy>
   </scstep>
   <scstep>
-   <time name="dav">    0.42    0.42</time>
-   <time name="total">    0.49    0.49</time>
+   <time name="dav">    0.41    0.42</time>
+   <time name="total">    0.47    0.48</time>
    <energy>
     <i name="e_fr_energy">    -16.45714284 </i>
     <i name="e_wo_entrp">    -16.45714284 </i>
@@ -1015,8 +1015,8 @@
    </energy>
   </scstep>
   <scstep>
-   <time name="dav">    0.41    0.42</time>
-   <time name="total">    0.47    0.48</time>
+   <time name="dav">    0.41    0.41</time>
+   <time name="total">    0.47    0.47</time>
    <energy>
     <i name="e_fr_energy">    -16.51360723 </i>
     <i name="e_wo_entrp">    -16.51360723 </i>
@@ -1033,7 +1033,7 @@
    </energy>
   </scstep>
   <scstep>
-   <time name="dav">    0.44    0.45</time>
+   <time name="dav">    0.44    0.44</time>
    <time name="total">    0.50    0.50</time>
    <energy>
     <i name="e_fr_energy">    -16.51548132 </i>
@@ -1043,7 +1043,7 @@
   </scstep>
   <scstep>
    <time name="dav">    0.42    0.42</time>
-   <time name="total">    0.48    0.48</time>
+   <time name="total">    0.47    0.47</time>
    <energy>
     <i name="e_fr_energy">    -16.51531005 </i>
     <i name="e_wo_entrp">    -16.51531005 </i>
@@ -1061,7 +1061,7 @@
   </scstep>
   <scstep>
    <time name="dav">    0.47    0.47</time>
-   <time name="total">    0.53    0.53</time>
+   <time name="total">    0.52    0.53</time>
    <energy>
     <i name="e_fr_energy">    -16.51537749 </i>
     <i name="e_wo_entrp">    -16.51537749 </i>
@@ -1070,7 +1070,7 @@
   </scstep>
   <scstep>
    <time name="dav">    0.42    0.42</time>
-   <time name="total">    0.48    0.48</time>
+   <time name="total">    0.47    0.48</time>
    <energy>
     <i name="e_fr_energy">    -16.51537070 </i>
     <i name="e_wo_entrp">    -16.51537070 </i>
@@ -1137,7 +1137,7 @@
    <i name="e_wo_entrp">    -16.51536910 </i>
    <i name="e_0_energy">      0.00000000 </i>
   </energy>
-  <time name="totalsc">    7.48    7.52</time>
+  <time name="totalsc">    7.43    7.46</time>
   <eigenvalues>
    <array>
     <dimension dim="1">band</dimension>
