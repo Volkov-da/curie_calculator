@@ -11,9 +11,9 @@ from time import sleep, gmtime, strftime
 warnings.filterwarnings('ignore')
 
 
-def create_job_script(out_path, job_id=None):
+def create_job_script(out_path, ntasks=8, job_id=None):
     """
-    Args:
+    Args:s
         out_path (str)   -   folder where job script will be created.
         job_id   (str)   -   preferable name of your job in squeue,
         and also the name of the folder for your vasp files.
@@ -24,7 +24,7 @@ def create_job_script(out_path, job_id=None):
 
     job_script_text = f"""#!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --ntasks=8
+#SBATCH --ntasks={ntasks}
 #SBATCH --time=06:00:00
 #SBATCH --job-name={job_id}
 #SBATCH --output=log

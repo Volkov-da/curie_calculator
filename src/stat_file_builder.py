@@ -1,7 +1,6 @@
 from pymatgen.core import Structure
-from pymatgen.analysis.magnetism.analyzer import MagneticStructureEnumerator, CollinearMagneticStructureAnalyzer
-from pymatgen.io.vasp.inputs import Poscar, Incar, Kpoints
-from pymatgen.io.vasp.sets import MPRelaxSet, MPStaticSet, MPSOCSet
+from pymatgen.analysis.magnetism.analyzer import MagneticStructureEnumerator
+from pymatgen.io.vasp.sets import MPStaticSet
 from shutil import copy
 from tqdm import tqdm
 import os

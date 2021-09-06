@@ -8,7 +8,8 @@ Code is currently under development. Now it working fine for few materials (e.g 
 
 ```
 git clone --recursive https://github.com/Volkov-da/curie_calculator.git
-
+```
+```
 ./install.sh
 ```
 
@@ -16,6 +17,8 @@ if needed:
 
 ```
 chmod +x install.sh
+```
+```
 chmod +x src/curie_calculator.py
 ```
 
