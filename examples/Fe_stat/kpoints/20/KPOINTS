@@ -1,4 +1,4 @@
 Automatic mesh
 0              ! number of k-points = 0 -> automatic generation scheme 
 Auto           ! fully automatic
-80           ! length (R_k)
+20           ! length (R_k)

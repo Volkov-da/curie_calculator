@@ -76,9 +76,9 @@ def plot_encut(input_path: str, en_per_atom: list, ecut_range: list) -> None:
 def write_kpoints(file_name, Rk):
     with open(file_name, 'w') as f:
         st = f"""Automatic mesh
-    0              ! number of k-points = 0 -> automatic generation scheme 
-    Auto           ! fully automatic
-      {Rk}           ! length (R_k)"""
+0              ! number of k-points = 0 -> automatic generation scheme 
+Auto           ! fully automatic
+{Rk}           ! length (R_k)"""
         f.write(st)
 
 
@@ -121,9 +121,9 @@ def check_readiness(input_path: str, submit_path: str) -> None:
                     if 'E0' in f.readlines()[-1]:
                         converged_list += [folder_name]
                     else:
-                        print(f'{folder_name} eV not yet converged')
+                        print(f'{folder_name} not yet converged')
             else:
-                print(f'{folder_name} eV not yet written')
+                print(f'{folder_name} not yet written')
         print()
         sleep(10)
     print(strftime("%H:%M:%S", gmtime()))
@@ -143,10 +143,11 @@ if __name__ == '__main__':
     en_per_atom = en_per_atom_list(input_path)
     Ecut = get_ecut(en_per_atom, ecut_range)
     plot_encut(input_path, en_per_atom, ecut_range=ecut_range)
-    print(f'Estimated value of Encut: {Ecut} eV')
-
+    print(f'Estimated value of Encut: {Ecut} eV\n')
+    print('_' * 31)
     print(f'Starting KPOINTS optimization.')
     get_kpoints_files(input_path, Ecut, kpoints_range)
     submit_all_jobs(input_path=input_path, submit_path='kpoints')
+    print()
     check_readiness(input_path, submit_path='kpoints')
-    print(f'Kpoints optimization fineshed!')
+    print(f'Kpoints optimization finished!')
