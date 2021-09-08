@@ -7,6 +7,7 @@ from pymatgen.io.vasp.outputs import Vasprun
 from file_builder import create_job_script
 from tqdm import tqdm
 import matplotlib.pyplot as plt
+
 plt.style.use('ggplot')
 
 
@@ -28,11 +29,8 @@ def get_ecut_files(input_path: str, ecut_range: list) -> None:
     structure = Structure.from_file(os.path.join(input_path, 'POSCAR'))
     for ecut in ecut_range:
         user_settings = {'ENCUT': ecut, 'EDIFF': 1E-7, 'NCORE': 4,
-                         'LDAU': False,
-                         'LVHAR': False,
-                         'LCHARG': False,
-                         'LAECHG': False,
-                         'LASPH': False}
+                         'LDAU': False, 'LVHAR': False, 'LCHARG': False,
+                         'LAECHG': False, 'LASPH': False}
         ecut_path = os.path.join(input_path, 'encut', str(ecut))
         if not os.path.exists(ecut_path):
             os.mkdir(ecut_path)
@@ -51,7 +49,6 @@ def en_per_atom_list(input_path: str, mode: str) -> tuple:
         vasprun = Vasprun(vasprun_path, parse_dos=False, parse_eigen=False)
         E_tot = vasprun.final_energy
         E_list.append(E_tot)
-
     initial_atoms_num = len(Structure.from_file(os.path.join(input_path, 'POSCAR')))
     energy_arr = np.array(E_list) / initial_atoms_num
     return energy_arr, kpoints_range
@@ -113,11 +110,11 @@ def get_kpoints_files(input_path: str, Ecut: int, kpoints_range: list) -> None:
 
 def check_readiness(input_path: str, submit_path: str) -> None:
     submit_full_path = os.path.join(input_path, submit_path)
-    initial_path = os.getcwd()
     pathes = sorted(os.listdir(submit_full_path))
     converged_list = []
     while len(converged_list) != len(pathes):
-        print(strftime("%H:%M:%S", gmtime()))
+        tmp_time = strftime("%H:%M:%S", gmtime())
+        print(f'{tmp_time} {submit_path.upper()} optimization')
         converged_list = []
         for folder_name in pathes:
             file_path = os.path.join(submit_full_path, folder_name, 'log')
@@ -131,7 +128,8 @@ def check_readiness(input_path: str, submit_path: str) -> None:
                 print(f'{folder_name} not yet written')
         print('\n')
         sleep(10)
-    print(strftime("%H:%M:%S", gmtime()))
+    time = strftime("%H:%M:%S", gmtime())
+    print(f'{time} {submit_path.upper()} optimization Finished')
     print('All structures converged! Starting Encut estimation.')
 
 
@@ -154,31 +152,36 @@ def get_kpoint_density(energy_arr: list, kpoints_range) -> int:
     return R_k
 
 
-if __name__ == '__main__':
-    ecut_range = np.arange(400, 900, 20)
-    kpoints_range = np.arange(20, 110, 10)
-    input_path = os.getcwd()
-    print(input_path)
+def encut_runner(input_path: str, ecut_range=np.arange(400, 900, 20)):
     print(f'Starting ENCUT optimization:')
     get_ecut_files(input_path, ecut_range)
     submit_all_jobs(input_path=input_path, submit_path='encut')
-    sleep(10)
     check_readiness(input_path, submit_path='encut')
     encut_arr, encut_range = en_per_atom_list(input_path, mode='encut')
     Ecut = get_ecut(encut_arr, encut_range)
     plot_encut(input_path, encut_arr, encut_range)
-    print(f'Estimated value of Encut: {Ecut} eV\n')
-    print('_' * 31)
+    print(f'ENCUT optimization finished!')
+    print('_' * 60 + '\n')
+    return Ecut
 
+
+def kpoints_runner(input_path: str, kpoints_range=np.arange(20, 100, 10)):
     print(f'Starting KPOINTS optimization:')
     get_kpoints_files(input_path, Ecut, kpoints_range)
     submit_all_jobs(input_path=input_path, submit_path='kpoints')
     print()
     check_readiness(input_path, submit_path='kpoints')
-    print(f'Kpoints optimization finished!')
-
+    print(f'KPOINTS optimization finished!')
     energy_arr, kpoints_range = en_per_atom_list(input_path, mode='kpoints')
     plot_kpoints(input_path, energy_arr, kpoints_range)
     R_k = get_kpoint_density(energy_arr, kpoints_range)
+    print('_' * 60)
+    return R_k
 
-    print(f'{R_k=}')
+
+if __name__ == '__main__':
+    input_path = os.getcwd()
+    Ecut = encut_runner(input_path)
+    print(f'Estimated value of Encut: {Ecut} eV\n')
+    R_k = kpoints_runner(input_path)
+    print(f'Estimated value of {R_k=}')

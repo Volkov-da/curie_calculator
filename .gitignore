@@ -2,8 +2,8 @@
 
 venv
 err
-thesis_plots.ipynb
 .ipynb_checkpoints/
+*.ipynb
 __pycache__/
 .idea/
 #vasp outputs
