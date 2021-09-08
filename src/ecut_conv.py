@@ -3,8 +3,9 @@ import numpy as np
 from time import sleep, gmtime, strftime
 from pymatgen.core import Structure
 from pymatgen.io.vasp.sets import MPStaticSet
+from pymatgen.io.vasp.outputs import Vasprun
 from file_builder import create_job_script
-from solver import energy_list_getter, find_good_structures
+from tqdm import tqdm
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
 
@@ -40,16 +41,20 @@ def get_ecut_files(input_path: str, ecut_range: list) -> None:
         create_job_script(out_path=ecut_path, ntasks=24)
 
 
-def en_per_atom_list(input_path: str) -> list:
-    _, struct_list = find_good_structures(input_path, folder='encut')  # TODO: rewrite
-    struct_list = sorted(struct_list)
-    print(struct_list)
-    ecut_opt_path = os.path.join(input_path, 'encut')
-    folder_list = os.listdir(ecut_opt_path)
+def en_per_atom_list(input_path: str, mode: str) -> tuple:
+    E_list = []
+    kpoints_path = os.path.join(input_path, mode)
+    kpoints_range = sorted([int(d) for d in os.listdir(kpoints_path) if '.' not in d])
+    for kpoint_density in tqdm(kpoints_range):
+        struct_folder = os.path.join(kpoints_path, str(kpoint_density))
+        vasprun_path = os.path.join(struct_folder, 'vasprun.xml')
+        vasprun = Vasprun(vasprun_path, parse_dos=False, parse_eigen=False)
+        E_tot = vasprun.final_energy
+        E_list.append(E_tot)
+
     initial_atoms_num = len(Structure.from_file(os.path.join(input_path, 'POSCAR')))
-    en_tot_list = energy_list_getter(struct_list, initial_atoms_num)
-    en_per_atom = en_tot_list / initial_atoms_num
-    return en_per_atom
+    energy_arr = np.array(E_list) / initial_atoms_num
+    return energy_arr, kpoints_range
 
 
 def get_ecut(en_per_atom: list, ecut_range) -> int:
@@ -59,13 +64,13 @@ def get_ecut(en_per_atom: list, ecut_range) -> int:
     return Ecut
 
 
-def plot_encut(input_path: str, en_per_atom: list, ecut_range: list) -> None:
+def plot_encut(input_path: str, en_per_atom, ecut_range: list) -> None:
     x = ecut_range
-    y = en_per_atom * 1000  # to meV
+    y = (en_per_atom - min(en_per_atom)) * 1000  # to meV
     Ecut = get_ecut(en_per_atom, ecut_range)
     i = list(ecut_range).index(Ecut)
     plt.figure(figsize=(12, 6), dpi=200)
-    plt.scatter(x, y, c='b')
+    plt.plot(x, y, 'o-', c='r')
     plt.scatter(x[i], y[i], s=200, c='r')
     plt.ylabel('E/atom, meV')
     plt.xlabel('Encut, eV')
@@ -88,7 +93,7 @@ def get_kpoints_files(input_path: str, Ecut: int, kpoints_range: list) -> None:
         os.mkdir(kpoints_opt_path)
 
     structure = Structure.from_file(os.path.join(input_path, 'POSCAR'))
-    for kpoints in kpoints_range:
+    for kpoints in tqdm(kpoints_range):
         user_settings = {'ENCUT': Ecut,
                          'EDIFF': 1E-7, 'NCORE': 4,
                          'LDAU': False,
@@ -103,7 +108,7 @@ def get_kpoints_files(input_path: str, Ecut: int, kpoints_range: list) -> None:
         static_set = MPStaticSet(structure, user_incar_settings=user_settings)
         static_set.get_vasp_input().write_input(kpoints_path)
         write_kpoints(file_name, Rk=kpoints)
-        create_job_script(out_path=kpoints_path, ntasks=24)
+        create_job_script(out_path=kpoints_path, ntasks=20)
 
 
 def check_readiness(input_path: str, submit_path: str) -> None:
@@ -124,30 +129,56 @@ def check_readiness(input_path: str, submit_path: str) -> None:
                         print(f'{folder_name} not yet converged')
             else:
                 print(f'{folder_name} not yet written')
-        print()
+        print('\n')
         sleep(10)
     print(strftime("%H:%M:%S", gmtime()))
-    print('All structures converged. Starting Encut estimation.')
+    print('All structures converged! Starting Encut estimation.')
+
+
+def plot_kpoints(input_path: str, energy_arr: list, kpoints_range: list) -> None:
+    y = (energy_arr - min(energy_arr)) * 1000
+    x = kpoints_range
+    plt.figure(figsize=(12, 6), dpi=200)
+    plt.plot(x, y, 'o-', label='Sigma = 0.05', c='b')
+    plt.ylabel('E/atom, meV')
+    plt.xlabel(r'$R_K$')
+    plt.xticks(x, rotation=45, ha='right')
+    plt.legend()
+    plt.savefig(os.path.join(input_path, 'Kgrid.pdf'), bbox_inches='tight')
+
+
+def get_kpoint_density(energy_arr: list, kpoints_range) -> int:
+    y = np.diff(energy_arr * 1000)  # diff in meV
+    x = kpoints_range[1:]
+    R_k = x[np.where(abs(y) < 0.5)[0][0]]
+    return R_k
 
 
 if __name__ == '__main__':
-    ecut_range = np.arange(400, 1000, 20)
-    kpoints_range = np.arange(20, 150, 10)
-
+    ecut_range = np.arange(400, 900, 20)
+    kpoints_range = np.arange(20, 110, 10)
     input_path = os.getcwd()
     print(input_path)
+    print(f'Starting ENCUT optimization:')
     get_ecut_files(input_path, ecut_range)
     submit_all_jobs(input_path=input_path, submit_path='encut')
     sleep(10)
     check_readiness(input_path, submit_path='encut')
-    en_per_atom = en_per_atom_list(input_path)
-    Ecut = get_ecut(en_per_atom, ecut_range)
-    plot_encut(input_path, en_per_atom, ecut_range=ecut_range)
+    encut_arr, encut_range = en_per_atom_list(input_path, mode='encut')
+    Ecut = get_ecut(encut_arr, encut_range)
+    plot_encut(input_path, encut_arr, encut_range)
     print(f'Estimated value of Encut: {Ecut} eV\n')
     print('_' * 31)
-    print(f'Starting KPOINTS optimization.')
+
+    print(f'Starting KPOINTS optimization:')
     get_kpoints_files(input_path, Ecut, kpoints_range)
     submit_all_jobs(input_path=input_path, submit_path='kpoints')
     print()
     check_readiness(input_path, submit_path='kpoints')
     print(f'Kpoints optimization finished!')
+
+    energy_arr, kpoints_range = en_per_atom_list(input_path, mode='kpoints')
+    plot_kpoints(input_path, energy_arr, kpoints_range)
+    R_k = get_kpoint_density(energy_arr, kpoints_range)
+
+    print(f'{R_k=}')
