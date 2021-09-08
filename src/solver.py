@@ -68,7 +68,6 @@ def is_good_structure(struct_folder: str) -> bool:
     """
     Check if structures after relaxation are sutable for
     futher Heisenberg hamiltonian calculations
-
     Return:
         True/False
     """

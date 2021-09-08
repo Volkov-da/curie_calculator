@@ -1,13 +1,12 @@
 import os
 import numpy as np
+from tqdm import tqdm
 from time import sleep, gmtime, strftime
 from pymatgen.core import Structure
 from pymatgen.io.vasp.sets import MPStaticSet
 from pymatgen.io.vasp.outputs import Vasprun
-from file_builder import create_job_script
-from tqdm import tqdm
+from stat_file_builder import create_job_script
 import matplotlib.pyplot as plt
-
 plt.style.use('ggplot')
 
 
@@ -40,18 +39,28 @@ def get_ecut_files(input_path: str, ecut_range: list) -> None:
 
 
 def en_per_atom_list(input_path: str, mode: str) -> tuple:
+    """
+
+    Args:
+        input_path (str): path to the folder with POSCAR file
+        mode (str): type of calculation it might be 'encut' or 'kpoints'
+
+    Returns:
+        energy_arr: structures energies normalized by the number of atom
+        params_range: range of optimized parameter (Encut, KPOINTS)
+    """
     E_list = []
-    kpoints_path = os.path.join(input_path, mode)
-    kpoints_range = sorted([int(d) for d in os.listdir(kpoints_path) if '.' not in d])
-    for kpoint_density in tqdm(kpoints_range):
-        struct_folder = os.path.join(kpoints_path, str(kpoint_density))
+    calc_fold = os.path.join(input_path, mode)
+    params_range = sorted([int(d) for d in os.listdir(calc_fold) if '.' not in d])
+    for kpoint_density in tqdm(params_range):
+        struct_folder = os.path.join(calc_fold, str(kpoint_density))
         vasprun_path = os.path.join(struct_folder, 'vasprun.xml')
         vasprun = Vasprun(vasprun_path, parse_dos=False, parse_eigen=False)
         E_tot = vasprun.final_energy
         E_list.append(E_tot)
     initial_atoms_num = len(Structure.from_file(os.path.join(input_path, 'POSCAR')))
     energy_arr = np.array(E_list) / initial_atoms_num
-    return energy_arr, kpoints_range
+    return energy_arr, params_range
 
 
 def get_ecut(en_per_atom: list, ecut_range) -> int:
@@ -117,7 +126,7 @@ def check_readiness(input_path: str, submit_path: str) -> None:
         print(f'{tmp_time} {submit_path.upper()} optimization')
         converged_list = []
         for folder_name in pathes:
-            file_path = os.path.join(submit_full_path, folder_name, 'log')
+            file_path = os.path.join(submit_full_path, folder_name, 'OSZICAR')
             if os.path.exists(file_path):
                 with open(file_path) as f:
                     if 'E0' in f.readlines()[-1]:
@@ -127,13 +136,12 @@ def check_readiness(input_path: str, submit_path: str) -> None:
             else:
                 print(f'{folder_name} not yet written')
         print('\n')
-        sleep(10)
+        sleep(15)
     time = strftime("%H:%M:%S", gmtime())
     print(f'{time} {submit_path.upper()} optimization Finished')
-    print('All structures converged! Starting Encut estimation.')
 
 
-def plot_kpoints(input_path: str, energy_arr: list, kpoints_range: list) -> None:
+def plot_kpoints(input_path: str, energy_arr, kpoints_range: list) -> None:
     y = (energy_arr - min(energy_arr)) * 1000
     x = kpoints_range
     plt.figure(figsize=(12, 6), dpi=200)

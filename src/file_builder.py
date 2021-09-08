@@ -25,7 +25,7 @@ def create_job_script(out_path, ntasks=8, job_id=None):
     job_script_text = f"""#!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --ntasks={ntasks}
-#SBATCH --time=06:00:00
+#SBATCH --time=02:00:00
 #SBATCH --job-name={job_id}
 #SBATCH --output=log
 #SBATCH --error=err
@@ -272,6 +272,30 @@ def vasprun_checker(input_path):
             break
 
 
+
+def check_readiness(input_path: str, submit_path: str) -> None:
+    submit_full_path = os.path.join(input_path, submit_path)
+    pathes = sorted(os.listdir(submit_full_path))
+    converged_list = []
+    while len(converged_list) != len(pathes):
+        tmp_time = strftime("%H:%M:%S", gmtime())
+        print(f'{tmp_time} {submit_path.upper()} optimization')
+        converged_list = []
+        for folder_name in pathes:
+            file_path = os.path.join(submit_full_path, folder_name, 'OSZICAR')
+            if os.path.exists(file_path):
+                with open(file_path) as f:
+                    if 'E0' in f.readlines()[-1]:
+                        converged_list += [folder_name]
+                    else:
+                        print(f'{folder_name} not yet converged')
+            else:
+                print(f'{folder_name} not yet written')
+        print('\n')
+        sleep(15)
+    time = strftime("%H:%M:%S", gmtime())
+    print(f'{time} {submit_path.upper()} optimization Finished')
+
 def file_builder(input_path: str):
     assert os.path.exists(
         input_path), f'Input path: {input_path} does not exist!'
@@ -288,7 +312,9 @@ def file_builder(input_path: str):
     print('All files written. Starting VASP calculations!')
     submit_all_jobs(input_path)
     sleep(7)
-    vasprun_checker(input_path)
+    check_readiness(input_path, submit_path='vasp_inputs')
+    print('All AFM structures converged!. Starting J values estimation:')
+    # vasprun_checker(input_path)
 
 
 if __name__ == '__main__':

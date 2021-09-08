@@ -8,12 +8,13 @@ import os
 from pymatgen.io.vasp.outputs import Vasprun
 import warnings
 from time import sleep, gmtime, strftime
+
 warnings.filterwarnings('ignore')
 
 
-def create_job_script(out_path, job_id=None):
+def create_job_script(out_path, ntasks=8, job_id=None):
     """
-    Args:
+    Args:s
         out_path (str)   -   folder where job script will be created.
         job_id   (str)   -   preferable name of your job in squeue,
         and also the name of the folder for your vasp files.
@@ -24,8 +25,8 @@ def create_job_script(out_path, job_id=None):
 
     job_script_text = f"""#!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --ntasks=8
-#SBATCH --time=06:00:00
+#SBATCH --ntasks={ntasks}
+#SBATCH --time=02:00:00
 #SBATCH --job-name={job_id}
 #SBATCH --output=log
 #SBATCH --error=err
@@ -76,10 +77,8 @@ def spin_row_replacer(in_data: list) -> list:
 def siman_POSCAR_writer(in_path: str, out_path: str) -> None:
     """
     Args:
-        in_path  (str)  -   path to the POSCAR type file which needs to be made
-                            readable for siman
-        out_path (str)  -   path where refactored version of this file will be
-                            written
+        in_path  (str)  -   path to the POSCAR type file which needs to be made readable for siman
+        out_path (str)  -   path where refactored version of this file will be written
     """
     with open(in_path) as in_f:
         in_data = in_f.readlines()
@@ -116,20 +115,17 @@ def submit_all_jobs(input_folder: str) -> None:
 
 
 LDAUJ_dict = {'Co': 0, 'Cr': 0, 'Fe': 0, 'Mn': 0, 'Mo': 0, 'Ni': 0, 'V': 0, 'W': 0,
-              'Nb': 0, 'Sc': 0, 'Ru': 0, 'Rh': 0, 'Pd': 0, 'Cu': 0, 'Y': 0, 'Os': 0, 'Ti': 0, 'Zr': 0, 'Re': 0, 'Hf': 0, 'Pt': 0, 'La': 0}
+              'Nb': 0, 'Sc': 0, 'Ru': 0, 'Rh': 0, 'Pd': 0, 'Cu': 0, 'Y': 0, 'Os': 0, 'Ti': 0, 'Zr': 0, 'Re': 0, 'Hf': 0,
+              'Pt': 0, 'La': 0}
 
 LDAUU_dict = {'Co': 3.32, 'Cr': 3.7, 'Fe': 5.3, 'Mn': 3.9, 'Mo': 4.38, 'Ni': 6.2, 'V': 3.25, 'W': 6.2,
-              'Nb': 1.45, 'Sc': 4.18, 'Ru': 4.29, 'Rh': 4.17, 'Pd': 2.96, 'Cu': 7.71, 'Y': 3.23, 'Os': 2.47, 'Ti': 5.89, 'Zr': 5.55,
+              'Nb': 1.45, 'Sc': 4.18, 'Ru': 4.29, 'Rh': 4.17, 'Pd': 2.96, 'Cu': 7.71, 'Y': 3.23, 'Os': 2.47, 'Ti': 5.89,
+              'Zr': 5.55,
               'Re': 1.28, 'Hf': 4.77, 'Pt': 2.95, 'La': 5.3}
 
-
 LDAUL_dict = {'Co': 2, 'Cr': 2, 'Fe': 2, 'Mn': 2, 'Mo': 2, 'Ni': 2, 'V': 2, 'W': 2,
-              'Nb': 2, 'Sc': 2, 'Ru': 2, 'Rh': 2, 'Pd': 2, 'Cu': 2, 'Y': 2, 'Os': 2, 'Ti': 2, 'Zr': 2, 'Re': 2, 'Hf': 2, 'Pt': 2, 'La': 2}
-
-
-stat_dict = {'ISMEAR': -5, 'EDIFF': 1E-6, 'SYMPREC': 1E-8,  'NCORE': 4, 'ICHARG': 2,
-             'LDAU': True, 'LDAUJ': LDAUJ_dict, 'LDAUL': LDAUL_dict, 'LDAUU': LDAUU_dict, 'NELM': 120, 'LVHAR': False,
-             'LDAUPRINT': 1, 'LDAUTYPE': 2, 'LASPH': True, 'LMAXMIX': 4, 'LWAVE': False, 'LVTOT': False, 'LAECHG' : False}
+              'Nb': 2, 'Sc': 2, 'Ru': 2, 'Rh': 2, 'Pd': 2, 'Cu': 2, 'Y': 2, 'Os': 2, 'Ti': 2, 'Zr': 2, 'Re': 2, 'Hf': 2,
+              'Pt': 2, 'La': 2}
 
 
 def write_static_set(structure, vasp_static_path: str, static_dict: dict) -> None:
@@ -154,7 +150,6 @@ def write_static_set(structure, vasp_static_path: str, static_dict: dict) -> Non
 
 
 def get_VASP_inputs(input_path: str, static_dict: dict) -> None:
-
     init_structure = Structure.from_file(os.path.join(input_path, 'POSCAR'))
     enum_struct_list = MagneticStructureEnumerator(init_structure,
                                                    transformation_kwargs={'symm_prec': 0.1,
@@ -179,40 +174,31 @@ def get_VASP_inputs(input_path: str, static_dict: dict) -> None:
                          static_dict=stat_dict)
 
 
-def vasprun_checker(input_path):
-    vasp_inputs_path = os.path.join(input_path, 'vasp_inputs')
-    vasprun_pathes = sorted([os.path.join(vasp_inputs_path, i, 'vasprun.xml')
-                             for i in os.listdir(vasp_inputs_path)])
-    tmp_vasprun = vasprun_pathes.copy()
-    while 1:
-        print(strftime("%H:%M:%S", gmtime()), len(vasprun_pathes))
-        for i, vasprun_path in enumerate(vasprun_pathes):
-            print(i + 1, end=' ')
-            if os.path.exists(vasprun_path):
-                try:
-                    vasprun = Vasprun(vasprun_path, parse_dos=False,
-                                      parse_eigen=False, exception_on_bad_xml=False)
-                    if vasprun.converged and vasprun.converged_ionic and vasprun.converged_electronic:
-                        print(f'Converged! {vasprun_path}')
-
-                        tmp_vasprun.remove(vasprun_path)
+def check_readiness(input_path: str, submit_path: str) -> None:
+    submit_full_path = os.path.join(input_path, submit_path)
+    pathes = sorted(os.listdir(submit_full_path))
+    converged_list = []
+    while len(converged_list) != len(pathes):
+        tmp_time = strftime("%H:%M:%S", gmtime())
+        print(f'{tmp_time} {submit_path.upper()} optimization')
+        converged_list = []
+        for folder_name in pathes:
+            file_path = os.path.join(submit_full_path, folder_name, 'OSZICAR')
+            if os.path.exists(file_path):
+                with open(file_path) as f:
+                    if 'E0' in f.readlines()[-1]:
+                        converged_list += [folder_name]
                     else:
-                        print(f'Not converged! {vasprun_path}')
-                        tmp_vasprun.remove(vasprun_path)
-                except Exception:
-                    print('Still running')
+                        print(f'{folder_name} not yet converged')
             else:
-                print(f'{vasprun_path} not written yet!')
-
-        vasprun_pathes = tmp_vasprun.copy()
+                print(f'{folder_name} not yet written')
         print('\n')
-        sleep(120)
-        if not vasprun_pathes:
-            print(strftime("%H:%M:%S", gmtime()), 'vasprun_checker done!')
-            break
+        sleep(15)
+    time = strftime("%H:%M:%S", gmtime())
+    print(f'{time} {submit_path.upper()} optimization Finished')
 
 
-def file_builder(input_path: str):
+def file_builder(input_path: str, stat_dict: dict):
     assert os.path.exists(
         input_path), f'Input path: {input_path} does not exist!'
     assert os.path.exists(os.path.join(input_path, 'POSCAR')
@@ -227,10 +213,25 @@ def file_builder(input_path: str):
     print(strftime("%H:%M:%S", gmtime()), 'All files written. Starting VASP calculations!')
     submit_all_jobs(input_path)
     sleep(20)
-    vasprun_checker(input_path)
+    check_readiness(input_path, submit_path='vasp_inputs')
 
+
+from conv_tests import encut_runner, kpoints_runner
+from solver import solver
 
 if __name__ == '__main__':
     input_path = os.getcwd()
+    magnetic_atom = input('Enter magnetic atom (str): ')
     print(input_path)
-    file_builder(input_path)
+    Ecut = encut_runner(input_path)
+    print(f'Estimated value of Encut: {Ecut} eV\n')
+    R_k = kpoints_runner(input_path)
+    print(f'Estimated value of {R_k=}')
+    stat_dict = {'ENCUT': Ecut, 'ISMEAR': -5, 'EDIFF': 1E-7, 'SYMPREC': 1E-8, 'NCORE': 4, 'ICHARG': 2,
+                 'LDAU': True, 'LDAUJ': LDAUJ_dict, 'LDAUL': LDAUL_dict, 'LDAUU': LDAUU_dict, 'NELM': 120,
+                 'LVHAR': False,
+                 'LDAUPRINT': 1, 'LDAUTYPE': 2, 'LASPH': True, 'LMAXMIX': 4, 'LWAVE': False, 'LVTOT': False,
+                 'LAECHG': False}
+    file_builder(input_path, stat_dict=stat_dict)
+    solver(input_path, magnetic_atom)
+
