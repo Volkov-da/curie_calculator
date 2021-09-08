@@ -189,7 +189,8 @@ def check_readiness(input_path: str, submit_path: str) -> None:
             file_path = os.path.join(submit_full_path, folder_name, 'OSZICAR')
             if os.path.exists(file_path):
                 with open(file_path) as f:
-                    if 'E0' in f.readlines()[-1]:
+                    text = f.readlines()
+                    if text and ('E0' in text[-1]):
                         converged_list += [folder_name]
                     else:
                         print(f'{folder_name} not yet converged')
