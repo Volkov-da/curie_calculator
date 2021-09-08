@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --ntasks=24
-#SBATCH --time=06:00:00
+#SBATCH --time=02:00:00
 #SBATCH --job-name=800
 #SBATCH --output=log
 #SBATCH --error=err

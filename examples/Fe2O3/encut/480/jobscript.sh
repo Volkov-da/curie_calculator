@@ -2,7 +2,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=24
 #SBATCH --time=02:00:00
-#SBATCH --job-name=660
+#SBATCH --job-name=480
 #SBATCH --output=log
 #SBATCH --error=err
 #SBATCH -p lenovo
