@@ -10,10 +10,13 @@ Code is currently under development. Now it working fine for few materials (e.g 
 git clone --recursive https://github.com/Volkov-da/curie_calculator.git
 ```
 
-`./install.sh`
-`python -m venv .venv`
-`source .venv/bin/activate`
-`pip install -r requirements.txt`
+1. `./install.sh`
+
+2. `python -m venv .venv`
+
+3. `source .venv/bin/activate`
+
+4. `pip install -r requirements.txt`
 
 if needed:
 
