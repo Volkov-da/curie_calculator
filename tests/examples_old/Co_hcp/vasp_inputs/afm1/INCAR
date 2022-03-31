@@ -1,0 +1,24 @@
+Co_hcp PAW_PBE AFM
+    SYSTEM   =    "Co_hcp"
+
+    NCORE    =    4
+
+Relaxation:
+    EDIFF    =    1E-6
+    ENCUT    =    520
+    IBRION   =    2
+    LORBIT   =    11
+
+    LWAVE    =    .FALSE.             # WAVECAR off
+    LCHARG   =    .FALSE.             # CHGCAR & CHG off
+
+Smearing:
+    ISMEAR  =    -5
+    SIGMA   =    0.05
+
+
+Magnetism:
+    ISPIN    =   2
+    MAGMOM  =   1.587 -1.587
+    
+

@@ -1,0 +1,83 @@
+=========================================
+SLURM_JOB_ID = 30554660
+SLURM_JOB_NODELIST = lnode48
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 8
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 875779
+CUDA_VISIBLE_DEVICES = 
+==========================================
+ running on    8 total cores
+ distrk:  each k-point on    8 cores,    1 groups
+ distr:  one band on    1 cores,    8 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 28 2018 00:24:27) complex          
+  
+ POSCAR found type information on POSCAR  Ni
+ POSCAR found :  1 types and       4 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|      For optimal performance we recommend to set                            |
+|        NCORE= 4 - approx SQRT( number of cores)                             |
+|      NCORE specifies how many cores store one orbital (NPAR=cpu/NCORE).     |
+|      This setting can  greatly improve the performance of VASP for DFT.     |
+|      The default,   NCORE=1            might be grossly inefficient         |
+|      on modern multi-core architectures or massively parallel machines.     |
+|      Do your own testing !!!!                                               |
+|      Unfortunately you need to use the default for GW and RPA calculations. |
+|      (for HF NCORE is supported but not extensively tested yet)             |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.249599710010E+03    0.24960E+03   -0.18590E+04 14248   0.241E+03
+DAV:   2    -0.117002105516E+02   -0.26130E+03   -0.25568E+03 14288   0.397E+02
+DAV:   3    -0.255423743245E+02   -0.13842E+02   -0.13458E+02 14864   0.127E+02
+DAV:   4    -0.257896285499E+02   -0.24725E+00   -0.24580E+00 15496   0.163E+01
+DAV:   5    -0.257958758685E+02   -0.62473E-02   -0.62467E-02 17072   0.214E+00    0.239E+01
+DAV:   6    -0.225735947270E+02    0.32223E+01   -0.54099E+01 14016   0.105E+02    0.133E+01
+DAV:   7    -0.216752566121E+02    0.89834E+00   -0.97546E+00 15544   0.442E+01    0.366E+00
+DAV:   8    -0.216612349036E+02    0.14022E-01   -0.26942E-01 15808   0.560E+00    0.120E+00
+DAV:   9    -0.216553074311E+02    0.59275E-02   -0.43630E-02 15328   0.237E+00    0.470E-01
+DAV:  10    -0.216533053976E+02    0.20020E-02   -0.25625E-03 16088   0.693E-01    0.152E-01
+DAV:  11    -0.216533851415E+02   -0.79744E-04   -0.73161E-04 14824   0.184E-01    0.479E-02
+DAV:  12    -0.216533917077E+02   -0.65662E-05   -0.90082E-05 15160   0.105E-01    0.225E-02
+DAV:  13    -0.216533937387E+02   -0.20310E-05   -0.14743E-05 15424   0.537E-02    0.113E-02
+DAV:  14    -0.216533930546E+02    0.68414E-06   -0.55653E-06  7472   0.329E-02
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|      Your highest band is occupied at some k-points! Unless you are         |
+|      performing a calculation for an insulator or semiconductor, without    |
+|      unoccupied bands, you have included TOO FEW BANDS!! Please increase    |
+|      the parameter NBANDS in file INCAR to ensure that the highest band     |
+|      is unoccupied at all k-points. It is always recommended to             |
+|      include a few unoccupied bands to accelerate the convergence of        |
+|      molecular dynamics runs (even for insulators or semiconductors).       |
+|      Because the presence of unoccupied bands improves wavefunction         |
+|      prediction, and helps to suppress 'band-crossings.'                    |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+   1 F= -.21653393E+02 E0= -.21634932E+02  d E =-.553829E-01  mag=    -0.0000

@@ -1,0 +1,30 @@
+SYSTEM = "Co_hcp"
+ALGO     = Fast
+PREC     = Accurate
+
+NCORE = 4
+
+Relaxation:
+    ISIF    =    3
+    EDIFF   =    1E-6
+    EDIFFG  =    1E-5
+    ENCUT   =    520
+    IBRION  =    2
+    LORBIT  =    11
+    NELM    =    100
+    NSW     =    99
+
+
+Smearing:
+    ISMEAR  =    -5
+    SIGMA   =    0.05
+
+Files:
+   LASPH    =    True
+   LREAL    =    Auto
+   LWAVE    =    False
+
+
+Magnetism:
+    ISPIN   =    2
+    MAGMOM  =    1.587 1.587

@@ -1,0 +1,21 @@
+SYSTEM = BiMn
+
+    NCORE     =    32
+    IBRION    =    2                  # relax with Conjugate Gradient
+
+    ISYM      =    0
+    LWAVE     =    .FALSE.             # WAVECAR off
+    LCHARG    =    .FALSE.             # CHGCAR & CHG off
+    PREC      =    Accurate            # avoid wrap around errors
+    ENCUT     =    500
+    LREAL     =    .FALSE.             # reciprocal space projection technique
+    EDIFF     =    1E-6                # high accuracy required
+    LORBIT    =    11
+
+Smearing:
+    ISMEAR    =    1
+    SIGMA     =    0.1
+
+Magnetism:
+    ISPIN     =    2
+    MAGMOM  =   3.9 3.9 3.9 -3.9 -3.9 -3.9 0.0 0.0 0.0 0.0 0.0 0.0

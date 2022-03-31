@@ -1,0 +1,64 @@
+=========================================
+SLURM_JOB_ID = 30554669
+SLURM_JOB_NODELIST = lnode15
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 8
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 1302464
+CUDA_VISIBLE_DEVICES = 
+==========================================
+ running on    8 total cores
+ distrk:  each k-point on    8 cores,    1 groups
+ distr:  one band on    1 cores,    8 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 28 2018 00:24:27) complex          
+  
+ POSCAR found type information on POSCAR  Ni
+ POSCAR found :  1 types and       6 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|      For optimal performance we recommend to set                            |
+|        NCORE= 4 - approx SQRT( number of cores)                             |
+|      NCORE specifies how many cores store one orbital (NPAR=cpu/NCORE).     |
+|      This setting can  greatly improve the performance of VASP for DFT.     |
+|      The default,   NCORE=1            might be grossly inefficient         |
+|      on modern multi-core architectures or massively parallel machines.     |
+|      Do your own testing !!!!                                               |
+|      Unfortunately you need to use the default for GW and RPA calculations. |
+|      (for HF NCORE is supported but not extensively tested yet)             |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.427436337785E+03    0.42744E+03   -0.26343E+04 35024   0.218E+03
+DAV:   2    -0.632367399677E+01   -0.43376E+03   -0.41456E+03 34584   0.395E+02
+DAV:   3    -0.381742909179E+02   -0.31851E+02   -0.29937E+02 36712   0.144E+02
+DAV:   4    -0.386620963908E+02   -0.48781E+00   -0.48710E+00 39424   0.191E+01
+DAV:   5    -0.386784905797E+02   -0.16394E-01   -0.16393E-01 49408   0.251E+00    0.247E+01
+DAV:   6    -0.345189522537E+02    0.41595E+01   -0.52731E+01 37056   0.933E+01    0.171E+01
+DAV:   7    -0.355632282270E+02   -0.10443E+01   -0.19597E+01 39288   0.962E+01    0.266E+01
+DAV:   8    -0.326853256644E+02    0.28779E+01   -0.10697E+01 39040   0.691E+01    0.756E+00
+DAV:   9    -0.325327736726E+02    0.15255E+00   -0.14985E+00 46032   0.216E+01    0.264E+00
+DAV:  10    -0.325411716078E+02   -0.83979E-02   -0.31630E-01 38760   0.702E+00    0.100E+00
+DAV:  11    -0.325372951391E+02    0.38765E-02   -0.28394E-02 41832   0.195E+00    0.566E-01
+DAV:  12    -0.325370561979E+02    0.23894E-03   -0.44054E-03 40256   0.951E-01    0.277E-01
+DAV:  13    -0.325371788730E+02   -0.12268E-03   -0.10298E-03 57704   0.434E-01    0.112E-01
+DAV:  14    -0.325372506984E+02   -0.71825E-04   -0.23459E-04 53144   0.216E-01    0.513E-02
+DAV:  15    -0.325372600251E+02   -0.93267E-05   -0.93212E-05 45280   0.107E-01    0.136E-02
+DAV:  16    -0.325372624022E+02   -0.23771E-05   -0.19007E-05 37800   0.430E-02    0.959E-03
+DAV:  17    -0.325372623245E+02    0.77671E-07   -0.25384E-06 20024   0.176E-02
+   1 F= -.32537262E+02 E0= -.32528769E+02  d E =-.254785E-01  mag=     0.0000

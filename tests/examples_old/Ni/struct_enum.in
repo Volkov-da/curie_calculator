@@ -1,0 +1,14 @@
+Ni1
+bulk
+2.4767000675         0.0000000000         0.0000000000
+1.2383500338         2.1448851760         0.0000000000
+1.2383500338         0.7149617253         2.0222171371
+2 - nary case
+1 # Number of points in the multilattice
+0.000000000     0.000000000     0.000000000 0/1
+1 6   # Starting and ending cell sizes for search
+0.10E-06 # Epsilon (finite precision parameter)
+full
+# Concentration restrictions
+50 50 100
+50 50 100

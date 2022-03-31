@@ -173,7 +173,7 @@ def encut_runner(input_path: str, ecut_range=np.arange(400, 900, 20)):
     return Ecut
 
 
-def kpoints_runner(input_path: str, kpoints_range=np.arange(20, 100, 10)):
+def kpoints_runner(input_path: str, kpoints_range=np.arange(20, 90, 10)):
     print(f'Starting KPOINTS optimization:')
     get_kpoints_files(input_path, Ecut, kpoints_range)
     submit_all_jobs(input_path=input_path, submit_path='kpoints')

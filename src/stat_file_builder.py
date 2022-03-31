@@ -1,19 +1,42 @@
-from pymatgen.analysis.magnetism.analyzer import MagneticStructureEnumerator
-from shutil import copy
-from solver import solver
 import os
+import warnings
 import numpy as np
 from tqdm import tqdm
-from pymatgen.core import Structure
-from pymatgen.io.vasp.sets import MPStaticSet
+from shutil import copy
+from solver import solver
+from monte_carlo import main_monte_carlo
+
 import matplotlib.pyplot as plt
-from pymatgen.io.vasp.outputs import Vasprun
-import warnings
 from time import sleep, gmtime, strftime
+
+from pymatgen.core import Structure
+from pymatgen.io.vasp.outputs import Vasprun
+from pymatgen.io.vasp.sets import MPStaticSet
+from pymatgen.analysis.magnetism.analyzer import MagneticStructureEnumerator
 
 plt.style.use('ggplot')
 warnings.filterwarnings('ignore')
 
+LDAUJ_dict = {'Co': 0, 'Cr': 0, 'Fe': 0, 'Mn': 0, 'Mo': 0, 'Ni': 0, 'V': 0, 'W': 0,
+              'Nb': 0, 'Sc': 0, 'Ru': 0, 'Rh': 0, 'Pd': 0, 'Cu': 0, 'Y': 0, 'Os': 0, 'Ti': 0, 'Zr': 0, 'Re': 0, 'Hf': 0,
+              'Pt': 0, 'La': 0}
+
+LDAUU_dict = {'Co': 3.32, 'Cr': 3.7, 'Fe': 5.3, 'Mn': 3.9, 'Mo': 4.38, 'Ni': 6.2, 'V': 3.25, 'W': 6.2,
+              'Nb': 1.45, 'Sc': 4.18, 'Ru': 4.29, 'Rh': 4.17, 'Pd': 2.96, 'Cu': 7.71, 'Y': 3.23, 'Os': 2.47, 'Ti': 5.89,
+              'Zr': 5.55,
+              'Re': 1.28, 'Hf': 4.77, 'Pt': 2.95, 'La': 5.3}
+
+LDAUL_dict = {'Co': 2, 'Cr': 2, 'Fe': 2, 'Mn': 2, 'Mo': 2, 'Ni': 2, 'V': 2, 'W': 2,
+              'Nb': 2, 'Sc': 2, 'Ru': 2, 'Rh': 2, 'Pd': 2, 'Cu': 2, 'Y': 2, 'Os': 2, 'Ti': 2, 'Zr': 2, 'Re': 2, 'Hf': 2,
+              'Pt': 2, 'La': 2}
+
+stat_dict = {
+    'ENCUT': 550, 'ISMEAR': -5, 'EDIFF': 1E-7, 'SYMPREC': 1E-8, 'NCORE': 4, 'ICHARG': 2,
+    'LDAU': True, 'LDAUJ': LDAUJ_dict, 'LDAUL': LDAUL_dict, 'LDAUU': LDAUU_dict, 'NELM': 120,
+    'LVHAR': False,
+    'LDAUPRINT': 1, 'LDAUTYPE': 2, 'LASPH': True, 'LMAXMIX': 4, 'LWAVE': False, 'LVTOT': False,
+    'LAECHG': False
+}
 
 def create_job_script(out_path, ntasks=8, job_id=None):
     """
@@ -117,20 +140,6 @@ def get_siman_inputs(input_path: str):
             folder, 'POSCAR'), out_path=tmp_out_path)
 
 
-LDAUJ_dict = {'Co': 0, 'Cr': 0, 'Fe': 0, 'Mn': 0, 'Mo': 0, 'Ni': 0, 'V': 0, 'W': 0,
-              'Nb': 0, 'Sc': 0, 'Ru': 0, 'Rh': 0, 'Pd': 0, 'Cu': 0, 'Y': 0, 'Os': 0, 'Ti': 0, 'Zr': 0, 'Re': 0, 'Hf': 0,
-              'Pt': 0, 'La': 0}
-
-LDAUU_dict = {'Co': 3.32, 'Cr': 3.7, 'Fe': 5.3, 'Mn': 3.9, 'Mo': 4.38, 'Ni': 6.2, 'V': 3.25, 'W': 6.2,
-              'Nb': 1.45, 'Sc': 4.18, 'Ru': 4.29, 'Rh': 4.17, 'Pd': 2.96, 'Cu': 7.71, 'Y': 3.23, 'Os': 2.47, 'Ti': 5.89,
-              'Zr': 5.55,
-              'Re': 1.28, 'Hf': 4.77, 'Pt': 2.95, 'La': 5.3}
-
-LDAUL_dict = {'Co': 2, 'Cr': 2, 'Fe': 2, 'Mn': 2, 'Mo': 2, 'Ni': 2, 'V': 2, 'W': 2,
-              'Nb': 2, 'Sc': 2, 'Ru': 2, 'Rh': 2, 'Pd': 2, 'Cu': 2, 'Y': 2, 'Os': 2, 'Ti': 2, 'Zr': 2, 'Re': 2, 'Hf': 2,
-              'Pt': 2, 'La': 2}
-
-
 def write_static_set(structure, vasp_static_path: str, static_dict: dict) -> None:
     """
     Args:
@@ -149,7 +158,7 @@ def write_static_set(structure, vasp_static_path: str, static_dict: dict) -> Non
                              reciprocal_density=300,
                              force_gamma=True)
     static_set.get_vasp_input().write_input(vasp_static_path)
-    create_job_script(vasp_static_path)
+    create_job_script(vasp_static_path, ntasks=24)
 
 
 def get_VASP_inputs(input_path: str, static_dict: dict) -> None:
@@ -162,16 +171,11 @@ def get_VASP_inputs(input_path: str, static_dict: dict) -> None:
         os.mkdir(os.path.join(input_path, 'vasp_inputs'))
 
     for i, magnetic_structure in tqdm(enumerate(enum_struct_list.ordered_structures)):
-
         magnetic_type = enum_struct_list.ordered_structure_origins[i]
-
         str_id = magnetic_type + str(i)
-
         vasp_out_path = os.path.join(input_path, 'vasp_inputs', str_id)
-
         if not os.path.exists(vasp_out_path):
             os.mkdir(vasp_out_path)
-
         write_static_set(structure=magnetic_structure,
                          vasp_static_path=vasp_out_path,
                          static_dict=stat_dict)
@@ -214,7 +218,8 @@ def file_builder(input_path: str, stat_dict: dict):
     get_siman_inputs(input_path)
     copy(os.path.join(input_path, 'POSCAR'), os.path.join(
         input_path, 'siman_inputs', 'POSCAR_fm0'))
-    print(strftime("%H:%M:%S", gmtime()), 'All files written. Starting VASP calculations!')
+    print(strftime("%H:%M:%S", gmtime()),
+          'All files written. Starting VASP calculations!')
     submit_all_jobs(input_path, submit_path='vasp_inputs')
     sleep(20)
     check_readiness(input_path, submit_path='vasp_inputs')
@@ -234,7 +239,7 @@ def get_ecut_files(input_path: str, ecut_range: list) -> None:
             os.mkdir(ecut_path)
         static_set = MPStaticSet(structure, user_incar_settings=user_settings)
         static_set.get_vasp_input().write_input(ecut_path)
-        create_job_script(out_path=ecut_path, ntasks=24)
+        create_job_script(out_path=ecut_path, ntasks=16)
 
 
 def en_per_atom_list(input_path: str, mode: str) -> tuple:
@@ -250,14 +255,16 @@ def en_per_atom_list(input_path: str, mode: str) -> tuple:
     """
     E_list = []
     calc_fold = os.path.join(input_path, mode)
-    params_range = sorted([int(d) for d in os.listdir(calc_fold) if '.' not in d])
+    params_range = sorted([int(d)
+                          for d in os.listdir(calc_fold) if '.' not in d])
     for kpoint_density in tqdm(params_range):
         struct_folder = os.path.join(calc_fold, str(kpoint_density))
         vasprun_path = os.path.join(struct_folder, 'vasprun.xml')
         vasprun = Vasprun(vasprun_path, parse_dos=False, parse_eigen=False)
         E_tot = vasprun.final_energy
         E_list.append(E_tot)
-    initial_atoms_num = len(Structure.from_file(os.path.join(input_path, 'POSCAR')))
+    initial_atoms_num = len(Structure.from_file(
+        os.path.join(input_path, 'POSCAR')))
     energy_arr = np.array(E_list) / initial_atoms_num
     return energy_arr, params_range
 
@@ -313,7 +320,7 @@ def get_kpoints_files(input_path: str, Ecut: int, kpoints_range: list) -> None:
         static_set = MPStaticSet(structure, user_incar_settings=user_settings)
         static_set.get_vasp_input().write_input(kpoints_path)
         write_kpoints(file_name, Rk=kpoints)
-        create_job_script(out_path=kpoints_path, ntasks=20)
+        create_job_script(out_path=kpoints_path, ntasks=16)
 
 
 def plot_kpoints(input_path: str, energy_arr, kpoints_range: list) -> None:
@@ -335,7 +342,7 @@ def get_kpoint_density(energy_arr: list, kpoints_range) -> int:
     return R_k
 
 
-def encut_runner(input_path: str, ecut_range=np.arange(400, 900, 20)):
+def encut_runner(input_path: str, ecut_range=np.arange(400, 900, 20)) -> float:
     print(f'Starting ENCUT optimization:')
     get_ecut_files(input_path, ecut_range)
     submit_all_jobs(input_path=input_path, submit_path='encut')
@@ -362,18 +369,19 @@ def kpoints_runner(input_path: str, kpoints_range=np.arange(20, 100, 10)):
     return R_k
 
 
+
 if __name__ == '__main__':
     input_path = os.getcwd()
     magnetic_atom = input('Enter magnetic atom (str): ')
     print(input_path)
     Ecut = encut_runner(input_path)
     print(f'Estimated value of Encut: {Ecut} eV\n')
+
     R_k = kpoints_runner(input_path)
-    print(f'Estimated value of {R_k=}')
-    stat_dict = {'ENCUT': Ecut, 'ISMEAR': -5, 'EDIFF': 1E-7, 'SYMPREC': 1E-8, 'NCORE': 4, 'ICHARG': 2,
-                 'LDAU': True, 'LDAUJ': LDAUJ_dict, 'LDAUL': LDAUL_dict, 'LDAUU': LDAUU_dict, 'NELM': 120,
-                 'LVHAR': False,
-                 'LDAUPRINT': 1, 'LDAUTYPE': 2, 'LASPH': True, 'LMAXMIX': 4, 'LWAVE': False, 'LVTOT': False,
-                 'LAECHG': False}
+    print(f'Estimated value of R_k={R_k}')
+
     file_builder(input_path, stat_dict=stat_dict)
     solver(input_path, magnetic_atom)
+
+    print(f'Starting Monte-Carlo simulations')
+    main_monte_carlo(input_path)

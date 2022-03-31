@@ -272,7 +272,6 @@ def vasprun_checker(input_path):
             break
 
 
-
 def check_readiness(input_path: str, submit_path: str) -> None:
     submit_full_path = os.path.join(input_path, submit_path)
     pathes = sorted(os.listdir(submit_full_path))
@@ -295,6 +294,7 @@ def check_readiness(input_path: str, submit_path: str) -> None:
         sleep(15)
     time = strftime("%H:%M:%S", gmtime())
     print(f'{time} {submit_path.upper()} optimization Finished')
+
 
 def file_builder(input_path: str):
     assert os.path.exists(

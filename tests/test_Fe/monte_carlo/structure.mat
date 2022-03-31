@@ -1,0 +1,11 @@
+#---------------------------------------------------
+# Number of Materials
+#---------------------------------------------------
+material:num-materials=1
+# material[1]:material-name=Co
+material[1]:damping-constant=1
+material[1]:exchange-matrix[1]=1.12e-20
+material[1]:atomic-spin-moment=1.72 !muB
+material[1]:minimum-height=0.0
+material[1]:maximum-height=1
+material[1]:initial-spin-direction=0,0,1
