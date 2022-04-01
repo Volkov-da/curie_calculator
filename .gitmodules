@@ -1,3 +1,7 @@
 [submodule "enumlib"]
 	path = enumlib
 	url = https://github.com/msg-byu/enumlib.git
+
+[submodule "vampire"]
+	path = enumlib
+	url = https://github.com/richard-evans/vampire
