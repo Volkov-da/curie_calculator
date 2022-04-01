@@ -3,8 +3,11 @@ import warnings
 import numpy as np
 from tqdm import tqdm
 from shutil import copy
+
+# import local modules src/ 
 from solver import solver
-from monte_carlo import main_monte_carlo
+from read_input import update_defaults
+from monte_carlo_run import run_monte_carlo
 
 import matplotlib.pyplot as plt
 from time import sleep, gmtime, strftime
@@ -17,26 +20,35 @@ from pymatgen.analysis.magnetism.analyzer import MagneticStructureEnumerator
 plt.style.use('ggplot')
 warnings.filterwarnings('ignore')
 
-LDAUJ_dict = {'Co': 0, 'Cr': 0, 'Fe': 0, 'Mn': 0, 'Mo': 0, 'Ni': 0, 'V': 0, 'W': 0,
+LDAUJ_DICT = {'Co': 0, 'Cr': 0, 'Fe': 0, 'Mn': 0, 'Mo': 0, 'Ni': 0, 'V': 0, 'W': 0,
               'Nb': 0, 'Sc': 0, 'Ru': 0, 'Rh': 0, 'Pd': 0, 'Cu': 0, 'Y': 0, 'Os': 0, 'Ti': 0, 'Zr': 0, 'Re': 0, 'Hf': 0,
               'Pt': 0, 'La': 0}
 
-LDAUU_dict = {'Co': 3.32, 'Cr': 3.7, 'Fe': 5.3, 'Mn': 3.9, 'Mo': 4.38, 'Ni': 6.2, 'V': 3.25, 'W': 6.2,
+LDAUU_DICT = {'Co': 3.32, 'Cr': 3.7, 'Fe': 5.3, 'Mn': 3.9, 'Mo': 4.38, 'Ni': 6.2, 'V': 3.25, 'W': 6.2,
               'Nb': 1.45, 'Sc': 4.18, 'Ru': 4.29, 'Rh': 4.17, 'Pd': 2.96, 'Cu': 7.71, 'Y': 3.23, 'Os': 2.47, 'Ti': 5.89,
               'Zr': 5.55,
               'Re': 1.28, 'Hf': 4.77, 'Pt': 2.95, 'La': 5.3}
 
-LDAUL_dict = {'Co': 2, 'Cr': 2, 'Fe': 2, 'Mn': 2, 'Mo': 2, 'Ni': 2, 'V': 2, 'W': 2,
+LDAUL_DICT = {'Co': 2, 'Cr': 2, 'Fe': 2, 'Mn': 2, 'Mo': 2, 'Ni': 2, 'V': 2, 'W': 2,
               'Nb': 2, 'Sc': 2, 'Ru': 2, 'Rh': 2, 'Pd': 2, 'Cu': 2, 'Y': 2, 'Os': 2, 'Ti': 2, 'Zr': 2, 'Re': 2, 'Hf': 2,
               'Pt': 2, 'La': 2}
 
-stat_dict = {
+STAT_DICT = {
     'ENCUT': 550, 'ISMEAR': -5, 'EDIFF': 1E-7, 'SYMPREC': 1E-8, 'NCORE': 4, 'ICHARG': 2,
-    'LDAU': True, 'LDAUJ': LDAUJ_dict, 'LDAUL': LDAUL_dict, 'LDAUU': LDAUU_dict, 'NELM': 120,
+    'LDAU': True, 'LDAUJ': LDAUJ_DICT, 'LDAUL': LDAUL_DICT, 'LDAUU': LDAUU_DICT, 'NELM': 120,
     'LVHAR': False,
     'LDAUPRINT': 1, 'LDAUTYPE': 2, 'LASPH': True, 'LMAXMIX': 4, 'LWAVE': False, 'LVTOT': False,
     'LAECHG': False
 }
+
+DEFAULT_DICT = {
+    'MAGNETIC_ATOM': 'Fe',
+    'MAX_T': 1600,
+    'ECUT_MIN': 400,
+    'ECUT_MIN' : 700,
+    'ECUT_STEP' : 20
+    }
+
 
 def create_job_script(out_path, ntasks=8, job_id=None):
     """
@@ -154,7 +166,7 @@ def write_static_set(structure, vasp_static_path: str, static_dict: dict) -> Non
     if not os.path.exists(vasp_static_path):
         os.mkdir(vasp_static_path)
     static_set = MPStaticSet(structure,
-                             user_incar_settings=stat_dict,
+                             user_incar_settings=static_dict,
                              reciprocal_density=300,
                              force_gamma=True)
     static_set.get_vasp_input().write_input(vasp_static_path)
@@ -178,7 +190,7 @@ def get_VASP_inputs(input_path: str, static_dict: dict) -> None:
             os.mkdir(vasp_out_path)
         write_static_set(structure=magnetic_structure,
                          vasp_static_path=vasp_out_path,
-                         static_dict=stat_dict)
+                         static_dict=static_dict)
 
 
 def check_readiness(input_path: str, submit_path: str) -> None:
@@ -213,7 +225,7 @@ def file_builder(input_path: str, stat_dict: dict):
                           ), f'Please specify POSCAR file in you input folder: {input_path}'
 
     get_VASP_inputs(input_path=input_path,
-                    static_dict=stat_dict)
+                    stat_dict=stat_dict)
 
     get_siman_inputs(input_path)
     copy(os.path.join(input_path, 'POSCAR'), os.path.join(
@@ -287,7 +299,7 @@ def plot_encut(input_path: str, en_per_atom, ecut_range: list) -> None:
     plt.ylabel('E/atom, meV')
     plt.xlabel('Encut, eV')
     plt.xticks(x, rotation=45, ha='right')
-    plt.savefig(os.path.join(input_path, 'Encut.pdf'), bbox_inches='tight')
+    plt.savefig(os.path.join(input_path, 'E_cut_opt.pdf'), bbox_inches='tight')
 
 
 def write_kpoints(file_name, Rk):
@@ -332,7 +344,7 @@ def plot_kpoints(input_path: str, energy_arr, kpoints_range: list) -> None:
     plt.xlabel(r'$R_K$')
     plt.xticks(x, rotation=45, ha='right')
     plt.legend()
-    plt.savefig(os.path.join(input_path, 'Kgrid.pdf'), bbox_inches='tight')
+    plt.savefig(os.path.join(input_path, 'K_grid_opt.pdf'), bbox_inches='tight')
 
 
 def get_kpoint_density(energy_arr: list, kpoints_range) -> int:
@@ -342,7 +354,8 @@ def get_kpoint_density(energy_arr: list, kpoints_range) -> int:
     return R_k
 
 
-def encut_runner(input_path: str, ecut_range=np.arange(400, 900, 20)) -> float:
+def encut_runner(input_path: str, ecut_min, ecut_max, ecut_step) -> float:
+    ecut_range=np.arange(ecut_min, ecut_max, ecut_step)
     print(f'Starting ENCUT optimization:')
     get_ecut_files(input_path, ecut_range)
     submit_all_jobs(input_path=input_path, submit_path='encut')
@@ -355,7 +368,7 @@ def encut_runner(input_path: str, ecut_range=np.arange(400, 900, 20)) -> float:
     return Ecut
 
 
-def kpoints_runner(input_path: str, kpoints_range=np.arange(20, 100, 10)):
+def kpoints_runner(input_path: str, kpoints_range=np.arange(20, 80, 10)):
     print(f'Starting KPOINTS optimization:')
     get_kpoints_files(input_path, Ecut, kpoints_range)
     submit_all_jobs(input_path=input_path, submit_path='kpoints')
@@ -369,19 +382,28 @@ def kpoints_runner(input_path: str, kpoints_range=np.arange(20, 100, 10)):
     return R_k
 
 
-
 if __name__ == '__main__':
     input_path = os.getcwd()
-    magnetic_atom = input('Enter magnetic atom (str): ')
+    default_dict = update_defaults(input_path, DEFAULT_DICT)
+
     print(input_path)
-    Ecut = encut_runner(input_path)
+
+    # optimization of cutoff energy
+    Ecut = encut_runner(input_path,
+     ecut_min  =DEFAULT_DICT['ECUT_MIN'],
+     ecut_max  =DEFAULT_DICT['ECUT_MIN'],
+     ecut_step =DEFAULT_DICT['ECUT_STEP'])
+
     print(f'Estimated value of Encut: {Ecut} eV\n')
 
+    # optimization of kpoints grid
     R_k = kpoints_runner(input_path)
     print(f'Estimated value of R_k={R_k}')
 
-    file_builder(input_path, stat_dict=stat_dict)
-    solver(input_path, magnetic_atom)
+    # fitting Hamiltonian
+    file_builder(input_path, stat_dict=STAT_DICT)
+    solver(input_path, DEFAULT_DICT['MAGNETIC_ATOM'])
 
+    # running Monte-Carlo simulations
     print(f'Starting Monte-Carlo simulations')
-    main_monte_carlo(input_path)
+    run_monte_carlo(input_path, MAX_T=DEFAULT_DICT['MAX_T'])

@@ -19,7 +19,8 @@ REPORT
 WAVECAR
 XDATCAR
 PROCAR
-
+vasprun.xml
+AECCAR*
 
 \#*#
 \#*
