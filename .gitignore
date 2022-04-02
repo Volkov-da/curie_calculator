@@ -1,6 +1,6 @@
 .DS_Store
-
-venv
+.venv/
+venv/
 err
 .ipynb_checkpoints/
 *.ipynb
@@ -21,6 +21,7 @@ XDATCAR
 PROCAR
 vasprun.xml
 AECCAR*
+OUTCAR
 
 \#*#
 \#*

@@ -1,0 +1,88 @@
+02-04-2022 [20:32:45] Logfile opened
+02-04-2022 [20:32:45] Executable : vampire-serial
+02-04-2022 [20:32:45] Host name  : lnode49:
+02-04-2022 [20:32:45] Directory  : /cephfs/home/dvolkov/curie_calculator/tests/Fe2O3/monte_carlo
+02-04-2022 [20:32:45] Process ID : 3300655
+02-04-2022 [20:32:45] Version    : 6.0.0
+02-04-2022 [20:32:45] Githash    : 4c9651daecc86c3e6b6df0c8055fcd9e89fd900c
+02-04-2022 [20:32:45] Opening main input file "input".
+02-04-2022 [20:32:45] Parsing system parameters from main input file.
+02-04-2022 [20:32:45] Opening material file "structure.mat".
+02-04-2022 [20:32:45] Parsing material file for parameters.
+02-04-2022 [20:32:45] Reading in unit cell data from disk...
+02-04-2022 [20:32:45] Reading data completed. Processing unit cell data...
+02-04-2022 [20:32:45] 	Processing data for 12 unit cell atoms...
+02-04-2022 [20:32:45] 	Processing unit cell atoms completed
+02-04-2022 [20:32:45] 	Processing data from 156 interactions...
+02-04-2022 [20:32:45] 	Processing unit cell interactions completed
+02-04-2022 [20:32:45] 	Verifying unit cell exchange interactions...
+02-04-2022 [20:32:45] Verifying unit cell exchange interactions completed
+02-04-2022 [20:32:45] 	Number of atoms read-in: 12
+02-04-2022 [20:32:45] 	Number of bilinear interactions read-in: 156
+02-04-2022 [20:32:45] 	Number of biquadratic interactions read-in: 0
+02-04-2022 [20:32:45] 	Exchange type: 
+02-04-2022 [20:32:45] 	Calculated interaction range: 1 Unit Cells
+02-04-2022 [20:32:45] Calculating alloy properties of system
+02-04-2022 [20:32:45] Determining atomic composition:
+02-04-2022 [20:32:45] Material 1 Fe-up makes up 48.8372 % of all atoms ( 2100 atoms )
+02-04-2022 [20:32:45] Material 2 Fe-dn makes up 51.1628 % of all atoms ( 2200 atoms )
+02-04-2022 [20:32:45] Memory required for neighbourlist calculation:0.0384 MB
+02-04-2022 [20:32:45] Allocating memory for supercell array in neighbourlist calculation
+02-04-2022 [20:32:45] 	Allocating memory done
+02-04-2022 [20:32:45] Populating supercell array for neighbourlist calculation...
+02-04-2022 [20:32:45] 	Populating supercell array completed
+02-04-2022 [20:32:45] Memory required for neighbour list:0.4992 MB
+02-04-2022 [20:32:45] Generating neighbour list...
+02-04-2022 [20:32:45] 	Neighbour list calculation complete
+02-04-2022 [20:32:45] Deallocating supercell array for neighbour list calculation
+02-04-2022 [20:32:45] 	Supercell array deallocated
+02-04-2022 [20:32:45] Copying system data to optimised data structures.
+02-04-2022 [20:32:45] Number of atoms generated on rank 0: 4300
+02-04-2022 [20:32:45] Memory required for copying to performance array on rank 0: 0.6536 MB RAM
+02-04-2022 [20:32:45] Identifying surface atoms using global threshold value of 0
+02-04-2022 [20:32:45] 0 surface atoms found.
+02-04-2022 [20:32:45] Memory required for creation of 1D neighbour list on rank 0: 0.0688 MB RAM
+02-04-2022 [20:32:45] Initialising data structures for exchange calculation.
+02-04-2022 [20:32:45] Unrolled exchange template requires 0.001248MB RAM
+02-04-2022 [20:32:45] Macrocell size = 10 Angstroms
+02-04-2022 [20:32:45] Macrocells in x,y,z: 6	6	6
+02-04-2022 [20:32:45] Total number of macrocells: 216
+02-04-2022 [20:32:45] Memory required for macrocell arrays: 0.01728 MB
+02-04-2022 [20:32:45] Number of local macrocells on rank 0: 125
+02-04-2022 [20:32:45] Number of atoms generated: 4300
+02-04-2022 [20:32:45] Initialising data structures for anisotropy calculation.
+02-04-2022 [20:32:45] Initialising statistics module
+02-04-2022 [20:32:45] Starting Simulation with Program Curie-Temperature...
+02-04-2022 [20:47:32] Simulation run time [s]: 887.509
+02-04-2022 [20:47:32] Monte Carlo statistics:
+02-04-2022 [20:47:32] 	Total moves: 4.3e+09
+02-04-2022 [20:47:32] 	53.0632% Accepted
+02-04-2022 [20:47:32] 	46.9368% Rejected
+02-04-2022 [20:47:32] Simulation ended gracefully.
+  	0.836257   	
+300        	0.0120059  	0.816314   	0.799994   	
+350        	0.0106818  	0.781171   	0.763471   	
+400        	0.00970383 	0.741214   	0.722416   	
+450        	0.0092157  	0.696153   	0.67675    	
+500        	0.00829778 	0.650681   	0.631664   	
+550        	0.00854441 	0.600793   	0.581742   	
+600        	0.00802651 	0.539398   	0.521402   	
+650        	0.00820729 	0.479583   	0.46251    	
+700        	0.0084592  	0.39387    	0.379687   	
+750        	0.00851893 	0.29719    	0.285419   	
+800        	0.00887074 	0.170163   	0.163387   	
+850        	0.00903993 	0.0841783  	0.080948   	
+900        	0.00928756 	0.055886   	0.055109   	
+950        	0.00967009 	0.0464929  	0.0443621  	
+1000       	0.00934493 	0.040753   	0.0394618  	
+1050       	0.00979402 	0.0350651  	0.0340121  	
+1100       	0.0101345  	0.030268   	0.0298019  	
+1150       	0.00993549 	0.0312937  	0.0291745  	
+1200       	0.010275   	0.0309622  	0.029814   	
+Simulation run time [s]: 887.503
+Monte Carlo statistics:
+	Total moves: 4300000000
+	53.0632% Accepted
+	46.9368% Rejected
+[32mSimulation ended gracefully.
+[0m

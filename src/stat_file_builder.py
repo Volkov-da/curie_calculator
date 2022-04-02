@@ -4,10 +4,11 @@ import numpy as np
 from tqdm import tqdm
 from shutil import copy
 
-# import local modules src/ 
+# import local modules src/
+from variables import *
 from solver import solver
 from read_input import update_defaults
-from monte_carlo_run import run_monte_carlo
+from mc_create_run import run_monte_carlo
 
 import matplotlib.pyplot as plt
 from time import sleep, gmtime, strftime
@@ -19,35 +20,6 @@ from pymatgen.analysis.magnetism.analyzer import MagneticStructureEnumerator
 
 plt.style.use('ggplot')
 warnings.filterwarnings('ignore')
-
-LDAUJ_DICT = {'Co': 0, 'Cr': 0, 'Fe': 0, 'Mn': 0, 'Mo': 0, 'Ni': 0, 'V': 0, 'W': 0,
-              'Nb': 0, 'Sc': 0, 'Ru': 0, 'Rh': 0, 'Pd': 0, 'Cu': 0, 'Y': 0, 'Os': 0, 'Ti': 0, 'Zr': 0, 'Re': 0, 'Hf': 0,
-              'Pt': 0, 'La': 0}
-
-LDAUU_DICT = {'Co': 3.32, 'Cr': 3.7, 'Fe': 5.3, 'Mn': 3.9, 'Mo': 4.38, 'Ni': 6.2, 'V': 3.25, 'W': 6.2,
-              'Nb': 1.45, 'Sc': 4.18, 'Ru': 4.29, 'Rh': 4.17, 'Pd': 2.96, 'Cu': 7.71, 'Y': 3.23, 'Os': 2.47, 'Ti': 5.89,
-              'Zr': 5.55,
-              'Re': 1.28, 'Hf': 4.77, 'Pt': 2.95, 'La': 5.3}
-
-LDAUL_DICT = {'Co': 2, 'Cr': 2, 'Fe': 2, 'Mn': 2, 'Mo': 2, 'Ni': 2, 'V': 2, 'W': 2,
-              'Nb': 2, 'Sc': 2, 'Ru': 2, 'Rh': 2, 'Pd': 2, 'Cu': 2, 'Y': 2, 'Os': 2, 'Ti': 2, 'Zr': 2, 'Re': 2, 'Hf': 2,
-              'Pt': 2, 'La': 2}
-
-STAT_DICT = {
-    'ENCUT': 550, 'ISMEAR': -5, 'EDIFF': 1E-7, 'SYMPREC': 1E-8, 'NCORE': 4, 'ICHARG': 2,
-    'LDAU': True, 'LDAUJ': LDAUJ_DICT, 'LDAUL': LDAUL_DICT, 'LDAUU': LDAUU_DICT, 'NELM': 120,
-    'LVHAR': False,
-    'LDAUPRINT': 1, 'LDAUTYPE': 2, 'LASPH': True, 'LMAXMIX': 4, 'LWAVE': False, 'LVTOT': False,
-    'LAECHG': False
-}
-
-DEFAULT_DICT = {
-    'MAGNETIC_ATOM': 'Fe',
-    'MAX_T': 1600,
-    'ECUT_MIN': 400,
-    'ECUT_MIN' : 700,
-    'ECUT_STEP' : 20
-    }
 
 
 def create_job_script(out_path, ntasks=8, job_id=None):
@@ -152,12 +124,12 @@ def get_siman_inputs(input_path: str):
             folder, 'POSCAR'), out_path=tmp_out_path)
 
 
-def write_static_set(structure, vasp_static_path: str, static_dict: dict) -> None:
+def write_static_set(structure, vasp_static_path: str, stat_dict: dict) -> None:
     """
     Args:
         structure        (pymatgen.core.structure.Structure)
         vasp_static_path (str)  -  path to the folder for static VASP run
-        static_dict      (dict) - dictionary with VASP INCAR keywords
+        stat_dict      (dict) - dictionary with VASP INCAR keywords
 
     Write the following files into specified folder:
         INCAR_stat
@@ -166,14 +138,14 @@ def write_static_set(structure, vasp_static_path: str, static_dict: dict) -> Non
     if not os.path.exists(vasp_static_path):
         os.mkdir(vasp_static_path)
     static_set = MPStaticSet(structure,
-                             user_incar_settings=static_dict,
+                             user_incar_settings=stat_dict,
                              reciprocal_density=300,
                              force_gamma=True)
     static_set.get_vasp_input().write_input(vasp_static_path)
-    create_job_script(vasp_static_path, ntasks=24)
+    create_job_script(vasp_static_path, ntasks=16)
 
 
-def get_VASP_inputs(input_path: str, static_dict: dict) -> None:
+def get_VASP_inputs(input_path: str, stat_dict: dict) -> None:
     init_structure = Structure.from_file(os.path.join(input_path, 'POSCAR'))
     enum_struct_list = MagneticStructureEnumerator(init_structure,
                                                    transformation_kwargs={'symm_prec': 0.1,
@@ -190,7 +162,7 @@ def get_VASP_inputs(input_path: str, static_dict: dict) -> None:
             os.mkdir(vasp_out_path)
         write_static_set(structure=magnetic_structure,
                          vasp_static_path=vasp_out_path,
-                         static_dict=static_dict)
+                         stat_dict=stat_dict)
 
 
 def check_readiness(input_path: str, submit_path: str) -> None:
@@ -251,7 +223,7 @@ def get_ecut_files(input_path: str, ecut_range: list) -> None:
             os.mkdir(ecut_path)
         static_set = MPStaticSet(structure, user_incar_settings=user_settings)
         static_set.get_vasp_input().write_input(ecut_path)
-        create_job_script(out_path=ecut_path, ntasks=16)
+        create_job_script(out_path=ecut_path, ntasks=8)
 
 
 def en_per_atom_list(input_path: str, mode: str) -> tuple:
@@ -299,7 +271,11 @@ def plot_encut(input_path: str, en_per_atom, ecut_range: list) -> None:
     plt.ylabel('E/atom, meV')
     plt.xlabel('Encut, eV')
     plt.xticks(x, rotation=45, ha='right')
-    plt.savefig(os.path.join(input_path, 'E_cut_opt.pdf'), bbox_inches='tight')
+    output_path = os.path.join(input_path, 'output')
+    if not os.path.exists(output_path):
+        os.mkdir(output_path)
+    plt.savefig(os.path.join(output_path, 'E_cut_opt.png'),
+                bbox_inches='tight')
 
 
 def write_kpoints(file_name, Rk):
@@ -332,7 +308,7 @@ def get_kpoints_files(input_path: str, Ecut: int, kpoints_range: list) -> None:
         static_set = MPStaticSet(structure, user_incar_settings=user_settings)
         static_set.get_vasp_input().write_input(kpoints_path)
         write_kpoints(file_name, Rk=kpoints)
-        create_job_script(out_path=kpoints_path, ntasks=16)
+        create_job_script(out_path=kpoints_path, ntasks=8)
 
 
 def plot_kpoints(input_path: str, energy_arr, kpoints_range: list) -> None:
@@ -344,7 +320,12 @@ def plot_kpoints(input_path: str, energy_arr, kpoints_range: list) -> None:
     plt.xlabel(r'$R_K$')
     plt.xticks(x, rotation=45, ha='right')
     plt.legend()
-    plt.savefig(os.path.join(input_path, 'K_grid_opt.pdf'), bbox_inches='tight')
+
+    output_path = os.path.join(input_path, 'output')
+    if not os.path.exists(output_path):
+        os.mkdir(output_path)
+    plt.savefig(os.path.join(output_path, 'K_grid_opt.png'),
+                bbox_inches='tight')
 
 
 def get_kpoint_density(energy_arr: list, kpoints_range) -> int:
@@ -355,26 +336,27 @@ def get_kpoint_density(energy_arr: list, kpoints_range) -> int:
 
 
 def encut_runner(input_path: str, ecut_min, ecut_max, ecut_step) -> float:
-    ecut_range=np.arange(ecut_min, ecut_max, ecut_step)
-    print(f'Starting ENCUT optimization:')
+    ecut_range = np.arange(ecut_min, ecut_max, ecut_step)
+    print('Starting ENCUT optimization:\n')
     get_ecut_files(input_path, ecut_range)
     submit_all_jobs(input_path=input_path, submit_path='encut')
     check_readiness(input_path, submit_path='encut')
     encut_arr, encut_range = en_per_atom_list(input_path, mode='encut')
     Ecut = get_ecut(encut_arr, encut_range)
     plot_encut(input_path, encut_arr, encut_range)
-    print(f'ENCUT optimization finished!')
+    print('ENCUT optimization finished!\n')
     print('_' * 60 + '\n')
     return Ecut
 
 
-def kpoints_runner(input_path: str, kpoints_range=np.arange(20, 80, 10)):
-    print(f'Starting KPOINTS optimization:')
+def kpoints_runner(input_path: str, Ecut: int, kpoints_min: int, kpoints_max: int, kpoints_step: int) -> int:
+    kpoints_range = np.arange(kpoints_min, kpoints_max, kpoints_step)
+    print(f'Starting KPOINTS optimization:\n')
     get_kpoints_files(input_path, Ecut, kpoints_range)
     submit_all_jobs(input_path=input_path, submit_path='kpoints')
     print()
     check_readiness(input_path, submit_path='kpoints')
-    print(f'KPOINTS optimization finished!')
+    print(f'KPOINTS optimization finished!\n')
     energy_arr, kpoints_range = en_per_atom_list(input_path, mode='kpoints')
     plot_kpoints(input_path, energy_arr, kpoints_range)
     R_k = get_kpoint_density(energy_arr, kpoints_range)
@@ -383,27 +365,38 @@ def kpoints_runner(input_path: str, kpoints_range=np.arange(20, 80, 10)):
 
 
 if __name__ == '__main__':
+
     input_path = os.getcwd()
     default_dict = update_defaults(input_path, DEFAULT_DICT)
 
-    print(input_path)
+    print(DEFAULT_DICT)
 
     # optimization of cutoff energy
-    Ecut = encut_runner(input_path,
-     ecut_min  =DEFAULT_DICT['ECUT_MIN'],
-     ecut_max  =DEFAULT_DICT['ECUT_MIN'],
-     ecut_step =DEFAULT_DICT['ECUT_STEP'])
+    if DEFAULT_DICT['ECUT_OPT']:
+        Ecut = encut_runner(
+            input_path,
+            ecut_min=DEFAULT_DICT['ECUT_MIN'],
+            ecut_max=DEFAULT_DICT['ECUT_MAX'],
+            ecut_step=DEFAULT_DICT['ECUT_STEP'])
 
-    print(f'Estimated value of Encut: {Ecut} eV\n')
+        print(f'Estimated value of Encut: {Ecut} eV\n')
 
-    # optimization of kpoints grid
-    R_k = kpoints_runner(input_path)
-    print(f'Estimated value of R_k={R_k}')
+    # optimization of kpoints grid w.r.t calculated Cut Off energy
+    if DEFAULT_DICT['KPOINTS_OPT']:
+        R_k = kpoints_runner(
+            input_path,
+            Ecut,
+            kpoints_min=DEFAULT_DICT['KPOINT_MIN'],
+            kpoints_max=DEFAULT_DICT['KPOINT_MAX'],
+            kpoints_step=DEFAULT_DICT['KPOINT_STEP'])
+        
+        print(f'Estimated value of R_k={R_k}')
 
     # fitting Hamiltonian
     file_builder(input_path, stat_dict=STAT_DICT)
     solver(input_path, DEFAULT_DICT['MAGNETIC_ATOM'])
 
     # running Monte-Carlo simulations
-    print(f'Starting Monte-Carlo simulations')
-    run_monte_carlo(input_path, MAX_T=DEFAULT_DICT['MAX_T'])
+    if DEFAULT_DICT['MC_SIMULATION']:
+        print(f'Starting Monte-Carlo simulations')
+        run_monte_carlo(input_path, MAX_T=DEFAULT_DICT['MAX_T'])

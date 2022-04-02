@@ -1,0 +1,2272 @@
+=========================================
+SLURM_JOB_ID = 63457513
+SLURM_JOB_NODELIST = lnode43
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 1
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 4142937
+CUDA_VISIBLE_DEVICES = 
+==========================================
+Submitted batch job 63457528
+Submitted batch job 63457529
+Submitted batch job 63457530
+Submitted batch job 63457531
+Submitted batch job 63457532
+Submitted batch job 63457533
+Submitted batch job 63457534
+Submitted batch job 63457535
+Submitted batch job 63457536
+Submitted batch job 63457537
+Submitted batch job 63457538
+Submitted batch job 63457539
+Submitted batch job 63457540
+Submitted batch job 63457541
+Submitted batch job 63457542
+{'MAGNETIC_ATOM': 'Eu', 'ECUT_MIN': 400, 'ECUT_MAX': 700, 'ECUT_STEP': 20, 'KPOINT_MIN': 20, 'KPOINT_MAX': 80, 'KPOINT_STEP': 10, 'MAX_T': 1400.0, 'STEP_T': 20, 'CUTOFF_RADIUS': 3.8, 'COUPLING_CONSTANTS': [-8.46830912e-22, -8.30979053e-22, -6.79694911e-21, -4.37347275e-21], 'MAGMOM': 1.72, 'TYPE_OF_CALC': 'Curie'}
+Starting ENCUT optimization:
+
+20:27:51 ENCUT optimization
+400 not yet written
+420 not yet written
+440 not yet written
+460 not yet written
+480 not yet written
+500 not yet written
+520 not yet written
+540 not yet written
+560 not yet written
+580 not yet written
+600 not yet written
+620 not yet written
+640 not yet written
+660 not yet written
+680 not yet written
+
+
+20:28:06 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:28:21 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:28:36 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:28:51 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:29:06 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:29:21 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:29:37 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:29:52 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:30:07 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:30:22 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:30:37 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:30:52 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:31:07 ENCUT optimization
+400 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:31:22 ENCUT optimization
+400 not yet converged
+440 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:31:37 ENCUT optimization
+400 not yet converged
+440 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:31:53 ENCUT optimization
+400 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:32:08 ENCUT optimization
+400 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:32:23 ENCUT optimization
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:32:38 ENCUT optimization
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:32:53 ENCUT optimization
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:33:08 ENCUT optimization
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:33:23 ENCUT optimization
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:33:38 ENCUT optimization
+600 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:33:53 ENCUT optimization
+600 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:34:08 ENCUT optimization
+600 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:34:23 ENCUT optimization
+600 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:34:38 ENCUT optimization
+600 not yet converged
+680 not yet converged
+
+
+20:34:53 ENCUT optimization
+680 not yet converged
+
+
+20:35:08 ENCUT optimization
+680 not yet converged
+
+
+20:35:23 ENCUT optimization
+
+
+20:35:38 ENCUT optimization Finished
+ENCUT optimization finished!
+
+____________________________________________________________
+
+Estimated value of Encut: 620 eV
+
+Starting KPOINTS optimization:
+
+Submitted batch job 63457710
+Submitted batch job 63457711
+Submitted batch job 63457712
+Submitted batch job 63457713
+Submitted batch job 63457714
+Submitted batch job 63457715
+
+20:35:46 KPOINTS optimization
+20 not yet written
+30 not yet written
+40 not yet written
+50 not yet written
+60 not yet written
+70 not yet written
+
+
+20:36:01 KPOINTS optimization
+20 not yet converged
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:36:16 KPOINTS optimization
+20 not yet converged
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:36:31 KPOINTS optimization
+20 not yet converged
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:36:46 KPOINTS optimization
+20 not yet converged
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:37:01 KPOINTS optimization
+20 not yet converged
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:37:16 KPOINTS optimization
+20 not yet converged
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:37:31 KPOINTS optimization
+20 not yet converged
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:37:47 KPOINTS optimization
+20 not yet converged
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:38:02 KPOINTS optimization
+20 not yet converged
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:38:17 KPOINTS optimization
+20 not yet converged
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:38:32 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:38:47 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:39:02 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:39:17 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:39:32 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:39:47 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:40:02 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:40:17 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:40:32 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:40:47 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:41:02 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:41:17 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:41:32 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:41:47 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:42:02 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:42:17 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:42:32 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:42:48 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:43:03 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:43:18 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:43:33 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:43:48 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:44:03 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:44:18 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:44:33 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:44:48 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:45:03 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:45:18 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:45:33 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:45:48 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:46:03 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:46:18 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:46:33 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:46:48 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:47:03 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:47:18 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:47:33 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:47:48 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:48:03 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:48:18 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:48:33 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:48:48 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:49:03 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:49:18 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:49:33 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:49:48 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:50:04 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:50:19 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:50:34 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:50:49 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:51:04 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:51:19 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:51:34 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:51:49 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:52:04 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:52:19 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:52:34 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:52:49 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:53:04 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:53:19 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:53:34 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:53:49 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:54:04 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:54:19 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:54:34 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:54:49 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:55:04 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:55:19 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:55:34 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:55:49 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:56:04 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:56:19 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:56:34 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:56:49 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:57:04 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:57:19 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:57:35 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:57:50 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:58:05 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:58:20 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:58:35 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:58:50 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:59:05 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:59:20 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:59:35 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:59:50 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:00:05 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:00:20 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:00:35 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:00:50 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:01:05 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:01:20 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:01:35 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:01:50 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:02:05 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:02:20 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:02:35 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:02:50 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:03:05 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:03:20 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:03:35 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:03:50 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:04:05 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:04:20 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:04:35 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:04:50 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:05:05 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:05:20 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:05:35 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:05:50 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:06:06 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:06:21 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:06:36 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:06:51 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:07:06 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:07:21 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:07:36 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:07:51 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:08:06 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:08:21 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:08:36 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:08:51 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:09:06 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:09:21 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:09:36 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:09:51 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:10:06 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:10:21 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:10:36 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:10:51 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:11:06 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:11:21 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:11:36 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:11:51 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:12:06 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:12:21 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:12:36 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:12:51 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:13:06 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:13:21 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:13:36 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:13:51 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:14:06 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:14:21 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:14:36 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:14:51 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:15:06 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:15:21 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:15:36 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:15:52 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:16:07 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:16:22 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:16:37 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:16:52 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:17:07 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:17:22 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:17:37 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:17:52 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:18:07 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:18:22 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:18:37 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:18:52 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:19:07 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:19:22 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+21:19:37 KPOINTS optimization
+70 not yet converged
+
+
+21:19:52 KPOINTS optimization
+70 not yet converged
+
+
+21:20:07 KPOINTS optimization
+70 not yet converged
+
+
+21:20:22 KPOINTS optimization
+70 not yet converged
+
+
+21:20:37 KPOINTS optimization
+70 not yet converged
+
+
+21:20:52 KPOINTS optimization
+70 not yet converged
+
+
+21:21:07 KPOINTS optimization
+70 not yet converged
+
+
+21:21:22 KPOINTS optimization
+70 not yet converged
+
+
+21:21:37 KPOINTS optimization
+70 not yet converged
+
+
+21:21:52 KPOINTS optimization
+70 not yet converged
+
+
+21:22:07 KPOINTS optimization
+70 not yet converged
+
+
+21:22:22 KPOINTS optimization
+70 not yet converged
+
+
+21:22:37 KPOINTS optimization
+70 not yet converged
+
+
+21:22:52 KPOINTS optimization
+70 not yet converged
+
+
+21:23:07 KPOINTS optimization
+70 not yet converged
+
+
+21:23:22 KPOINTS optimization
+70 not yet converged
+
+
+21:23:37 KPOINTS optimization
+70 not yet converged
+
+
+21:23:52 KPOINTS optimization
+70 not yet converged
+
+
+21:24:07 KPOINTS optimization
+70 not yet converged
+
+
+21:24:22 KPOINTS optimization
+70 not yet converged
+
+
+21:24:37 KPOINTS optimization
+70 not yet converged
+
+
+21:24:52 KPOINTS optimization
+70 not yet converged
+
+
+21:25:07 KPOINTS optimization
+70 not yet converged
+
+
+21:25:22 KPOINTS optimization
+70 not yet converged
+
+
+21:25:37 KPOINTS optimization
+70 not yet converged
+
+
+21:25:52 KPOINTS optimization
+70 not yet converged
+
+
+21:26:07 KPOINTS optimization
+70 not yet converged
+
+
+21:26:22 KPOINTS optimization
+70 not yet converged
+
+
+21:26:37 KPOINTS optimization
+70 not yet converged
+
+
+21:26:52 KPOINTS optimization
+70 not yet converged
+
+
+21:27:07 KPOINTS optimization
+70 not yet converged
+
+
+21:27:23 KPOINTS optimization
+70 not yet converged
+
+
+21:27:38 KPOINTS optimization
+70 not yet converged
+
+
+21:27:53 KPOINTS optimization
+70 not yet converged
+
+
+21:28:08 KPOINTS optimization
+70 not yet converged
+
+
+21:28:23 KPOINTS optimization
+70 not yet converged
+
+
+21:28:38 KPOINTS optimization
+70 not yet converged
+
+
+21:28:53 KPOINTS optimization
+70 not yet converged
+
+
+21:29:08 KPOINTS optimization
+70 not yet converged
+
+
+21:29:23 KPOINTS optimization
+70 not yet converged
+
+
+21:29:38 KPOINTS optimization
+70 not yet converged
+
+
+21:29:53 KPOINTS optimization
+70 not yet converged
+
+
+21:30:08 KPOINTS optimization
+70 not yet converged
+
+
+21:30:23 KPOINTS optimization
+70 not yet converged
+
+
+21:30:38 KPOINTS optimization
+70 not yet converged
+
+
+21:30:53 KPOINTS optimization
+70 not yet converged
+
+
+21:31:08 KPOINTS optimization
+70 not yet converged
+
+
+21:31:23 KPOINTS optimization
+70 not yet converged
+
+
+21:31:38 KPOINTS optimization
+70 not yet converged
+
+
+21:31:53 KPOINTS optimization
+70 not yet converged
+
+
+21:32:08 KPOINTS optimization
+70 not yet converged
+
+
+21:32:23 KPOINTS optimization
+70 not yet converged
+
+
+21:32:38 KPOINTS optimization
+70 not yet converged
+
+
+21:32:53 KPOINTS optimization
+70 not yet converged
+
+
+21:33:08 KPOINTS optimization
+70 not yet converged
+
+
+21:33:23 KPOINTS optimization
+70 not yet converged
+
+
+21:33:38 KPOINTS optimization
+70 not yet converged
+
+
+21:33:53 KPOINTS optimization
+70 not yet converged
+
+
+21:34:08 KPOINTS optimization
+70 not yet converged
+
+
+21:34:23 KPOINTS optimization
+70 not yet converged
+
+
+21:34:38 KPOINTS optimization
+70 not yet converged
+
+
+21:34:53 KPOINTS optimization
+70 not yet converged
+
+
+21:35:08 KPOINTS optimization
+70 not yet converged
+
+
+21:35:23 KPOINTS optimization
+70 not yet converged
+
+
+21:35:38 KPOINTS optimization
+70 not yet converged
+
+
+21:35:53 KPOINTS optimization
+70 not yet converged
+
+
+21:36:08 KPOINTS optimization
+70 not yet converged
+
+
+21:36:23 KPOINTS optimization
+70 not yet converged
+
+
+21:36:38 KPOINTS optimization
+70 not yet converged
+
+
+21:36:53 KPOINTS optimization
+70 not yet converged
+
+
+21:37:08 KPOINTS optimization
+70 not yet converged
+
+
+21:37:23 KPOINTS optimization
+70 not yet converged
+
+
+21:37:38 KPOINTS optimization
+70 not yet converged
+
+
+21:37:53 KPOINTS optimization
+70 not yet converged
+
+
+21:38:08 KPOINTS optimization
+70 not yet converged
+
+
+21:38:23 KPOINTS optimization
+70 not yet converged
+
+
+21:38:38 KPOINTS optimization
+70 not yet converged
+
+
+21:38:53 KPOINTS optimization
+70 not yet converged
+
+
+21:39:08 KPOINTS optimization
+70 not yet converged
+
+
+21:39:23 KPOINTS optimization
+70 not yet converged
+
+
+21:39:38 KPOINTS optimization
+70 not yet converged
+
+
+21:39:53 KPOINTS optimization
+
+
+21:40:09 KPOINTS optimization Finished
+KPOINTS optimization finished!
+
+____________________________________________________________
+Estimated value of R_k=40
+Submitted batch job 63459736
+Submitted batch job 63459737
+Submitted batch job 63459738
+Submitted batch job 63459739
+Submitted batch job 63459740
+21:40:17 All files written. Starting VASP calculations!
+21:40:37 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:40:52 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:41:07 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:41:22 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:41:37 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:41:52 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:42:07 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:42:22 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:42:37 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:42:52 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:43:07 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:43:23 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:43:38 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:43:53 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+fm0 not yet converged
+
+
+21:44:08 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:44:23 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:44:38 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:44:53 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:45:08 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:45:23 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:45:38 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:45:53 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:46:08 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:46:23 VASP_INPUTS optimization
+afm1 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:46:38 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:46:53 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:47:08 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:47:23 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:47:38 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:47:53 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:48:08 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:48:23 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:48:38 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:48:53 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:49:08 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:49:23 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:49:38 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:49:53 VASP_INPUTS optimization
+afm3 not yet converged
+afm4 not yet converged
+
+
+21:50:08 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:50:23 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:50:38 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:50:53 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:51:08 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:51:23 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:51:38 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:51:53 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:52:09 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:52:24 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:52:39 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:52:54 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:53:09 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:53:24 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:53:39 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:53:54 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:54:09 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:54:24 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:54:39 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:54:54 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:55:09 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:55:24 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:55:39 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:55:54 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:56:09 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:56:24 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:56:39 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:56:54 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:57:09 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:57:24 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:57:39 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:57:54 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:58:09 VASP_INPUTS optimization
+afm3 not yet converged
+
+
+21:58:24 VASP_INPUTS optimization
+
+
+21:58:39 VASP_INPUTS optimization Finished
+
+ 
+**********************************************************
+*                   Curie Calculator                    *
+**********************************************************
+    Good structures:
+	afm1 afm2 afm3 afm4 fm0
+
+bad structures: 
+	
+
+nn_matrix:
+[[  8.75        17.5         35.          17.5         35.
+  -41.16686162]
+ [  8.75       -17.5          0.           0.           0.
+  -41.14437745]
+ [  8.75       -17.5         35.          17.5         35.
+  -41.06988506]
+ [  8.75       -17.5        -35.          17.5         35.
+  -41.04134374]
+ [  8.75       -17.5          0.           0.           0.
+  -41.00013907]]
+
+-------------------------------------------------------------------------------
+Exact solution method: 
+
+E_geom, eV:
+
+	[-4.70349938 -4.70775608 -4.70775608]
+
+Exchange coupling vector by exact solution (J, meV): 
+ 
+	1 : [-0.64]
+	2 : [-2.77  2.13]
+	3 : [-2.77 -0.41  5.07]
+
+
+Critical temperature (Tc, K):
+
+	[-5.  11.5 11.5]
+
+-------------------------------------------------------------------------------
+Least squares method: 
+
+E_geom, eV:
+
+	[-4.69890274 -4.69808727 -4.69951389 -4.69951389]
+
+Exchange coupling vector by least squares method (J, meV): 
+ 
+	1 : [-2.94]
+	2 : [-2.53 -0.41]
+	3 : [-2.77 -0.41  0.95]
+	4 : [-2.77 -0.41  0.19  0.38]
+
+
+Critical temperature (Tc, K):
+
+	[-22.8 -25.9 -20.4 -20.4]
+ 
+
+OUTPUT.txt written
+All graphs are plotted
+Calculations completed successfully!
+

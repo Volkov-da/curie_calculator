@@ -1,0 +1,54 @@
+
+**********************************************************
+*                   Curie Calculator                    *
+**********************************************************
+    Good structures:
+	afm1 afm4 afm5 fm0
+
+bad structures: 
+	afm2 afm3
+
+nn_matrix:
+[[ 1. 12.  6.  6.]
+ [ 1. 12.  6.  6.]
+ [ 1.  4.  2. -6.]
+ [ 1.  0.  0.  0.]]
+
+-------------------------------------------------------------------------------
+Exact solution method: 
+
+E_geom, eV:
+
+	[]
+
+Exchange coupling vector by exact solution (J, meV): 
+ 
+
+
+Critical temperature (Tc, K):
+
+	[]
+
+-------------------------------------------------------------------------------
+Least squares method: 
+
+E_geom, eV:
+
+	[-2.2112741  -2.2112741  -2.20957505]
+
+Exchange coupling vector by least squares method (meV): 
+ 
+	1 : [-5.52]
+	2 : [-4.41 -2.21]
+	3 : [-4.69 -2.35  0.48]
+
+Exchange coupling vector by least squares method (Joule / link): 
+ 
+	1 : -7.368e-23
+	2 : -5.894e-23 -5.894e-23
+	3 : -6.263e-23 -6.263e-23 1.276e-23
+
+
+Critical temperature (Tc, K):
+
+	[1609.4 1609.4 1640.4]

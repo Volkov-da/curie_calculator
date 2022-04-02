@@ -1,0 +1,74 @@
+=========================================
+SLURM_JOB_ID = 63457710
+SLURM_JOB_NODELIST = lnode20
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 8
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 2629727
+CUDA_VISIBLE_DEVICES = 
+==========================================
+ running on    8 total cores
+ distrk:  each k-point on    8 cores,    1 groups
+ distr:  one band on    4 cores,    2 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 28 2018 00:24:27) complex          
+  
+ POSCAR found type information on POSCAR  Eu
+ POSCAR found :  1 types and       4 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|  ADVICE TO THIS USER RUNNING 'VASP/VAMP'   (HEAR YOUR MASTER'S VOICE ...):  |
+|                                                                             |
+|      You have a (more or less) 'small supercell' and for smaller cells      |
+|      it is recommended  to use the reciprocal-space projection scheme!      |
+|      The real space optimization is not  efficient for small cells and it   |
+|      is also less accurate ...                                              |
+|      Therefore set LREAL=.FALSE. in the  INCAR file                         |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+ generate k-points for:    5    3    3
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.848099749837E+03    0.84810E+03   -0.25632E+04  3448   0.270E+03
+DAV:   2     0.203616085663E+03   -0.64448E+03   -0.48761E+03  3600   0.384E+02
+DAV:   3    -0.223407354496E+01   -0.20585E+03   -0.19748E+03  2996   0.221E+02
+DAV:   4    -0.270564520599E+02   -0.24822E+02   -0.23480E+02  4140   0.690E+01
+DAV:   5    -0.295226098992E+02   -0.24662E+01   -0.23813E+01  5136   0.231E+01    0.223E+01
+DAV:   6    -0.440296670290E+02   -0.14507E+02   -0.56562E+01  3560   0.703E+01    0.298E+01
+DAV:   7    -0.424809852957E+02    0.15487E+01   -0.88163E+00  3676   0.184E+01    0.105E+01
+DAV:   8    -0.409497770959E+02    0.15312E+01   -0.32528E+00  3980   0.141E+01    0.328E+00
+DAV:   9    -0.410519076873E+02   -0.10213E+00   -0.16303E+00  4036   0.104E+01    0.407E+00
+DAV:  10    -0.410095615504E+02    0.42346E-01   -0.30869E-01  4476   0.373E+00    0.137E+00
+DAV:  11    -0.410850341020E+02   -0.75473E-01   -0.57148E-02  4964   0.130E+00    0.719E-01
+DAV:  12    -0.411268665594E+02   -0.41832E-01   -0.30861E-02  4148   0.853E-01    0.518E-01
+  WARNING: DENTET: can't reach specified precision
+  Number of Electrons is NELECT =   67.9782695254545     
+DAV:  13    -0.411938743763E+02   -0.67008E-01   -0.39929E-02  4152   0.964E-01BRMIX: very serious problems
+ the old and the new charge density differ
+ old charge density:    68.00000 new   67.97827
+    0.398E-01
+DAV:  14    -0.411489301667E+02    0.44944E-01   -0.13068E-02  4900   0.555E-01BRMIX: very serious problems
+ the old and the new charge density differ
+ old charge density:    67.97827 new   68.00000
+    0.166E-01
+DAV:  15    -0.411493313099E+02   -0.40114E-03   -0.12954E-03  4732   0.166E-01    0.203E-01
+DAV:  16    -0.411492543256E+02    0.76984E-04   -0.22526E-03  4044   0.279E-01    0.550E-02
+DAV:  17    -0.411495645706E+02   -0.31025E-03   -0.73399E-04  4280   0.961E-02    0.193E-02
+DAV:  18    -0.411495841325E+02   -0.19562E-04   -0.10055E-04  4928   0.468E-02    0.146E-02
+DAV:  19    -0.411495784655E+02    0.56670E-05   -0.79297E-06  5044   0.134E-02    0.104E-02
+DAV:  20    -0.411495838495E+02   -0.53841E-05   -0.36975E-06  4296   0.103E-02    0.372E-03
+DAV:  21    -0.411495895347E+02   -0.56851E-05   -0.74626E-07  3988   0.382E-03    0.225E-03
+DAV:  22    -0.411495845589E+02    0.49758E-05   -0.84445E-08  2252   0.233E-03    0.120E-03
+DAV:  23    -0.411495836544E+02    0.90448E-06   -0.42149E-08  1836   0.118E-03    0.525E-04
+DAV:  24    -0.411495825159E+02    0.11385E-05   -0.23213E-08  1712   0.890E-04    0.145E-04
+DAV:  25    -0.411495815006E+02    0.10154E-05   -0.13960E-08  1688   0.725E-04    0.150E-04
+DAV:  26    -0.411495813326E+02    0.16795E-06   -0.71381E-09  1704   0.563E-04    0.187E-04
+DAV:  27    -0.411495813794E+02   -0.46830E-07   -0.43714E-09  1692   0.446E-04
+   1 F= -.41149581E+02 E0= -.41149581E+02  d E =0.000000E+00  mag=    29.5423

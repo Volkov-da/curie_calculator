@@ -1,0 +1,179 @@
+=========================================
+SLURM_JOB_ID = 63456988
+SLURM_JOB_NODELIST = lnode26
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 1
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 2066341
+CUDA_VISIBLE_DEVICES = 
+==========================================
+Submitted batch job 63457025
+Submitted batch job 63457026
+Submitted batch job 63457027
+Submitted batch job 63457028
+Submitted batch job 63457029
+Submitted batch job 63457030
+Submitted batch job 63457031
+Submitted batch job 63457032
+Submitted batch job 63457033
+Submitted batch job 63457034
+Submitted batch job 63457035
+Submitted batch job 63457036
+Submitted batch job 63457037
+Submitted batch job 63457038
+Submitted batch job 63457039
+{'MAGNETIC_ATOM': 'Eu', 'ECUT_MIN': 400, 'ECUT_MAX': 700, 'ECUT_STEP': 20, 'KPOINT_MIN': 20, 'KPOINT_MAX': 80, 'KPOINT_STEP': 10, 'MAX_T': 1400.0, 'STEP_T': 20, 'CUTOFF_RADIUS': 3.8, 'COUPLING_CONSTANTS': [-8.46830912e-22, -8.30979053e-22, -6.79694911e-21, -4.37347275e-21], 'MAGMOM': 1.72, 'TYPE_OF_CALC': 'Curie'}
+Starting ENCUT optimization:
+
+20:12:15 ENCUT optimization
+400 not yet written
+420 not yet written
+440 not yet written
+460 not yet written
+480 not yet written
+500 not yet written
+520 not yet written
+540 not yet written
+560 not yet written
+580 not yet written
+600 not yet written
+620 not yet written
+640 not yet written
+660 not yet written
+680 not yet written
+
+
+20:12:30 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:12:45 ENCUT optimization
+600 not yet converged
+660 not yet converged
+680 not yet converged
+
+
+20:13:01 ENCUT optimization
+
+
+20:13:16 ENCUT optimization Finished
+ENCUT optimization finished!
+
+____________________________________________________________
+
+Estimated value of Encut: 440 eV
+
+Starting KPOINTS optimization:
+
+Submitted batch job 63457095
+Submitted batch job 63457096
+Submitted batch job 63457097
+Submitted batch job 63457098
+Submitted batch job 63457099
+Submitted batch job 63457100
+
+20:13:25 KPOINTS optimization
+20 not yet written
+30 not yet written
+40 not yet written
+50 not yet written
+60 not yet written
+70 not yet written
+
+
+20:13:40 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:13:55 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:14:10 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:14:25 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:14:40 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+20:14:55 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:15:10 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:15:25 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+20:15:40 KPOINTS optimization
+70 not yet converged
+
+
+20:15:56 KPOINTS optimization
+70 not yet converged
+
+
+20:16:11 KPOINTS optimization
+70 not yet converged
+
+
+20:16:26 KPOINTS optimization
+70 not yet converged
+
+
+20:16:41 KPOINTS optimization
+
+
+20:16:56 KPOINTS optimization Finished
+KPOINTS optimization finished!
+
+____________________________________________________________
+Estimated value of R_k=30
+Submitted batch job 63457165
+Submitted batch job 63457166
+Submitted batch job 63457167
+Submitted batch job 63457168
+Submitted batch job 63457169
+Submitted batch job 63457170
+Submitted batch job 63457171
+Submitted batch job 63457172

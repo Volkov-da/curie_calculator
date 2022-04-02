@@ -1,0 +1,1207 @@
+=========================================
+SLURM_JOB_ID = 63455410
+SLURM_JOB_NODELIST = lnode18
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 1
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 2265032
+CUDA_VISIBLE_DEVICES = 
+==========================================
+Submitted batch job 63455417
+Submitted batch job 63455418
+Submitted batch job 63455419
+Submitted batch job 63455420
+Submitted batch job 63455421
+Submitted batch job 63455422
+Submitted batch job 63455423
+Submitted batch job 63455424
+Submitted batch job 63455425
+Submitted batch job 63455426
+Submitted batch job 63455427
+Submitted batch job 63455428
+Submitted batch job 63455429
+Submitted batch job 63455430
+Submitted batch job 63455431
+Submitted batch job 63455432
+Submitted batch job 63455433
+Submitted batch job 63455434
+Submitted batch job 63455435
+Submitted batch job 63455436
+{'MAGNETIC_ATOM': 'Co', 'ECUT_MIN': 400, 'ECUT_MAX': 800, 'ECUT_STEP': 20, 'KPOINT_MIN': 20, 'KPOINT_MAX': 80, 'KPOINT_STEP': 10, 'MAX_T': 1400.0, 'STEP_T': 20, 'CUTOFF_RADIUS': 3.8, 'COUPLING_CONSTANTS': [-8.46830912e-22, -8.30979053e-22, -6.79694911e-21, -4.37347275e-21], 'MAGMOM': 1.72, 'TYPE_OF_CALC': 'Curie'}
+Starting ENCUT optimization:
+
+19:23:42 ENCUT optimization
+400 not yet written
+420 not yet written
+440 not yet written
+460 not yet written
+480 not yet written
+500 not yet written
+520 not yet written
+540 not yet written
+560 not yet written
+580 not yet written
+600 not yet written
+620 not yet written
+640 not yet written
+660 not yet written
+680 not yet written
+700 not yet written
+720 not yet written
+740 not yet written
+760 not yet written
+780 not yet written
+
+
+19:23:57 ENCUT optimization
+400 not yet converged
+420 not yet converged
+440 not yet converged
+460 not yet converged
+480 not yet converged
+500 not yet converged
+520 not yet converged
+540 not yet converged
+560 not yet converged
+580 not yet converged
+600 not yet converged
+620 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+700 not yet converged
+720 not yet converged
+740 not yet converged
+760 not yet converged
+780 not yet converged
+
+
+19:24:12 ENCUT optimization
+480 not yet converged
+500 not yet converged
+600 not yet converged
+640 not yet converged
+660 not yet converged
+680 not yet converged
+720 not yet converged
+740 not yet converged
+760 not yet converged
+780 not yet converged
+
+
+19:24:27 ENCUT optimization
+
+
+19:24:42 ENCUT optimization Finished
+ENCUT optimization finished!
+
+____________________________________________________________
+
+Estimated value of Encut: 600 eV
+
+Starting KPOINTS optimization:
+
+Submitted batch job 63455468
+Submitted batch job 63455469
+Submitted batch job 63455470
+Submitted batch job 63455471
+Submitted batch job 63455472
+Submitted batch job 63455473
+
+19:24:50 KPOINTS optimization
+20 not yet written
+30 not yet written
+40 not yet written
+50 not yet written
+60 not yet written
+70 not yet written
+
+
+19:25:05 KPOINTS optimization
+30 not yet converged
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+19:25:20 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+19:25:35 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+19:25:50 KPOINTS optimization
+40 not yet converged
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+19:26:05 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+19:26:20 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+19:26:35 KPOINTS optimization
+50 not yet converged
+60 not yet converged
+70 not yet converged
+
+
+19:26:50 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+19:27:05 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+19:27:20 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+19:27:35 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+19:27:50 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+19:28:05 KPOINTS optimization
+60 not yet converged
+70 not yet converged
+
+
+19:28:20 KPOINTS optimization
+70 not yet converged
+
+
+19:28:36 KPOINTS optimization
+70 not yet converged
+
+
+19:28:51 KPOINTS optimization
+70 not yet converged
+
+
+19:29:06 KPOINTS optimization
+70 not yet converged
+
+
+19:29:21 KPOINTS optimization
+70 not yet converged
+
+
+19:29:36 KPOINTS optimization
+
+
+19:29:51 KPOINTS optimization Finished
+KPOINTS optimization finished!
+
+____________________________________________________________
+Estimated value of R_k=50
+Submitted batch job 63455636
+Submitted batch job 63455637
+Submitted batch job 63455638
+Submitted batch job 63455639
+Submitted batch job 63455640
+Submitted batch job 63455641
+19:29:55 All files written. Starting VASP calculations!
+19:30:16 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:30:31 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:30:46 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:31:01 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:31:16 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:31:31 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:31:46 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:32:01 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:32:16 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:32:31 VASP_INPUTS optimization
+afm1 not yet converged
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:32:46 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:33:01 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm4 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:33:16 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:33:31 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:33:46 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:34:01 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:34:16 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:34:31 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:34:46 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:35:01 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:35:16 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:35:31 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:35:46 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:36:01 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+fm0 not yet converged
+
+
+19:36:16 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:36:31 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:36:47 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:37:02 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:37:17 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:37:32 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:37:47 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:38:02 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:38:17 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:38:32 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:38:47 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:39:02 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:39:17 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:39:32 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:39:47 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:40:02 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:40:17 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:40:32 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:40:47 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:41:02 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:41:17 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:41:32 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:41:47 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:42:02 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:42:17 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:42:32 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:42:47 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:43:02 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:43:17 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:43:32 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:43:48 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:44:03 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:44:18 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:44:33 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:44:48 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:45:03 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:45:18 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:45:33 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:45:48 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+afm5 not yet converged
+
+
+19:46:03 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+
+
+19:46:18 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+
+
+19:46:33 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+
+
+19:46:48 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+
+
+19:47:03 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+
+
+19:47:18 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+
+
+19:47:33 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+
+
+19:47:48 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+
+
+19:48:03 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+
+
+19:48:18 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+
+
+19:48:33 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+
+
+19:48:48 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+
+
+19:49:03 VASP_INPUTS optimization
+afm2 not yet converged
+afm3 not yet converged
+
+
+19:49:18 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:49:33 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:49:48 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:50:03 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:50:18 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:50:33 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:50:48 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:51:03 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:51:18 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:51:33 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:51:48 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:52:03 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:52:18 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:52:33 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:52:48 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:53:04 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:53:19 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:53:34 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:53:49 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:54:04 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:54:19 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:54:34 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:54:49 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:55:04 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:55:19 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:55:34 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:55:49 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:56:04 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:56:19 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:56:34 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:56:49 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:57:04 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:57:19 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:57:34 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:57:49 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:58:04 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:58:19 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:58:34 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:58:49 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:59:04 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:59:19 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:59:34 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+19:59:49 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:00:04 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:00:19 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:00:34 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:00:49 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:01:04 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:01:19 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:01:34 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:01:49 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:02:04 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:02:19 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:02:34 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:02:49 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:03:04 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:03:19 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:03:34 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:03:49 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:04:04 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:04:19 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:04:35 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:04:50 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:05:05 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:05:20 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:05:35 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:05:50 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:06:05 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:06:20 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:06:35 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:06:50 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:07:05 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:07:20 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:07:35 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:07:50 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:08:05 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:08:20 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:08:35 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:08:50 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:09:05 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:09:20 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:09:35 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:09:50 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:10:05 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:10:20 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:10:35 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:10:50 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:11:05 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:11:20 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:11:35 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:11:50 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:12:05 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:12:20 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:12:35 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:12:50 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:13:05 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:13:20 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:13:35 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:13:50 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:14:05 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:14:20 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:14:35 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:14:50 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:15:05 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:15:20 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:15:35 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:15:50 VASP_INPUTS optimization
+afm2 not yet converged
+
+
+20:16:05 VASP_INPUTS optimization
+
+
+20:16:20 VASP_INPUTS optimization Finished
+
+ 
+**********************************************************
+*                   Curie Calculator                    *
+**********************************************************
+    Good structures:
+	afm1 afm4 afm5 fm0
+
+bad structures: 
+	afm2 afm3
+
+nn_matrix:
+[[  3.75        45.          22.5         22.5         -8.69000326]
+ [  3.75        45.          22.5         22.5         -8.38801002]
+ [  3.75        15.           7.5        -22.5         -8.38460889]
+ [  3.75         0.           0.           0.          -8.28590645]]
+
+-------------------------------------------------------------------------------
+Exact solution method: 
+
+E_geom, eV:
+
+	[]
+
+Exchange coupling vector by exact solution (J, meV): 
+ 
+
+
+Critical temperature (Tc, K):
+
+	[]
+
+-------------------------------------------------------------------------------
+Least squares method: 
+
+E_geom, eV:
+
+	[-2.2112741  -2.2112741  -2.20957505]
+
+Exchange coupling vector by least squares method (J, meV): 
+ 
+	1 : [-5.52]
+	2 : [-4.41 -2.21]
+	3 : [-4.69 -2.35  0.48]
+
+
+Critical temperature (Tc, K):
+
+	[-256.1 -256.1 -261.1]
+ 
+
+OUTPUT.txt written
+All graphs are plotted
+Calculations completed successfully!
+

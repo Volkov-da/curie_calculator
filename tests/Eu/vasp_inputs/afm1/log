@@ -1,0 +1,59 @@
+=========================================
+SLURM_JOB_ID = 63459738
+SLURM_JOB_NODELIST = lnode49
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 16
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 3400091
+CUDA_VISIBLE_DEVICES = 
+==========================================
+ running on   16 total cores
+ distrk:  each k-point on   16 cores,    1 groups
+ distr:  one band on    4 cores,    4 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 28 2018 00:24:27) complex          
+  
+ POSCAR found type information on POSCAR  Eu
+ POSCAR found :  1 types and       4 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|  ADVICE TO THIS USER RUNNING 'VASP/VAMP'   (HEAR YOUR MASTER'S VOICE ...):  |
+|                                                                             |
+|      You have a (more or less) 'small supercell' and for smaller cells      |
+|      it is recommended  to use the reciprocal-space projection scheme!      |
+|      The real space optimization is not  efficient for small cells and it   |
+|      is also less accurate ...                                              |
+|      Therefore set LREAL=.FALSE. in the  INCAR file                         |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.827667334697E+03    0.82767E+03   -0.24889E+04 15632   0.342E+03
+DAV:   2     0.206583390752E+03   -0.62108E+03   -0.59606E+03 23576   0.497E+02
+DAV:   3    -0.865428254107E+01   -0.21524E+03   -0.21343E+03 26600   0.357E+02
+DAV:   4    -0.261060012745E+02   -0.17452E+02   -0.16870E+02 27592   0.106E+02
+DAV:   5    -0.288979722843E+02   -0.27920E+01   -0.27524E+01 30672   0.441E+01    0.253E+01
+DAV:   6    -0.432375622146E+02   -0.14340E+02   -0.10190E+02 22576   0.140E+02    0.355E+01
+DAV:   7    -0.408561771343E+02    0.23814E+01   -0.10561E+02 25176   0.667E+01    0.140E+01
+DAV:   8    -0.414644415158E+02   -0.60826E+00   -0.42812E+00 27152   0.167E+01    0.527E+00
+DAV:   9    -0.409584339580E+02    0.50601E+00   -0.19949E+00 23392   0.163E+01    0.155E+00
+DAV:  10    -0.409978683093E+02   -0.39434E-01   -0.46772E-01 30672   0.452E+00    0.128E+00
+DAV:  11    -0.410290541505E+02   -0.31186E-01   -0.85569E-02 30536   0.253E+00    0.714E-01
+DAV:  12    -0.410347586807E+02   -0.57045E-02   -0.50015E-02 28032   0.247E+00    0.576E-01
+DAV:  13    -0.410375954198E+02   -0.28367E-02   -0.20429E-02 25568   0.995E-01    0.423E-01
+DAV:  14    -0.410403754641E+02   -0.27800E-02   -0.50902E-03 29160   0.406E-01    0.147E-01
+DAV:  15    -0.410411393630E+02   -0.76390E-03   -0.31877E-03 24680   0.250E-01    0.762E-02
+DAV:  16    -0.410412964275E+02   -0.15706E-03   -0.93249E-04 30520   0.193E-01    0.359E-02
+DAV:  17    -0.410413197042E+02   -0.23277E-04   -0.15808E-04 27960   0.699E-02    0.253E-02
+DAV:  18    -0.410413352461E+02   -0.15542E-04   -0.91290E-05 29704   0.462E-02    0.829E-03
+DAV:  19    -0.410413417881E+02   -0.65421E-05   -0.20460E-05 28408   0.230E-02    0.422E-03
+DAV:  20    -0.410413436558E+02   -0.18676E-05   -0.29200E-06 20152   0.105E-02    0.284E-03
+DAV:  21    -0.410413437433E+02   -0.87488E-07   -0.57177E-07 16448   0.763E-03
+   1 F= -.41041344E+02 E0= -.41041344E+02  d E =0.000000E+00  mag=     0.0000
