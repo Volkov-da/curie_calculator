@@ -1,0 +1,40 @@
+=========================================
+SLURM_JOB_ID = 63601882
+SLURM_JOB_NODELIST = lnode32
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 8
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 2341208
+CUDA_VISIBLE_DEVICES = 
+==========================================
+ running on    8 total cores
+ distrk:  each k-point on    8 cores,    1 groups
+ distr:  one band on    4 cores,    2 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 28 2018 00:24:27) complex          
+  
+ POSCAR found type information on POSCAR  Ni
+ POSCAR found :  1 types and       4 ions
+ scaLAPACK will be used
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.758844586597E+03    0.75884E+03   -0.34590E+04  4360   0.162E+03
+DAV:   2     0.249045960854E+02   -0.73394E+03   -0.69262E+03  3944   0.522E+02
+DAV:   3    -0.158445631193E+02   -0.40749E+02   -0.39431E+02  4256   0.141E+02
+DAV:   4    -0.164298282479E+02   -0.58527E+00   -0.58460E+00  4232   0.172E+01
+DAV:   5    -0.164415591128E+02   -0.11731E-01   -0.11731E-01  4336   0.235E+00    0.547E+01
+DAV:   6    -0.266082049309E+02   -0.10167E+02   -0.34048E+01  4208   0.692E+01    0.227E+01
+DAV:   7    -0.236150879655E+02    0.29931E+01   -0.12205E+01  4160   0.401E+01    0.351E+00
+DAV:   8    -0.235305951177E+02    0.84493E-01   -0.19475E-01  4360   0.498E+00    0.135E+00
+DAV:   9    -0.235279567696E+02    0.26383E-02   -0.75210E-03  4224   0.517E-01    0.615E-01
+DAV:  10    -0.235248441188E+02    0.31127E-02   -0.70865E-04  4696   0.245E-01    0.188E-01
+DAV:  11    -0.235246699774E+02    0.17414E-03   -0.42376E-04  4192   0.172E-01    0.838E-02
+DAV:  12    -0.235246884639E+02   -0.18487E-04   -0.32632E-05  4200   0.442E-02    0.479E-02
+DAV:  13    -0.235246925663E+02   -0.41024E-05   -0.37338E-06  3832   0.185E-02    0.112E-02
+DAV:  14    -0.235246924682E+02    0.98033E-07   -0.74464E-07  2464   0.761E-03
+   1 F= -.23524692E+02 E0= -.23456028E+02  d E =-.137329E+00  mag=     2.3729
+ writing wavefunctions

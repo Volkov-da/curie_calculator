@@ -1,0 +1,38 @@
+=========================================
+SLURM_JOB_ID = 63599061
+SLURM_JOB_NODELIST = lnode42
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 8
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 1194903
+CUDA_VISIBLE_DEVICES = 
+==========================================
+ running on    8 total cores
+ distrk:  each k-point on    8 cores,    1 groups
+ distr:  one band on    4 cores,    2 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 28 2018 00:24:27) complex          
+  
+ POSCAR found type information on POSCAR  Fe
+ POSCAR found :  1 types and       2 ions
+ scaLAPACK will be used
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.201095363153E+03    0.20110E+03   -0.12197E+04  3792   0.138E+03
+DAV:   2    -0.761788753411E+01   -0.20871E+03   -0.19742E+03  3424   0.354E+02
+DAV:   3    -0.162086647393E+02   -0.85908E+01   -0.85700E+01  3600   0.806E+01
+DAV:   4    -0.162721311556E+02   -0.63466E-01   -0.63464E-01  3720   0.670E+00
+DAV:   5    -0.162730207956E+02   -0.88964E-03   -0.88964E-03  3608   0.727E-01    0.247E+01
+DAV:   6    -0.164301166311E+02   -0.15710E+00   -0.68349E+00  3504   0.381E+01    0.643E+00
+DAV:   7    -0.165074812990E+02   -0.77365E-01   -0.55495E-01  3488   0.908E+00    0.412E+00
+DAV:   8    -0.165221242792E+02   -0.14643E-01   -0.13380E-02  3624   0.135E+00    0.139E+00
+DAV:   9    -0.165137923208E+02    0.83320E-02   -0.43782E-03  3560   0.809E-01    0.334E-01
+DAV:  10    -0.165136157890E+02    0.17653E-03   -0.21893E-03  3432   0.565E-01    0.400E-02
+DAV:  11    -0.165136610621E+02   -0.45273E-04   -0.63751E-05  3536   0.615E-02    0.233E-02
+DAV:  12    -0.165136619390E+02   -0.87695E-06   -0.18326E-06  3216   0.151E-02
+   1 F= -.16513662E+02 E0= -.16493456E+02  d E =-.404116E-01  mag=     4.4316
+ writing wavefunctions

@@ -1,0 +1,130 @@
+=========================================
+SLURM_JOB_ID = 63603126
+SLURM_JOB_NODELIST = lnode47
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 16
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 3369219
+CUDA_VISIBLE_DEVICES = 
+==========================================
+ running on   16 total cores
+ distrk:  each k-point on   16 cores,    1 groups
+ distr:  one band on    4 cores,    4 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 28 2018 00:24:27) complex          
+  
+ POSCAR found type information on POSCAR  Ni
+ POSCAR found :  1 types and       4 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|  ADVICE TO THIS USER RUNNING 'VASP/VAMP'   (HEAR YOUR MASTER'S VOICE ...):  |
+|                                                                             |
+|      You have a (more or less) 'small supercell' and for smaller cells      |
+|      it is recommended  to use the reciprocal-space projection scheme!      |
+|      The real space optimization is not  efficient for small cells and it   |
+|      is also less accurate ...                                              |
+|      Therefore set LREAL=.FALSE. in the  INCAR file                         |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...      48
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.903438828525E+03    0.90344E+03   -0.44240E+04 69160   0.250E+03
+DAV:   2     0.504955201862E+02   -0.85294E+03   -0.82219E+03 62440   0.712E+02
+DAV:   3    -0.264140827081E+01   -0.53137E+02   -0.50360E+02 68584   0.213E+02
+DAV:   4    -0.361863917125E+01   -0.97723E+00   -0.97366E+00 68632   0.303E+01
+DAV:   5    -0.364416028314E+01   -0.25521E-01   -0.25525E-01 80360   0.479E+00    0.860E+01
+DAV:   6     0.143844215745E+02    0.18029E+02   -0.21856E+02 66936   0.127E+02    0.551E+01
+DAV:   7    -0.961010458553E+01   -0.23995E+02   -0.90966E+01 68408   0.944E+01    0.119E+01
+DAV:   8    -0.111014352373E+02   -0.14913E+01   -0.32317E+00 72160   0.169E+01    0.597E+00
+DAV:   9    -0.113706218633E+02   -0.26919E+00   -0.50209E-01 71408   0.708E+00    0.377E+00
+DAV:  10    -0.114183960856E+02   -0.47774E-01   -0.22183E-01 72272   0.460E+00    0.131E+00
+DAV:  11    -0.114244892359E+02   -0.60932E-02   -0.30106E-02 66624   0.156E+00    0.587E-01
+DAV:  12    -0.114260078828E+02   -0.15186E-02   -0.30075E-03 73656   0.394E-01    0.259E-01
+DAV:  13    -0.114260924554E+02   -0.84573E-04   -0.34883E-04 67888   0.162E-01    0.300E-01
+DAV:  14    -0.114258616125E+02    0.23084E-03   -0.41836E-03 86504   0.387E-01    0.124E-01
+DAV:  15    -0.114259023544E+02   -0.40742E-04   -0.38862E-04 68648   0.142E-01    0.668E-02
+DAV:  16    -0.114258926871E+02    0.96672E-05   -0.27204E-04 80760   0.105E-01    0.697E-02
+DAV:  17    -0.114258636899E+02    0.28997E-04   -0.11736E-04 85072   0.766E-02    0.309E-02
+DAV:  18    -0.114258562414E+02    0.74484E-05   -0.13152E-04 91000   0.678E-02    0.192E-02
+DAV:  19    -0.114258506033E+02    0.56382E-05   -0.84757E-05 82448   0.683E-02    0.168E-02
+DAV:  20    -0.114258311923E+02    0.19411E-04   -0.23679E-04106440   0.910E-02    0.149E-02
+DAV:  21    -0.114258139136E+02    0.17279E-04   -0.21124E-05 79176   0.297E-02    0.127E-02
+DAV:  22    -0.114257968893E+02    0.17024E-04   -0.33323E-06 63512   0.140E-02    0.664E-03
+DAV:  23    -0.114257827502E+02    0.14139E-04   -0.38501E-06 68968   0.137E-02    0.229E-03
+DAV:  24    -0.114257786512E+02    0.40989E-05   -0.49693E-07 54360   0.594E-03    0.193E-03
+DAV:  25    -0.114257780923E+02    0.55892E-06   -0.10016E-07 32896   0.225E-03    0.896E-04
+DAV:  26    -0.114257775311E+02    0.56128E-06   -0.95774E-08 32656   0.193E-03    0.300E-04
+DAV:  27    -0.114257773819E+02    0.14916E-06   -0.13015E-08 32552   0.981E-04    0.267E-04
+DAV:  28    -0.114257773921E+02   -0.10203E-07   -0.99672E-09 32384   0.372E-04
+   1 F= -.11425777E+02 E0= -.11425777E+02  d E =0.000000E+00  mag=     0.0000

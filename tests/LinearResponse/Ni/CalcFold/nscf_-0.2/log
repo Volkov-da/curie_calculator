@@ -1,0 +1,37 @@
+=========================================
+SLURM_JOB_ID = 63601875
+SLURM_JOB_NODELIST = lnode18
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 8
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 227117
+CUDA_VISIBLE_DEVICES = 
+==========================================
+ running on    8 total cores
+ distrk:  each k-point on    8 cores,    1 groups
+ distr:  one band on    4 cores,    2 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 28 2018 00:24:27) complex          
+  
+ POSCAR found type information on POSCAR  Ni
+ POSCAR found :  1 types and       4 ions
+ scaLAPACK will be used
+ LDA part: xc-table for Pade appr. of Perdew
+ WARNING: stress and forces are not correct
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ charge-density read from file: unknown                                 
+ magnetization density read from file 1
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.740398659207E+03    0.74040E+03   -0.34521E+04  4376   0.160E+03
+DAV:   2     0.236816854565E+02   -0.71672E+03   -0.67955E+03  3984   0.523E+02
+DAV:   3    -0.149688285054E+02   -0.38651E+02   -0.36422E+02  4232   0.137E+02
+DAV:   4    -0.155453004330E+02   -0.57647E+00   -0.57570E+00  4224   0.170E+01
+DAV:   5    -0.155575814368E+02   -0.12281E-01   -0.12280E-01  4336   0.240E+00
+DAV:   6    -0.155580372559E+02   -0.45582E-03   -0.45582E-03  4536   0.451E-01
+DAV:   7    -0.155580544973E+02   -0.17241E-04   -0.17242E-04  4272   0.816E-02
+DAV:   8    -0.155580553088E+02   -0.81156E-06   -0.81167E-06  3864   0.173E-02
+   1 F= -.15558055E+02 E0= -.15488073E+02  d E =-.139964E+00  mag=     2.3812
+ writing wavefunctions

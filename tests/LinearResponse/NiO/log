@@ -1,0 +1,1718 @@
+=========================================
+SLURM_JOB_ID = 63600652
+SLURM_JOB_NODELIST = lnode49
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 1
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 70400
+CUDA_VISIBLE_DEVICES = 
+==========================================
+Submitted batch job 63600688
+Submitted batch job 63601023
+Submitted batch job 63601024
+Submitted batch job 63601025
+Submitted batch job 63601026
+Submitted batch job 63601027
+Submitted batch job 63601028
+Submitted batch job 63601029
+Submitted batch job 63601030
+Submitted batch job 63601031
+Submitted batch job 63601032
+Submitted batch job 63601033
+Submitted batch job 63601034
+Submitted batch job 63601035
+Submitted batch job 63601036
+Submitted batch job 63601038
+Submitted batch job 63601039
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+	Not yet
+Done
+
+21:53:29 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:53:34 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:53:39 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:53:44 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:53:49 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:53:57 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:54:02 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:54:07 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:54:13 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:54:18 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:54:23 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:54:28 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:54:33 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:54:38 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:54:44 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:54:49 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:54:54 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:54:59 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:55:04 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:55:09 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:55:15 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:55:20 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:55:25 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:55:30 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:55:35 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:55:40 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:55:46 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:55:51 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:55:56 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:56:01 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:56:06 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:56:12 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:56:17 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:56:22 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:56:27 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:56:32 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:56:37 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:56:42 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:56:47 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:56:52 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:56:57 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:57:03 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:57:08 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:57:13 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:57:18 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:57:23 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:57:28 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:57:33 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:57:38 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:57:43 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:57:48 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:57:53 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:57:58 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:58:04 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:58:09 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:58:14 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:58:19 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:58:24 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:58:29 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:58:34 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:58:39 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/nscf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:58:44 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:58:49 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:58:54 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:58:59 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:59:04 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:59:09 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:59:14 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:59:20 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:59:25 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:59:30 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:59:35 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:59:40 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:59:45 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:59:50 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+21:59:55 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:00:00 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:00:05 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:00:10 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:00:15 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:00:20 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:00:25 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:00:30 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:00:35 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:00:40 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:00:45 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:00:51 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.2 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:00:56 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:01:01 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:01:06 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.15 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:01:11 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:01:16 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:01:21 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:01:26 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.2 not yet converged
+
+
+
+22:01:31 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_-0.05 not yet converged
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:01:36 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:01:41 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:01:46 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:01:51 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:01:56 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:02:01 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:02:06 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:02:11 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:02:16 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:02:21 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:02:26 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:02:31 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:02:36 Perturbations pipline
+	/cephfs/home/dvolkov/curie_calculator/tests/LinearResponse/NiO/CalcFold/scf_0.1 not yet converged
+
+
+
+22:02:41 Perturbations pipline
+
+
+22:02:46 Perturbations pipline finished!
+
+Starting postprocessing.
++----+-------+--------+-------+
+|    |   SCF |   NSCF |     v |
+|----+-------+--------+-------|
+|  0 | 8.001 |  7.987 | -0.2  |
+|  1 | 8.006 |  7.995 | -0.15 |
+|  2 | 8.011 |  8.004 | -0.1  |
+|  3 | 8.016 |  8.013 | -0.05 |
+|  4 | 8.027 |  8.03  |  0.05 |
+|  5 | 8.032 |  8.039 |  0.1  |
+|  6 | 8.037 |  8.048 |  0.15 |
+|  7 | 8.042 |  8.057 |  0.2  |
++----+-------+--------+-------+
+
+	Estimated U = 3.974
+
+Postprocessing finished!

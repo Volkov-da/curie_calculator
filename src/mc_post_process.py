@@ -5,11 +5,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-def read_MT_data(path: str) -> tuple:
+def read_MT_data(path: str)-> tuple:
     output_path = os.path.join(path, 'monte_carlo', 'output')
-    cols = ['T', 'W', 'M_l', 'M']
+    cols = ['T', 'W', 'M']
     df = pd.read_table(output_path, skiprows=8,
                        delim_whitespace=True, names=cols, index_col=False)
+    print(df.head())
     temperatures = df['T']
     magnetizations = df['M']
     return temperatures, magnetizations

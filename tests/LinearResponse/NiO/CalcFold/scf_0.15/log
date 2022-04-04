@@ -1,0 +1,57 @@
+=========================================
+SLURM_JOB_ID = 63601035
+SLURM_JOB_NODELIST = lnode13
+SLURM_GPUS = 
+SLURM_CPUS_ON_NODE = 8
+SLURM_JOB_PARTITION = lenovo
+SLURM_TASK_PID = 853736
+CUDA_VISIBLE_DEVICES = 
+==========================================
+ running on    8 total cores
+ distrk:  each k-point on    8 cores,    1 groups
+ distr:  one band on    4 cores,    2 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Apr 28 2018 00:24:27) complex          
+  
+ POSCAR found type information on POSCAR  Ni O 
+ POSCAR found :  2 types and      32 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|  ADVICE TO THIS USER RUNNING 'VASP/VAMP'   (HEAR YOUR MASTER'S VOICE ...):  |
+|                                                                             |
+|      You have a (more or less) 'large supercell' and for larger cells       |
+|      it might be more efficient to use real space projection opertators     |
+|      So try LREAL= Auto  in the INCAR   file.                               |
+|      Mind:          For very  accurate calculation you might also keep the  |
+|      reciprocal projection scheme          (i.e. LREAL=.FALSE.)             |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.526903370031E+04    0.52690E+04   -0.18113E+05 10072   0.187E+03
+DAV:   2     0.385670073815E+03   -0.48834E+04   -0.46174E+04  8816   0.639E+02
+DAV:   3    -0.199934349955E+03   -0.58560E+03   -0.54252E+03  9440   0.235E+02
+DAV:   4    -0.232226740364E+03   -0.32292E+02   -0.31368E+02  9848   0.509E+01
+DAV:   5    -0.232933002038E+03   -0.70626E+00   -0.70131E+00  9624   0.841E+00    0.604E+01
+DAV:   6    -0.214556720890E+03    0.18376E+02   -0.24703E+02 11384   0.767E+01    0.682E+01
+DAV:   7    -0.199436633122E+03    0.15120E+02   -0.57209E+01 10632   0.509E+01    0.285E+01
+DAV:   8    -0.199798583806E+03   -0.36195E+00   -0.97970E+00  9560   0.699E+00    0.139E+01
+DAV:   9    -0.199747500587E+03    0.51083E-01   -0.19543E-01 10456   0.202E+00    0.248E+00
+DAV:  10    -0.199743699092E+03    0.38015E-02   -0.10427E-01  9664   0.142E+00    0.115E+00
+DAV:  11    -0.199744768663E+03   -0.10696E-02   -0.64511E-03 11320   0.347E-01    0.845E-01
+DAV:  12    -0.199748142961E+03   -0.33743E-02   -0.81942E-03 11432   0.440E-01    0.382E-01
+DAV:  13    -0.199751372421E+03   -0.32295E-02   -0.15585E-03 10864   0.130E-01    0.235E-01
+DAV:  14    -0.199752669950E+03   -0.12975E-02   -0.78061E-04 10480   0.122E-01    0.918E-02
+DAV:  15    -0.199752862940E+03   -0.19299E-03   -0.22026E-04 11136   0.526E-02    0.542E-02
+DAV:  16    -0.199752908719E+03   -0.45779E-04   -0.67543E-05 11384   0.411E-02    0.156E-02
+DAV:  17    -0.199752929325E+03   -0.20606E-04   -0.14632E-05  8208   0.135E-02    0.475E-03
+DAV:  18    -0.199752930202E+03   -0.87717E-06   -0.42556E-07  5120   0.273E-03
+   1 F= -.19975293E+03 E0= -.19950995E+03  d E =-.485954E+00  mag=    11.0682
+ writing wavefunctions

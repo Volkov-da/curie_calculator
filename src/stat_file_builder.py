@@ -389,7 +389,7 @@ if __name__ == '__main__':
             kpoints_min=DEFAULT_DICT['KPOINT_MIN'],
             kpoints_max=DEFAULT_DICT['KPOINT_MAX'],
             kpoints_step=DEFAULT_DICT['KPOINT_STEP'])
-        
+
         print(f'Estimated value of R_k={R_k}')
 
     # fitting Hamiltonian

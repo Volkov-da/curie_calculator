@@ -1,6 +1,7 @@
 import os
 import numpy as np
 from read_input import update_defaults
+from solver import get_spin
 from variables import DEFAULT_DICT, VAMPIRE_PATH
 from pymatgen.core.structure import Structure
 
@@ -181,9 +182,12 @@ def run_monte_carlo(input_path: str):
 
     )
 
+    fm_outcar_path = os.path.join(input_path, 'vasp_inputs', 'fm0', 'OUTCAR')
+    ref_magmom = get_spin(fm_outcar_path)
+
     mat_file_vamp(
         input_path,
-        magmom        = DEFAULT_DICT['MAGMOM'],
+        magmom        = ref_magmom,
         magnetic_atom = DEFAULT_DICT['MAGNETIC_ATOM'],
         type_of_calc  = DEFAULT_DICT['TYPE_OF_CALC']
     )

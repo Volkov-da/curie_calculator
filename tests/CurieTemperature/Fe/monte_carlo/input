@@ -1,0 +1,42 @@
+#------------------------------------------
+# Creation attributes:
+#------------------------------------------
+create:crystal-structure=sc
+#------------------------------------------
+# System Dimensions:
+#------------------------------------------
+dimensions:system-size-x = 5 !nm
+dimensions:system-size-y = 5 !nm
+dimensions:system-size-z = 5 !nm
+#------------------------------------------
+# Material Files:
+#------------------------------------------
+material:file=structure.mat
+material:unit-cell-file=structure.ucf
+#------------------------------------------
+# Simulation attributes:
+#------------------------------------------
+sim:minimum-temperature=0.0
+sim:maximum-temperature=1400.0
+sim:temperature-increment=20
+
+sim:time-steps-increment=100
+sim:equilibration-time-steps=10000
+sim:loop-time-steps=30000
+
+sim:time-step=1.0E-16
+#------------------------------------------
+# Program and integrator details
+#------------------------------------------
+sim:program=curie-temperature
+sim:integrator=monte-carlo
+#------------------------------------------
+# data output
+#------------------------------------------
+output:temperature
+output:mean-magnetisation-length
+output:material-mean-magnetisation-length
+
+screen:temperature
+screen:mean-magnetisation-length
+screen:material-mean-magnetisation-length
