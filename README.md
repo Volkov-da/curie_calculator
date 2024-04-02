@@ -1,6 +1,8 @@
 # Magnetic critical temperature Calculator :magnet:
 ![Algo Details](/images/algo.png)
-
+## :warning: Warning
+For all the calculations you need VASP ab-initio program. 
+Project is no more supported.
 ---
 ## :computer: Installation
 Code is currently under development. Now it working fine for few materials (e.g EuO).
